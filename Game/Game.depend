@@ -1,0 +1,810 @@
+# depslib dependency file v1.0
+1517447702 source:c:\users\dhany\desktop\game2018\lesson01\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1517445762 c:\users\dhany\desktop\game2018\lesson01\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1489447129 c:\users\dhany\desktop\game2018\common\inc\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1517820391 source:c:\users\dhany\desktop\game2018\lesson01\src\glscene.cpp
+	"GLScene.h"
+
+1517447702 source:c:\users\dhany\desktop\game2018\lesson02\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1517445762 c:\users\dhany\desktop\game2018\lesson02\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1518032192 source:c:\users\dhany\desktop\game2018\lesson02\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+
+1517881828 source:c:\users\dhany\desktop\game2018\lesson02\src\gllight.cpp
+	"GLLight.h"
+
+1517881828 c:\users\dhany\desktop\game2018\lesson02\include\gllight.h
+	<GLScene.h>
+
+1517447702 source:c:\users\dhany\desktop\game2018\lesson03\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1517445762 c:\users\dhany\desktop\game2018\lesson03\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1517881828 source:c:\users\dhany\desktop\game2018\lesson03\src\gllight.cpp
+	"GLLight.h"
+
+1517881828 c:\users\dhany\desktop\game2018\lesson03\include\gllight.h
+	<GLScene.h>
+
+1518051347 source:c:\users\dhany\desktop\game2018\lesson03\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+
+1518051027 source:c:\users\dhany\desktop\game2018\lesson03\src\model.cpp
+	"Model.h"
+
+1518050995 c:\users\dhany\desktop\game2018\lesson03\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1518483487 source:c:\users\dhany\desktop\game2018\lesson04\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1518481819 c:\users\dhany\desktop\game2018\lesson04\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1517881828 source:c:\users\dhany\desktop\game2018\lesson04\src\gllight.cpp
+	"GLLight.h"
+
+1517881828 c:\users\dhany\desktop\game2018\lesson04\include\gllight.h
+	<GLScene.h>
+
+1518595119 source:c:\users\dhany\desktop\game2018\lesson04\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+
+1518050995 c:\users\dhany\desktop\game2018\lesson04\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1518051027 source:c:\users\dhany\desktop\game2018\lesson04\src\model.cpp
+	"Model.h"
+
+1518595959 source:c:\users\dhany\desktop\game2018\lesson04\src\inputs.cpp
+	"Inputs.h"
+
+1518594928 c:\users\dhany\desktop\game2018\lesson04\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+
+1518483487 source:c:\users\dhany\desktop\game2018\lesson05\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1518481819 c:\users\dhany\desktop\game2018\lesson05\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1517881828 source:c:\users\dhany\desktop\game2018\lesson05\src\gllight.cpp
+	"GLLight.h"
+
+1517881828 c:\users\dhany\desktop\game2018\lesson05\include\gllight.h
+	<GLScene.h>
+
+1518656360 source:c:\users\dhany\desktop\game2018\lesson05\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+
+1518656097 c:\users\dhany\desktop\game2018\lesson05\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1518594928 c:\users\dhany\desktop\game2018\lesson05\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+
+1518656639 source:c:\users\dhany\desktop\game2018\lesson05\src\inputs.cpp
+	"Inputs.h"
+
+1518656360 source:c:\users\dhany\desktop\game2018\lesson05\src\model.cpp
+	"Model.h"
+	<textureLoader.h>
+
+1518656638 source:c:\users\dhany\desktop\game2018\lesson05\src\textureloader.cpp
+	<iostream>
+	"textureLoader.h"
+
+1518655590 c:\users\dhany\desktop\game2018\lesson05\include\textureloader.h
+	<SOIL.h>
+	<gl/gl.h>
+
+1215483208 c:\users\dhany\desktop\game2018\common\inc\soil.h
+
+1519689931 source:c:\users\dhany\desktop\game2018\lesson06\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1519260447 c:\users\dhany\desktop\game2018\lesson06\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1517881828 source:c:\users\dhany\desktop\game2018\lesson06\src\gllight.cpp
+	"GLLight.h"
+
+1517881828 c:\users\dhany\desktop\game2018\lesson06\include\gllight.h
+	<GLScene.h>
+
+1519691755 source:c:\users\dhany\desktop\game2018\lesson06\src\inputs.cpp
+	"Inputs.h"
+
+1519691515 c:\users\dhany\desktop\game2018\lesson06\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+	<parallax.h>
+
+1519261356 c:\users\dhany\desktop\game2018\lesson06\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1519261654 source:c:\users\dhany\desktop\game2018\lesson06\src\model.cpp
+	"Model.h"
+	<textureLoader.h>
+
+1518655590 c:\users\dhany\desktop\game2018\lesson06\include\textureloader.h
+	<SOIL.h>
+	<gl/gl.h>
+
+1519690459 source:c:\users\dhany\desktop\game2018\lesson06\src\parallax.cpp
+	"parallax.h"
+	<textureLoader.h>
+
+1519261356 c:\users\dhany\desktop\game2018\lesson06\include\parallax.h
+	<iostream>
+	<string.h>
+	<gl/gl.h>
+	<windows.h>
+
+1518656638 source:c:\users\dhany\desktop\game2018\lesson06\src\textureloader.cpp
+	<iostream>
+	"textureLoader.h"
+
+1519691856 source:c:\users\dhany\desktop\game2018\lesson06\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+	<parallax.h>
+
+1519689931 source:c:\users\dhany\desktop\game2018\lesson07\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1519260447 c:\users\dhany\desktop\game2018\lesson07\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1517881828 source:c:\users\dhany\desktop\game2018\lesson07\src\gllight.cpp
+	"GLLight.h"
+
+1517881828 c:\users\dhany\desktop\game2018\lesson07\include\gllight.h
+	<GLScene.h>
+
+1519865163 source:c:\users\dhany\desktop\game2018\lesson07\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+	<parallax.h>
+
+1519863846 c:\users\dhany\desktop\game2018\lesson07\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1519691515 c:\users\dhany\desktop\game2018\lesson07\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+	<parallax.h>
+
+1519261356 c:\users\dhany\desktop\game2018\lesson07\include\parallax.h
+	<iostream>
+	<string.h>
+	<gl/gl.h>
+	<windows.h>
+
+1519691755 source:c:\users\dhany\desktop\game2018\lesson07\src\inputs.cpp
+	"Inputs.h"
+
+1519864180 source:c:\users\dhany\desktop\game2018\lesson07\src\model.cpp
+	"Model.h"
+	<textureLoader.h>
+
+1518655590 c:\users\dhany\desktop\game2018\lesson07\include\textureloader.h
+	<SOIL.h>
+	<gl/gl.h>
+
+1519690459 source:c:\users\dhany\desktop\game2018\lesson07\src\parallax.cpp
+	"parallax.h"
+	<textureLoader.h>
+
+1519865281 source:c:\users\dhany\desktop\game2018\lesson07\src\textureloader.cpp
+	<iostream>
+	"textureLoader.h"
+
+1519693985 source:c:\users\dhany\desktop\game2018\lesson07\src\player.cpp
+	<player.h>
+
+1519693985 c:\users\dhany\desktop\game2018\lesson07\include\player.h
+	<Model.h>
+	<gl/gl.h>
+	<textureLoader.h>
+
+1519689931 source:c:\users\dhany\desktop\game2018\lesson08\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1519260447 c:\users\dhany\desktop\game2018\lesson08\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1517881828 source:c:\users\dhany\desktop\game2018\lesson08\src\gllight.cpp
+	"GLLight.h"
+
+1517881828 c:\users\dhany\desktop\game2018\lesson08\include\gllight.h
+	<GLScene.h>
+
+1519868227 source:c:\users\dhany\desktop\game2018\lesson08\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+	<parallax.h>
+
+1519863846 c:\users\dhany\desktop\game2018\lesson08\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1519691515 c:\users\dhany\desktop\game2018\lesson08\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+	<parallax.h>
+
+1519261356 c:\users\dhany\desktop\game2018\lesson08\include\parallax.h
+	<iostream>
+	<string.h>
+	<gl/gl.h>
+	<windows.h>
+
+1519691755 source:c:\users\dhany\desktop\game2018\lesson08\src\inputs.cpp
+	"Inputs.h"
+
+1519868183 source:c:\users\dhany\desktop\game2018\lesson08\src\model.cpp
+	"Model.h"
+	<textureLoader.h>
+
+1518655590 c:\users\dhany\desktop\game2018\lesson08\include\textureloader.h
+	<SOIL.h>
+	<gl/gl.h>
+
+1519690459 source:c:\users\dhany\desktop\game2018\lesson08\src\parallax.cpp
+	"parallax.h"
+	<textureLoader.h>
+
+1519865281 source:c:\users\dhany\desktop\game2018\lesson08\src\textureloader.cpp
+	<iostream>
+	"textureLoader.h"
+
+1519867057 source:c:\users\dhany\desktop\game2018\lesson08\src\timer.cpp
+	"timer.h"
+
+1519866797 c:\users\dhany\desktop\game2018\lesson08\include\timer.h
+	<time.h>
+
+1519689931 source:c:\users\dhany\desktop\game2018\lesson09-player\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1519260447 c:\users\dhany\desktop\game2018\lesson09-player\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1517881828 source:c:\users\dhany\desktop\game2018\lesson09-player\src\gllight.cpp
+	"GLLight.h"
+
+1517881828 c:\users\dhany\desktop\game2018\lesson09-player\include\gllight.h
+	<GLScene.h>
+
+1520299500 source:c:\users\dhany\desktop\game2018\lesson09-player\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+	<parallax.h>
+	<player.h>
+
+1520297297 c:\users\dhany\desktop\game2018\lesson09-player\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1520299010 c:\users\dhany\desktop\game2018\lesson09-player\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+	<parallax.h>
+	<player.h>
+
+1519261356 c:\users\dhany\desktop\game2018\lesson09-player\include\parallax.h
+	<iostream>
+	<string.h>
+	<gl/gl.h>
+	<windows.h>
+
+1520299471 source:c:\users\dhany\desktop\game2018\lesson09-player\src\inputs.cpp
+	"Inputs.h"
+	<player.h>
+
+1519868183 source:c:\users\dhany\desktop\game2018\lesson09-player\src\model.cpp
+	"Model.h"
+	<textureLoader.h>
+
+1518655590 c:\users\dhany\desktop\game2018\lesson09-player\include\textureloader.h
+	<SOIL.h>
+	<gl/gl.h>
+
+1520281286 source:c:\users\dhany\desktop\game2018\lesson09-player\src\parallax.cpp
+	"parallax.h"
+	<textureLoader.h>
+
+1519865281 source:c:\users\dhany\desktop\game2018\lesson09-player\src\textureloader.cpp
+	<iostream>
+	"textureLoader.h"
+
+1519867057 source:c:\users\dhany\desktop\game2018\lesson09-player\src\timer.cpp
+	"timer.h"
+
+1519866797 c:\users\dhany\desktop\game2018\lesson09-player\include\timer.h
+	<time.h>
+
+1520299420 source:c:\users\dhany\desktop\game2018\lesson09-player\src\player.cpp
+	<player.h>
+	<timer.h>
+	<textureLoader.h>
+
+1520295732 c:\users\dhany\desktop\game2018\lesson09-player\include\player.h
+	<Model.h>
+	<gl/gl.h>
+	<textureLoader.h>
+
+1519689931 source:c:\users\dhany\desktop\game2018\lesson09-animation\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1519260447 c:\users\dhany\desktop\game2018\lesson09-animation\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1517881828 source:c:\users\dhany\desktop\game2018\lesson09-animation\src\gllight.cpp
+	"GLLight.h"
+
+1517881828 c:\users\dhany\desktop\game2018\lesson09-animation\include\gllight.h
+	<GLScene.h>
+
+1520299500 source:c:\users\dhany\desktop\game2018\lesson09-animation\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+	<parallax.h>
+	<player.h>
+
+1520297297 c:\users\dhany\desktop\game2018\lesson09-animation\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1520299010 c:\users\dhany\desktop\game2018\lesson09-animation\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+	<parallax.h>
+	<player.h>
+
+1519261356 c:\users\dhany\desktop\game2018\lesson09-animation\include\parallax.h
+	<iostream>
+	<string.h>
+	<gl/gl.h>
+	<windows.h>
+
+1520295732 c:\users\dhany\desktop\game2018\lesson09-animation\include\player.h
+	<Model.h>
+	<gl/gl.h>
+	<textureLoader.h>
+
+1518655590 c:\users\dhany\desktop\game2018\lesson09-animation\include\textureloader.h
+	<SOIL.h>
+	<gl/gl.h>
+
+1520299471 source:c:\users\dhany\desktop\game2018\lesson09-animation\src\inputs.cpp
+	"Inputs.h"
+	<player.h>
+
+1519868183 source:c:\users\dhany\desktop\game2018\lesson09-animation\src\model.cpp
+	"Model.h"
+	<textureLoader.h>
+
+1520281286 source:c:\users\dhany\desktop\game2018\lesson09-animation\src\parallax.cpp
+	"parallax.h"
+	<textureLoader.h>
+
+1520299420 source:c:\users\dhany\desktop\game2018\lesson09-animation\src\player.cpp
+	<player.h>
+	<timer.h>
+	<textureLoader.h>
+
+1519866797 c:\users\dhany\desktop\game2018\lesson09-animation\include\timer.h
+	<time.h>
+
+1519865281 source:c:\users\dhany\desktop\game2018\lesson09-animation\src\textureloader.cpp
+	<iostream>
+	"textureLoader.h"
+
+1519867057 source:c:\users\dhany\desktop\game2018\lesson09-animation\src\timer.cpp
+	"timer.h"
+
+1519693531 source:c:\users\dhany\desktop\game2018\lesson10-skybox\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1520477330 c:\users\dhany\desktop\game2018\lesson10-skybox\include\glscene.h
+	<windows.h>
+	<gl/gl.h>
+	<iostream>
+
+1517885428 source:c:\users\dhany\desktop\game2018\lesson10-skybox\src\gllight.cpp
+	"GLLight.h"
+
+1520847947 c:\users\dhany\desktop\game2018\lesson10-skybox\include\gllight.h
+	<GLScene.h>
+
+1521054864 source:c:\users\dhany\desktop\game2018\lesson10-skybox\src\inputs.cpp
+	"Inputs.h"
+	<player.h>
+
+1520900472 c:\users\dhany\desktop\game2018\lesson10-skybox\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+	<parallax.h>
+	<player.h>
+	<skyBox.h>
+
+1520300897 c:\users\dhany\desktop\game2018\lesson10-skybox\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1519264956 c:\users\dhany\desktop\game2018\lesson10-skybox\include\parallax.h
+	<iostream>
+	<string.h>
+	<gl/gl.h>
+	<windows.h>
+
+1520299332 c:\users\dhany\desktop\game2018\lesson10-skybox\include\player.h
+	<Model.h>
+	<gl/gl.h>
+	<textureLoader.h>
+
+1518659190 c:\users\dhany\desktop\game2018\lesson10-skybox\include\textureloader.h
+	<SOIL.h>
+	<gl/gl.h>
+
+1520900824 source:c:\users\dhany\desktop\game2018\lesson10-skybox\src\model.cpp
+	"Model.h"
+	<textureLoader.h>
+
+1520284886 source:c:\users\dhany\desktop\game2018\lesson10-skybox\src\parallax.cpp
+	"parallax.h"
+	<textureLoader.h>
+
+1520303020 source:c:\users\dhany\desktop\game2018\lesson10-skybox\src\player.cpp
+	<player.h>
+	<timer.h>
+	<textureLoader.h>
+
+1519870397 c:\users\dhany\desktop\game2018\lesson10-skybox\include\timer.h
+	<time.h>
+
+1521071416 source:c:\users\dhany\desktop\game2018\lesson10-skybox\src\skybox.cpp
+	"skyBox.h"
+	<iostream>
+
+1520472460 c:\users\dhany\desktop\game2018\lesson10-skybox\include\skybox.h
+	<gl/gl.h>
+	<textureLoader.h>
+
+1521071361 source:c:\users\dhany\desktop\game2018\lesson10-skybox\src\textureloader.cpp
+	<iostream>
+	"textureLoader.h"
+
+1519870657 source:c:\users\dhany\desktop\game2018\lesson10-skybox\src\timer.cpp
+	"timer.h"
+
+1521071309 source:c:\users\dhany\desktop\game2018\lesson10-skybox\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+	<parallax.h>
+	<player.h>
+	<skyBox.h>
+
+1519693531 source:c:\users\dhany\desktop\game2018\midtermcode\midterm\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1520477330 c:\users\dhany\desktop\game2018\midtermcode\midterm\include\glscene.h
+	<windows.h>
+	<gl/gl.h>
+	<iostream>
+
+1517885428 source:c:\users\dhany\desktop\game2018\midtermcode\midterm\src\gllight.cpp
+	"GLLight.h"
+
+1520847947 c:\users\dhany\desktop\game2018\midtermcode\midterm\include\gllight.h
+	<GLScene.h>
+
+1521079644 source:c:\users\dhany\desktop\game2018\midtermcode\midterm\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+	<parallax.h>
+	<player.h>
+	<skyBox.h>
+
+1520300897 c:\users\dhany\desktop\game2018\midtermcode\midterm\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1489447129 c:\users\dhany\desktop\game2018\midtermcode\common\inc\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1520900472 c:\users\dhany\desktop\game2018\midtermcode\midterm\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+	<parallax.h>
+	<player.h>
+	<skyBox.h>
+
+1519264956 c:\users\dhany\desktop\game2018\midtermcode\midterm\include\parallax.h
+	<iostream>
+	<string.h>
+	<gl/gl.h>
+	<windows.h>
+
+1520299332 c:\users\dhany\desktop\game2018\midtermcode\midterm\include\player.h
+	<Model.h>
+	<gl/gl.h>
+	<textureLoader.h>
+
+1518659190 c:\users\dhany\desktop\game2018\midtermcode\midterm\include\textureloader.h
+	<SOIL.h>
+	<gl/gl.h>
+
+1215483208 c:\users\dhany\desktop\game2018\midtermcode\common\inc\soil.h
+
+1520472460 c:\users\dhany\desktop\game2018\midtermcode\midterm\include\skybox.h
+	<gl/gl.h>
+	<textureLoader.h>
+
+1521054864 source:c:\users\dhany\desktop\game2018\midtermcode\midterm\src\inputs.cpp
+	"Inputs.h"
+	<player.h>
+
+1520900824 source:c:\users\dhany\desktop\game2018\midtermcode\midterm\src\model.cpp
+	"Model.h"
+	<textureLoader.h>
+
+1520284886 source:c:\users\dhany\desktop\game2018\midtermcode\midterm\src\parallax.cpp
+	"parallax.h"
+	<textureLoader.h>
+
+1520303020 source:c:\users\dhany\desktop\game2018\midtermcode\midterm\src\player.cpp
+	<player.h>
+	<timer.h>
+	<textureLoader.h>
+
+1519870397 c:\users\dhany\desktop\game2018\midtermcode\midterm\include\timer.h
+	<time.h>
+
+1521071416 source:c:\users\dhany\desktop\game2018\midtermcode\midterm\src\skybox.cpp
+	"skyBox.h"
+	<iostream>
+
+1521071361 source:c:\users\dhany\desktop\game2018\midtermcode\midterm\src\textureloader.cpp
+	<iostream>
+	"textureLoader.h"
+
+1519870657 source:c:\users\dhany\desktop\game2018\midtermcode\midterm\src\timer.cpp
+	"timer.h"
+
+1521610816 source:c:\users\jbara\desktop\191teamgame\game\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1520477332 c:\users\jbara\desktop\191teamgame\game\include\glscene.h
+	<windows.h>
+	<gl/gl.h>
+	<iostream>
+
+1517885430 source:c:\users\jbara\desktop\191teamgame\game\src\gllight.cpp
+	"GLLight.h"
+
+1520847948 c:\users\jbara\desktop\191teamgame\game\include\gllight.h
+	<GLScene.h>
+
+1521606350 source:c:\users\jbara\desktop\191teamgame\game\src\inputs.cpp
+	"Inputs.h"
+	<player.h>
+
+1520900474 c:\users\jbara\desktop\191teamgame\game\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+	<parallax.h>
+	<player.h>
+	<skyBox.h>
+
+1520300898 c:\users\jbara\desktop\191teamgame\game\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1489447130 c:\users\jbara\desktop\191teamgame\common\inc\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1519264958 c:\users\jbara\desktop\191teamgame\game\include\parallax.h
+	<iostream>
+	<string.h>
+	<gl/gl.h>
+	<windows.h>
+
+1521616076 c:\users\jbara\desktop\191teamgame\game\include\player.h
+	<Model.h>
+	<gl/gl.h>
+	<textureLoader.h>
+	<Trail.h>
+
+1518659192 c:\users\jbara\desktop\191teamgame\game\include\textureloader.h
+	<SOIL.h>
+	<gl/gl.h>
+
+1215483208 c:\users\jbara\desktop\191teamgame\common\inc\soil.h
+
+1520472462 c:\users\jbara\desktop\191teamgame\game\include\skybox.h
+	<gl/gl.h>
+	<textureLoader.h>
+
+1521600858 source:c:\users\jbara\desktop\191teamgame\game\src\model.cpp
+	"Model.h"
+	<textureLoader.h>
+
+1520284888 source:c:\users\jbara\desktop\191teamgame\game\src\parallax.cpp
+	"parallax.h"
+	<textureLoader.h>
+
+1521675420 source:c:\users\jbara\desktop\191teamgame\game\src\player.cpp
+	<player.h>
+	<timer.h>
+	<textureLoader.h>
+	<iostream>
+
+1519870398 c:\users\jbara\desktop\191teamgame\game\include\timer.h
+	<time.h>
+
+1521071418 source:c:\users\jbara\desktop\191teamgame\game\src\skybox.cpp
+	"skyBox.h"
+	<iostream>
+
+1521071362 source:c:\users\jbara\desktop\191teamgame\game\src\textureloader.cpp
+	<iostream>
+	"textureLoader.h"
+
+1519870658 source:c:\users\jbara\desktop\191teamgame\game\src\timer.cpp
+	"timer.h"
+
+1521666522 source:c:\users\jbara\desktop\191teamgame\game\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+	<parallax.h>
+	<player.h>
+	<skyBox.h>
+
+1521612926 c:\users\jbara\desktop\191teamgame\game\include\trail.h
+	<windows.h>
+	<GL/glut.h>
+	<vector>
+
+1521675361 source:c:\users\jbara\desktop\191teamgame\game\src\trail.cpp
+	"Trail.h"
+	<iostream>
+	<math.h>
+
