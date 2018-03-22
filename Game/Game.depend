@@ -808,3 +808,112 @@
 	<iostream>
 	<math.h>
 
+1521610816 source:c:\users\jbara\documents\github\191t_teamproject\game\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+
+1520477332 c:\users\jbara\documents\github\191t_teamproject\game\include\glscene.h
+	<windows.h>
+	<gl/gl.h>
+	<iostream>
+
+1517885430 source:c:\users\jbara\documents\github\191t_teamproject\game\src\gllight.cpp
+	"GLLight.h"
+
+1520847948 c:\users\jbara\documents\github\191t_teamproject\game\include\gllight.h
+	<GLScene.h>
+
+1521666522 source:c:\users\jbara\documents\github\191t_teamproject\game\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+	<parallax.h>
+	<player.h>
+	<skyBox.h>
+
+1520300898 c:\users\jbara\documents\github\191t_teamproject\game\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1489447130 c:\users\jbara\documents\github\191t_teamproject\common\inc\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1520900474 c:\users\jbara\documents\github\191t_teamproject\game\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+	<parallax.h>
+	<player.h>
+	<skyBox.h>
+
+1519264958 c:\users\jbara\documents\github\191t_teamproject\game\include\parallax.h
+	<iostream>
+	<string.h>
+	<gl/gl.h>
+	<windows.h>
+
+1521616076 c:\users\jbara\documents\github\191t_teamproject\game\include\player.h
+	<Model.h>
+	<gl/gl.h>
+	<textureLoader.h>
+	<Trail.h>
+
+1518659192 c:\users\jbara\documents\github\191t_teamproject\game\include\textureloader.h
+	<SOIL.h>
+	<gl/gl.h>
+
+1215483208 c:\users\jbara\documents\github\191t_teamproject\common\inc\soil.h
+
+1521612926 c:\users\jbara\documents\github\191t_teamproject\game\include\trail.h
+	<windows.h>
+	<GL/glut.h>
+	<vector>
+
+1520472462 c:\users\jbara\documents\github\191t_teamproject\game\include\skybox.h
+	<gl/gl.h>
+	<textureLoader.h>
+
+1521606350 source:c:\users\jbara\documents\github\191t_teamproject\game\src\inputs.cpp
+	"Inputs.h"
+	<player.h>
+
+1521600858 source:c:\users\jbara\documents\github\191t_teamproject\game\src\model.cpp
+	"Model.h"
+	<textureLoader.h>
+
+1520284888 source:c:\users\jbara\documents\github\191t_teamproject\game\src\parallax.cpp
+	"parallax.h"
+	<textureLoader.h>
+
+1521675498 source:c:\users\jbara\documents\github\191t_teamproject\game\src\player.cpp
+	<player.h>
+	<timer.h>
+	<textureLoader.h>
+	<iostream>
+
+1519870398 c:\users\jbara\documents\github\191t_teamproject\game\include\timer.h
+	<time.h>
+
+1521071418 source:c:\users\jbara\documents\github\191t_teamproject\game\src\skybox.cpp
+	"skyBox.h"
+	<iostream>
+
+1521071362 source:c:\users\jbara\documents\github\191t_teamproject\game\src\textureloader.cpp
+	<iostream>
+	"textureLoader.h"
+
+1519870658 source:c:\users\jbara\documents\github\191t_teamproject\game\src\timer.cpp
+	"timer.h"
+
+1521675361 source:c:\users\jbara\documents\github\191t_teamproject\game\src\trail.cpp
+	"Trail.h"
+	<iostream>
+	<math.h>
+
