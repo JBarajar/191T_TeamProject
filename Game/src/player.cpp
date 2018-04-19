@@ -1,13 +1,4 @@
 #include <player.h>
-#include <timer.h>
-#include <textureLoader.h>
-#include <iostream>
-
-
-timer *T = new timer();
-
-textureLoader tloader;
-
 
 player::player()
 {
@@ -67,8 +58,6 @@ void player::movePlayer()
 
 
 }
-
-
 
 void player::drawPlayer()
 {

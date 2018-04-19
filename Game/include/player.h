@@ -5,6 +5,7 @@
 #include<gl/gl.h>
 #include<textureLoader.h>
 #include<Trail.h>
+#include <timer.h>
 
 typedef struct
 {
@@ -25,6 +26,9 @@ class player:Model
         int runspeed;
         int jumpspeed;
         int actionTrigger;
+
+        timer *T = new timer();
+        textureLoader tloader;
 
         float speed = 0.01;
         int dir = 0;

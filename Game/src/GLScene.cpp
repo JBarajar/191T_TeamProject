@@ -5,12 +5,14 @@
 #include <parallax.h>
 #include <player.h>
 #include <skyBox.h>
+#include <randAI.h>
 
 Model *modelTeapot = new Model();
 Inputs *KbMs = new Inputs();
 parallax *plx = new parallax();
 player *ply = new player();
 skyBox *sky = new skyBox;
+randAI *rai = new randAI();
 
 GLScene::GLScene()
 {
@@ -39,6 +41,7 @@ GLint GLScene::initGL()
     modelTeapot->modelInit("images/player/player0.png",true);
     plx->parallaxInit("images/grid.png");
     ply->playerInit();
+    rai->rAIInit();
     sky->loadTextures();
 
     return true;
@@ -67,6 +70,10 @@ GLint GLScene::drawGLScene()
 */
     glPushMatrix();
         ply->drawPlayer();
+    glPopMatrix();
+
+    glPushMatrix();
+        rai->drawRAI();
     glPopMatrix();
 
 }
