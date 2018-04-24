@@ -10,7 +10,7 @@ Model *modelTeapot = new Model();
 Inputs *KbMs = new Inputs();
 parallax *plx = new parallax();
 player *ply = new player();
-skyBox *sky = new skyBox;
+skyBox *sky = new skyBox();
 
 GLScene::GLScene()
 {

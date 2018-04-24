@@ -5,6 +5,9 @@
 
 #include<gl/gl.h>
 #include<iostream>
+#include<vector>
+
+class Model;
 
 using namespace std;
 
@@ -26,6 +29,8 @@ class GLScene
     protected:
 
     private:
+        vector<Model*> entities;
+
 };
 
 #endif // GLSCENE_H

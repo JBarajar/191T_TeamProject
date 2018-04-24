@@ -815,10 +815,11 @@
 	<iostream>
 	<windows.h>
 
-1520477332 c:\users\jbara\documents\github\191t_teamproject\game\include\glscene.h
+1524532297 c:\users\jbara\documents\github\191t_teamproject\game\include\glscene.h
 	<windows.h>
 	<gl/gl.h>
 	<iostream>
+	<vector>
 
 1517885430 source:c:\users\jbara\documents\github\191t_teamproject\game\src\gllight.cpp
 	"GLLight.h"
@@ -826,7 +827,7 @@
 1520847948 c:\users\jbara\documents\github\191t_teamproject\game\include\gllight.h
 	<GLScene.h>
 
-1521666522 source:c:\users\jbara\documents\github\191t_teamproject\game\src\glscene.cpp
+1524532201 source:c:\users\jbara\documents\github\191t_teamproject\game\src\glscene.cpp
 	"GLScene.h"
 	<GLLight.h>
 	<Model.h>
@@ -916,4 +917,16 @@
 	"Trail.h"
 	<iostream>
 	<math.h>
+
+1524530555 source:c:\users\jbara\documents\github\191t_teamproject\game\src\boxcollider.cpp
+	"BoxCollider.h"
+
+1524532359 c:\users\jbara\documents\github\191t_teamproject\game\include\boxcollider.h
+	<string>
+
+1524531573 source:c:\users\jbara\documents\github\191t_teamproject\game\src\collision.cpp
+	"Collision.h"
+	"BoxCollider.h"
+
+1524531320 c:\users\jbara\documents\github\191t_teamproject\game\include\collision.h
 
