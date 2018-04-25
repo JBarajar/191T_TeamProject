@@ -860,11 +860,12 @@
 	<gl/gl.h>
 	<windows.h>
 
-1521616076 c:\users\jbara\documents\github\191t_teamproject\game\include\player.h
+1524544003 c:\users\jbara\documents\github\191t_teamproject\game\include\player.h
 	<Model.h>
 	<gl/gl.h>
 	<textureLoader.h>
 	<Trail.h>
+	<BoxCollider.h>
 
 1518659192 c:\users\jbara\documents\github\191t_teamproject\game\include\textureloader.h
 	<SOIL.h>
@@ -893,7 +894,7 @@
 	"parallax.h"
 	<textureLoader.h>
 
-1521675498 source:c:\users\jbara\documents\github\191t_teamproject\game\src\player.cpp
+1524544014 source:c:\users\jbara\documents\github\191t_teamproject\game\src\player.cpp
 	<player.h>
 	<timer.h>
 	<textureLoader.h>
@@ -918,10 +919,10 @@
 	<iostream>
 	<math.h>
 
-1524530555 source:c:\users\jbara\documents\github\191t_teamproject\game\src\boxcollider.cpp
+1524532378 source:c:\users\jbara\documents\github\191t_teamproject\game\src\boxcollider.cpp
 	"BoxCollider.h"
 
-1524532359 c:\users\jbara\documents\github\191t_teamproject\game\include\boxcollider.h
+1524702060 c:\users\jbara\documents\github\191t_teamproject\game\include\boxcollider.h
 	<string>
 
 1524531573 source:c:\users\jbara\documents\github\191t_teamproject\game\src\collision.cpp

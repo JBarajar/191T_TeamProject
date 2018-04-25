@@ -65,6 +65,7 @@ void player::movePlayer()
         break;
     }
 
+    collider->setPosition(Xpos - 0.5,Ypos + 0.5);
 
 }
 

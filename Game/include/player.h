@@ -5,6 +5,7 @@
 #include<gl/gl.h>
 #include<textureLoader.h>
 #include<Trail.h>
+#include<BoxCollider.h>
 
 typedef struct
 {
@@ -37,6 +38,8 @@ class player:Model
         void movePlayer();
 
         Trail trail;
+        BoxCollider* collider = new BoxCollider(1.0f, 1.0f, "player");
+
 
 
     protected:

@@ -43,6 +43,8 @@
 			<Add library="gdi32" />
 			<Add library="../Common/lib/glut32.lib" />
 		</Linker>
+		<Unit filename="include/BoxCollider.h" />
+		<Unit filename="include/Collision.h" />
 		<Unit filename="include/GLLight.h" />
 		<Unit filename="include/GLScene.h" />
 		<Unit filename="include/Inputs.h" />
@@ -54,6 +56,8 @@
 		<Unit filename="include/textureLoader.h" />
 		<Unit filename="include/timer.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/BoxCollider.cpp" />
+		<Unit filename="src/Collision.cpp" />
 		<Unit filename="src/GLLight.cpp" />
 		<Unit filename="src/GLScene.cpp" />
 		<Unit filename="src/Inputs.cpp" />

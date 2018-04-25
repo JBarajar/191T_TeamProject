@@ -24,6 +24,7 @@ class BoxCollider
         float xpos, ypos;
         float width, height;
         std::string tag;
+
 };
 
 #endif // BOXCOLLIDER_H
