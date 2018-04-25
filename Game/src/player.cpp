@@ -1,13 +1,4 @@
 #include <player.h>
-#include <timer.h>
-#include <textureLoader.h>
-#include <iostream>
-
-
-timer *T = new timer();
-
-textureLoader tloader;
-
 
 player::player()
 {
@@ -68,8 +59,6 @@ void player::movePlayer()
     collider->setPosition(Xpos - 0.5,Ypos + 0.5);
 
 }
-
-
 
 void player::drawPlayer()
 {
