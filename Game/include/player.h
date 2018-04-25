@@ -41,7 +41,7 @@ class player:Model
         void setDirection(int);
         void movePlayer();
 
-        Trail trail;
+        Trail* trail = new Trail(0.0,0.5,0.5);
         BoxCollider* collider = new BoxCollider(1.0f, 1.0f, "player");
 
 

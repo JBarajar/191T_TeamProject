@@ -35,7 +35,7 @@ void player::setDirection(int d)
     else {
         dir = d;
         rot = 90*dir;
-        trail.addPoint();
+        trail->addPoint();
     }
 }
 
@@ -66,11 +66,11 @@ void player::drawPlayer()
         movePlayer();
         T->reset();
 
-    trail.updateEnds(Xpos,Ypos);
+    trail->updateEnds(Xpos,Ypos);
     }
     glPushMatrix();
 
-        trail.drawTrail();
+        trail->drawTrail();
     glPopMatrix();
 
   //  glColor3f(1.0,0.0,0.0);
@@ -117,7 +117,7 @@ void player::playerInit()
 
     tloader.bindTexture("images/bike.png");
 
-    trail.init(Xpos, Ypos);
+    trail->init(Xpos, Ypos);
 
 }
 

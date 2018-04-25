@@ -21,7 +21,7 @@ void randAI::rAIInit()
     T->start();                                         //Start step timer
     A->start();                                         //Start action timer
     tloader.bindTexture("images/bike.png");             //Bind bike image
-    rAITrail.init(Xpos, Ypos);                          //Initialize light trail
+    rAITrail->init(Xpos, Ypos);                          //Initialize light trail
 }
 
 void randAI::setDirection(int d)
@@ -32,7 +32,7 @@ void randAI::setDirection(int d)
     }
     else {
         dir = d;            //Set new direction
-        rAITrail.addPoint();
+        rAITrail->addPoint();
     }
 }
 
@@ -41,7 +41,7 @@ void randAI::drawRAI()
     //Move after every step
     if(T->getTicks()>10){
         moveRAI();
-        rAITrail.updateEnds(Xpos,Ypos);
+        rAITrail->updateEnds(Xpos,Ypos);
         T->reset();
         if(A->getTicks()>150){
             actions();
@@ -51,7 +51,7 @@ void randAI::drawRAI()
 
     //Draw trail behind RAI
     glPushMatrix();
-        rAITrail.drawTrail();
+        rAITrail->drawTrail();
     glPopMatrix();
 
     //Draw bike

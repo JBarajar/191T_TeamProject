@@ -864,7 +864,7 @@
 	<gl/gl.h>
 	<windows.h>
 
-1524703441 c:\users\jbara\documents\github\191t_teamproject\game\include\player.h
+1524704034 c:\users\jbara\documents\github\191t_teamproject\game\include\player.h
 	<Model.h>
 	<gl/gl.h>
 	<textureLoader.h>
@@ -878,7 +878,7 @@
 
 1215483208 c:\users\jbara\documents\github\191t_teamproject\common\inc\soil.h
 
-1521612926 c:\users\jbara\documents\github\191t_teamproject\game\include\trail.h
+1524703637 c:\users\jbara\documents\github\191t_teamproject\game\include\trail.h
 	<windows.h>
 	<GL/glut.h>
 	<vector>
@@ -899,7 +899,7 @@
 	"parallax.h"
 	<textureLoader.h>
 
-1524703247 source:c:\users\jbara\documents\github\191t_teamproject\game\src\player.cpp
+1524704110 source:c:\users\jbara\documents\github\191t_teamproject\game\src\player.cpp
 	<player.h>
 
 1519870398 c:\users\jbara\documents\github\191t_teamproject\game\include\timer.h
@@ -916,7 +916,7 @@
 1519870658 source:c:\users\jbara\documents\github\191t_teamproject\game\src\timer.cpp
 	"timer.h"
 
-1521675361 source:c:\users\jbara\documents\github\191t_teamproject\game\src\trail.cpp
+1524703714 source:c:\users\jbara\documents\github\191t_teamproject\game\src\trail.cpp
 	"Trail.h"
 	<iostream>
 	<math.h>
@@ -1061,10 +1061,10 @@
 
 1524179268 ev
 
-1524703247 source:c:\users\jbara\documents\github\191t_teamproject\game\src\randai.cpp
+1524704074 source:c:\users\jbara\documents\github\191t_teamproject\game\src\randai.cpp
 	"randAI.h"
 
-1524703247 c:\users\jbara\documents\github\191t_teamproject\game\include\randai.h
+1524704007 c:\users\jbara\documents\github\191t_teamproject\game\include\randai.h
 	<Model.h>
 	<gl/gl.h>
 	<textureLoader.h>

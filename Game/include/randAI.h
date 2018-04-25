@@ -28,7 +28,7 @@ class randAI:Model
         float scalesize[3]={1.0,1.0,1.0};
         vec1 verticies[4];
 
-        Trail rAITrail;             //Light trail
+        Trail* rAITrail = new Trail(1.0,0.0,0.0);             //Light trail
         timer *T = new timer();     //Step timer
         timer *A = new timer();     //Action timer
         textureLoader tloader;      //Loads bike image

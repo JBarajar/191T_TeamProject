@@ -2,9 +2,13 @@
 #include <iostream>'
 #include <math.h>
 
-Trail::Trail()
+Trail::Trail(float r = 0.0, float g = 0.5, float b = 0.5)
 {
     //ctor
+
+    color.r = r;
+    color.g = g;
+    color.b = b;
 }
 
 Trail::~Trail()
@@ -74,7 +78,7 @@ void Trail::drawTrail()
 {
     glBindTexture(GL_TEXTURE_2D, 0);
     glEnable(GL_COLOR_MATERIAL);
-    glColor3f(0.0,0.5,0.5);
+    glColor3f(color.r,color.g,color.b);
     glPointSize(5);
 
     glBegin(GL_POINTS);
