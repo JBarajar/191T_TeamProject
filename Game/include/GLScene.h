@@ -6,6 +6,7 @@
 #include<gl/gl.h>
 #include<iostream>
 #include<vector>
+#include <time.h>
 
 class Model;
 
@@ -17,6 +18,7 @@ class GLScene
         GLScene();
         virtual ~GLScene();
         GLint initGL();
+        GLint run();
         GLint drawGLScene();
         GLvoid resizeGLScene(GLsizei, GLsizei);
 
@@ -29,7 +31,9 @@ class GLScene
     protected:
 
     private:
-        vector<Model*> entities;
+        clock_t newTime, oldTime;
+        double deltaTime;
+
 
 };
 

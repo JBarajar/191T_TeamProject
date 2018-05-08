@@ -1,0 +1,38 @@
+#ifndef BIKE_H
+#define BIKE_H
+
+#include "trail.h"
+#include "timer.h"
+#include "Entity.h"
+#include "textureLoader.h"
+
+class Bike : public Entity
+{
+    public:
+        Bike();
+        virtual ~Bike();
+
+        vec verticies[4];
+
+        void init();
+        void setDirection(int);
+        void moveBike();
+
+        virtual void draw(double dt);
+        virtual void update(ObjectHandler* handler);
+
+        virtual void onCollision(Entity* collider);
+
+        Trail* trail = new Trail();
+s
+    protected:
+
+    private:
+        char image[1024] = "images/bike.png";
+        textureLoader tloader;
+        float speed = 0.05;
+        int dir = 0;
+        float rot = 0;
+};
+
+#endif // BIKE_H

@@ -26,6 +26,8 @@ class Model
         double Zoom;
         double Xpos;
         double Ypos;
+        double lastYpos;
+        double lastXpos;
 
         vec1 verticies[4];
 

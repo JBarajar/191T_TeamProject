@@ -11,6 +11,7 @@ class textureLoader
         virtual ~textureLoader();
         void bindTexture(char *);
         void binder();
+        void nullTex();
         unsigned char* image;
         int width, height;
         GLuint tex;

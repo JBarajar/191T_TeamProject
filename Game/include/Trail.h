@@ -17,7 +17,7 @@ typedef struct {
 class Trail
 {
     public:
-        Trail(float, float, float);
+        Trail();
         virtual ~Trail();
 
         void addPoint();
@@ -25,14 +25,20 @@ class Trail
         void updateEnds(float,float);
         void init(float, float);
         float getLength();
+        std::vector<Point> getPoints() {return points;}
+
+        void setSpeed(float s) {speed = s;}
+        void setColor(float r, float g, float b) {color.r = r; color.g = g; color.b = b;}
+        void setMaxLength(float l){maxLength = l;}
 
     protected:
 
     private:
         std::vector<Point> points;
         std::vector<Point>::iterator it;
-        float maxLength = 1.0;
+        float maxLength = 10.0;
         Color color;
+        float speed;
 };
 
 #endif // TRAIL_H
