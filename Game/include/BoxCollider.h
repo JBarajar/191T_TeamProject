@@ -19,10 +19,10 @@ class BoxCollider
         void setPosition(float, float);
 
         std::string getTag() {return tag;}
-        float getLeft() {return xpos-width/2;}
-        float getTop() {return ypos+height/2;}
-        float getRight() {return xpos + width/2;}
-        float getBot() {return ypos - height/2;}
+        float getLeft() {return xpos-width/2.0;}
+        float getTop() {return ypos+height/2.0;}
+        float getRight() {return xpos + width/2.0;}
+        float getBot() {return ypos - height/2.0;}
         float getX() {return xpos;}
         float getY() {return ypos;}
 

@@ -7,8 +7,8 @@ player::player()
 
     trail->setColor(0.0,0.5,0.5);
 
-    Xpos = -10.0;
-    Ypos = -4.0;
+    Xpos = 0.5;
+    Ypos = 0.0;
 
 
 }

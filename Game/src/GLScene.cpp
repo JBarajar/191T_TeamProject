@@ -8,6 +8,7 @@
 #include <randAI.h>
 #include <ObjectHandler.h>
 #include <Wall.h>
+#include <PowerUp.h>
 
 Model *modelTeapot = new Model();
 Inputs *KbMs = new Inputs();
@@ -51,10 +52,11 @@ GLint GLScene::initGL()
 
     handler->addEntity(ply);
     handler->addEntity(rai);
-    handler->addEntity(new Wall(-12.16,0,0.2,12.0));
-    handler->addEntity(new Wall(12.16,0,0.2,12.0));
-    handler->addEntity(new Wall(0,6,24.5,0.2));
-    handler->addEntity(new Wall(0,-6,24.5,0.2));
+    handler->addEntity(new Wall(-1.25,0,0.04,1.37));
+    handler->addEntity(new Wall(1.25,0,0.04,1.37));
+    handler->addEntity(new Wall(0,0.7,2.54,0.04));
+    handler->addEntity(new Wall(0,-0.7,2.54,0.04));
+    handler->addEntity(new PowerUp(0.0,0.0));
 
     oldTime = clock();
     newTime = clock();
@@ -105,7 +107,7 @@ GLint GLScene::drawGLScene()
     glPopMatrix();
 */
 
-    glScaled(0.1,0.1,1);
+    glScaled(1.0,1.0,1.0);
     /*glPushMatrix();
         ply->drawPlayer();
     glPopMatrix();

@@ -14,7 +14,7 @@ class Bike : public Entity
 
         vec verticies[4];
 
-        float speed = 0.05;
+        float speed = 0.006;
         int dir = 0;
         float rot = 0;
 
@@ -35,8 +35,8 @@ class Bike : public Entity
         char image[1024] = "images/bike.png";
         textureLoader tloader;
 
-        float width = 0.7;
-        float height = 0.7;
+        float width = 0.08;
+        float height = 0.08;
 
 };
 

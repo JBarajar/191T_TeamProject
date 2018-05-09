@@ -808,7 +808,7 @@
 	<iostream>
 	<math.h>
 
-1525854875 source:c:\users\jbara\documents\github\191t_teamproject\game\main.cpp
+1525858186 source:c:\users\jbara\documents\github\191t_teamproject\game\main.cpp
 	<windows.h>
 	<GLScene.h>
 	<stdlib.h>
@@ -831,7 +831,7 @@
 1525854862 c:\users\jbara\documents\github\191t_teamproject\game\include\gllight.h
 	<GLScene.h>
 
-1525857615 source:c:\users\jbara\documents\github\191t_teamproject\game\src\glscene.cpp
+1525859960 source:c:\users\jbara\documents\github\191t_teamproject\game\src\glscene.cpp
 	"GLScene.h"
 	<GLLight.h>
 	<Model.h>
@@ -842,6 +842,7 @@
 	<randAI.h>
 	<ObjectHandler.h>
 	<Wall.h>
+	<PowerUp.h>
 
 1525854875 c:\users\jbara\documents\github\191t_teamproject\game\include\model.h
 	<windows.h>
@@ -867,7 +868,7 @@
 	<gl/gl.h>
 	<windows.h>
 
-1525854875 c:\users\jbara\documents\github\191t_teamproject\game\include\player.h
+1525859626 c:\users\jbara\documents\github\191t_teamproject\game\include\player.h
 	<Entity.h>
 	<gl/gl.h>
 	<textureLoader.h>
@@ -882,7 +883,7 @@
 
 1525854862 c:\users\jbara\documents\github\191t_teamproject\common\inc\soil.h
 
-1525854875 c:\users\jbara\documents\github\191t_teamproject\game\include\trail.h
+1525858909 c:\users\jbara\documents\github\191t_teamproject\game\include\trail.h
 	<windows.h>
 	<GL/glut.h>
 	<vector>
@@ -903,7 +904,7 @@
 	"parallax.h"
 	<textureLoader.h>
 
-1525854875 source:c:\users\jbara\documents\github\191t_teamproject\game\src\player.cpp
+1525858602 source:c:\users\jbara\documents\github\191t_teamproject\game\src\player.cpp
 	<player.h>
 	<iostream>
 
@@ -928,12 +929,12 @@
 
 1521675361 D
 
-1525854875 source:c:\users\jbara\documents\github\191t_teamproject\game\src\boxcollider.cpp
+1525861580 source:c:\users\jbara\documents\github\191t_teamproject\game\src\boxcollider.cpp
 	"BoxCollider.h"
 	<gl/glut.h>
 	<iostream>
 
-1525854875 c:\users\jbara\documents\github\191t_teamproject\game\include\boxcollider.h
+1525860820 c:\users\jbara\documents\github\191t_teamproject\game\include\boxcollider.h
 	<string>
 
 1525677293 source:c:\users\jbara\documents\github\191t_teamproject\game\src\collision.cpp
@@ -1071,7 +1072,7 @@
 
 1524179268 ev
 
-1525856936 source:c:\users\jbara\documents\github\191t_teamproject\game\src\randai.cpp
+1525858620 source:c:\users\jbara\documents\github\191t_teamproject\game\src\randai.cpp
 	"randAI.h"
 
 1525854875 c:\users\jbara\documents\github\191t_teamproject\game\include\randai.h
@@ -1093,7 +1094,7 @@
 1525854875 c:\users\jbara\documents\github\191t_teamproject\game\include\objecthandler.h
 	<vector>
 
-1525854875 source:c:\users\jbara\documents\github\191t_teamproject\game\src\objecthandler.cpp
+1525862228 source:c:\users\jbara\documents\github\191t_teamproject\game\src\objecthandler.cpp
 	"ObjectHandler.h"
 	"BoxCollider.h"
 	"Entity.h"
@@ -1101,12 +1102,13 @@
 	"Trail.h"
 	"player.h"
 	"randAI.h"
+	"PowerUp.h"
 
-1525857764 source:c:\users\jbara\documents\github\191t_teamproject\game\src\bike.cpp
+1525861715 source:c:\users\jbara\documents\github\191t_teamproject\game\src\bike.cpp
 	"Bike.h"
 	"ObjectHandler.h"
 
-1525857655 c:\users\jbara\documents\github\191t_teamproject\game\include\bike.h
+1525858770 c:\users\jbara\documents\github\191t_teamproject\game\include\bike.h
 	"trail.h"
 	"timer.h"
 	"Entity.h"
@@ -1119,4 +1121,12 @@
 1525857045 c:\users\jbara\documents\github\191t_teamproject\game\include\wall.h
 	"Entity.h"
 	"textureLoader.h"
+
+1525862385 source:c:\users\jbara\documents\github\191t_teamproject\game\src\powerup.cpp
+	"PowerUp.h"
+	<iostream>
+
+1525862427 c:\users\jbara\documents\github\191t_teamproject\game\include\powerup.h
+	<Entity.h>
+	<textureLoader.h>
 

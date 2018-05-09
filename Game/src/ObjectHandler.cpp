@@ -5,6 +5,7 @@
 #include "Trail.h"
 #include "player.h"
 #include "randAI.h"
+#include "PowerUp.h"
 
 ObjectHandler::ObjectHandler()
 {
@@ -31,15 +32,7 @@ bool ObjectHandler::collisionCheck(Entity* e1, Entity* e2)
     float t2 = b->getTop();
     float b2 = b->getBot();
 
-    /*std::cout << "l1: " << l1 << std::endl;
-    std::cout << "r1: " << r1 << std::endl;
-    std::cout << "t1: " << t1 << std::endl;
-    std::cout << "b1: " << b1 << std::endl;
 
-    std::cout << "l2: " << l2 << std::endl;
-    std::cout << "r2: " << r2 << std::endl;
-    std::cout << "t2: " << t2 << std::endl;
-    std::cout << "b2: " << b2 << std::endl;*/
 
     if(l1 > r2 || r1 < l2 || b1 > t2 || t1 < b2) {
         return false;

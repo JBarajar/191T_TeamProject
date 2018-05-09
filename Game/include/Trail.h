@@ -36,7 +36,7 @@ class Trail
     private:
         std::vector<Point> points;
         std::vector<Point>::iterator it;
-        float maxLength = 10.0;
+        float maxLength = 0.5;
         Color color;
         float speed;
 };

@@ -9,8 +9,8 @@ Bike::Bike()
     verticies[2].x = width/2;verticies[2].y = height/2;verticies[2].z = -1.0;
     verticies[3].x = -width/2;verticies[3].y = height/2;verticies[3].z = -1.0;
 
-    collider->setHeight(0.4f);
-    collider->setWidth(0.4f);
+    collider->setHeight(0.06f);
+    collider->setWidth(0.06f);
     collider->setTag("bike");
 }
 
@@ -69,9 +69,9 @@ void Bike::draw(double dt)
 
     glPushMatrix();
 
-    //collider->drawCollider();
+    collider->drawCollider();
 
-    glTranslated(Xpos*dt + lastXpos*(1.0 - dt),Ypos*dt + lastYpos*(1.0 - dt),0.0);
+    glTranslated(Xpos,Ypos,0.0);
     glRotated(dir * 90, 0,0,1);
 
     tloader.binder();
