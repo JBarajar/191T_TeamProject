@@ -7,7 +7,11 @@
 #include<Trail.h>
 #include <timer.h>
 #include <Entity.h>
+#include <vector>
+#include "ObjectHandler.h"
 #include "Bike.h"
+
+using std::vector;
 
 /*
     This AI will move randomnly favoring its current direction over turning.
@@ -32,6 +36,8 @@ class randAI : public Bike
 
         virtual void update(ObjectHandler* handler);
 
+        void updateColliders(vector<BoxCollider*>* col);
+        void setDistances();
         void actions();          //Decide next action
 
         virtual void onCollision(Entity* collider);
@@ -39,6 +45,21 @@ class randAI : public Bike
     protected:
 
     private:
+        int NDist = 0;  //anyTrail.dist(North);
+        int EDist = 0;  //anyTrail.dist(East);
+        int WDist = 0;  //anyTrail.dist(West);
+
+        BoxCollider* nCol = new BoxCollider(1.0f, 1.0f, "probe");
+        BoxCollider* eCol = new BoxCollider(1.0f, 1.0f, "probe");
+        BoxCollider* sCol = new BoxCollider(1.0f, 1.0f, "probe");
+        BoxCollider* wCol = new BoxCollider(1.0f, 1.0f, "probe");
+        BoxCollider* nCol2 = new BoxCollider(1.0f, 1.0f, "probe");
+        BoxCollider* eCol2 = new BoxCollider(1.0f, 1.0f, "probe");
+        BoxCollider* sCol2 = new BoxCollider(1.0f, 1.0f, "probe");
+        BoxCollider* wCol2 = new BoxCollider(1.0f, 1.0f, "probe");
+
+        vector<BoxCollider*>* cols;
+        vector<BoxCollider*>* cols2;
 };
 
 #endif // RANDAI_H

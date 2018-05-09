@@ -56,7 +56,7 @@ GLint GLScene::initGL()
     handler->addEntity(new Wall(1.25,0,0.04,1.37));
     handler->addEntity(new Wall(0,0.7,2.54,0.04));
     handler->addEntity(new Wall(0,-0.7,2.54,0.04));
-    handler->addEntity(new PowerUp(0.0,0.0));
+    //handler->addEntity(new PowerUp(0.0,0.0));
 
     oldTime = clock();
     newTime = clock();
