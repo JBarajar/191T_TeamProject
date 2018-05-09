@@ -35,8 +35,8 @@ class Bike : public Entity
         char image[1024] = "images/bike.png";
         textureLoader tloader;
 
-        float width = 0.4;
-        float height = 0.4;
+        float width = 0.7;
+        float height = 0.7;
 
 };
 

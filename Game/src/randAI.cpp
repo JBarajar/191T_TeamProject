@@ -6,7 +6,7 @@ randAI::randAI()
 
     trail->setColor(1.0,0.0,0.0);
 
-    Xpos = 1.0;
+    Xpos = 3.0;
     Ypos = 1.0;
 
     A->start();

@@ -1,21 +1,23 @@
 #include "Wall.h"
+#include <iostream>
 
-Wall::Wall(float w, float h)
+Wall::Wall(float x, float y, float w, float h)
 {
     //ctor
-    Xpos = 0.0;
-    Ypos = 0.0;
+    Xpos = x;
+    Ypos = y;
 
     width = w;
-    height - h;
+    height = h;
 
     collider->setHeight(height);
     collider->setWidth(width);
+    collider->setTag("wall");
 
-    verticies[0].x = -width;verticies[0].y = -height;verticies[0].z = -1.0;
-    verticies[1].x = width;verticies[1].y = -height;verticies[1].z = -1.0;
-    verticies[2].x = width;verticies[2].y = height;verticies[2].z = -1.0;
-    verticies[3].x = -width;verticies[3].y = height;verticies[3].z = -1.0;
+    verticies[0].x = -width/2;verticies[0].y = -height/2;verticies[0].z = -1.0;
+    verticies[1].x = width/2;verticies[1].y = -height/2;verticies[1].z = -1.0;
+    verticies[2].x = width/2;verticies[2].y = height/2;verticies[2].z = -1.0;
+    verticies[3].x = -width/2;verticies[3].y = height/2;verticies[3].z = -1.0;
 }
 
 Wall::~Wall()
@@ -29,6 +31,7 @@ void Wall::init()
     glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 
     tloader.bindTexture(image);
+    collider->setPosition(Xpos, Ypos);
 }
 
 
@@ -44,7 +47,10 @@ void Wall::update(ObjectHandler* handler)
 
 void Wall::draw(double dt)
 {
-    glColor3f(0.0,1.0,0.0);
+    collider->drawCollider();
+
+    glColor3f(1.0,0.4,0.0);
+    tloader.nullTex();
     glTranslated(Xpos, Ypos, 0.0);
     glBegin(GL_QUADS);
         glTexCoord2f(0.0,1.0);
@@ -59,5 +65,10 @@ void Wall::draw(double dt)
         glTexCoord2f(0.0,0.0);
         glVertex3f(verticies[3].x,verticies[3].y,verticies[3].z);
     glEnd();
+    tloader.nullTex();
+
+    glColor3f(1.0,1.0,1.0);
+
+
 }
 

@@ -7,7 +7,7 @@
 class Wall : public Entity
 {
     public:
-        Wall(float w, float h);
+        Wall(float x, float y, float w, float h);
         virtual ~Wall();
 
         vec verticies[4];
@@ -27,7 +27,7 @@ class Wall : public Entity
         float width;
         float height;
         textureLoader tloader;
-        char image[1024] = "images/bike.png";
+        char image[1024] = "images/wall.png";
 };
 
 #endif // WALL_H

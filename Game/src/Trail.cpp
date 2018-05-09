@@ -97,12 +97,5 @@ void Trail::drawTrail()
         }
     glEnd();
 
-    glColor3f(0.0,0.0,1.0);
-    glBegin(GL_POINTS);
-        for(int i = 0; i < points.size() ; i++) {
-            glVertex3f(points.at(i).x, points.at(i).y, -1.0);
-        }
-    glEnd();
-
     glColor3f(1.0,1.0,1.0);
 }
