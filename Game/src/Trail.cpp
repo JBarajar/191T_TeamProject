@@ -5,6 +5,10 @@
 Trail::Trail()
 {
     //ctor
+
+    color.r = 1.0;
+    color.g = 1.0;
+    color.b = 1.0;
 }
 
 Trail::~Trail()
@@ -46,8 +50,8 @@ void Trail::updateEnds(float x, float y)
         else if(points.at(1).y - points.front().y < 0) diry = -1;
         else diry = 0;
 
-        points.front().x = points.front().x + 0.015 * dirx;
-        points.front().y = points.front().y + 0.015 * diry;
+        points.front().x = points.front().x + (speed + 0.05) * dirx;
+        points.front().y = points.front().y + (speed + 0.05) * diry;
 
         it = points.begin();
         if(points.size() > 2) {
@@ -74,7 +78,7 @@ void Trail::drawTrail()
 {
     glBindTexture(GL_TEXTURE_2D, 0);
     glEnable(GL_COLOR_MATERIAL);
-    glColor3f(0.0,0.5,0.5);
+    glColor3f(color.r,color.g,color.b);
     glPointSize(5);
 
     glBegin(GL_POINTS);
@@ -88,7 +92,7 @@ void Trail::drawTrail()
                 tx = p1->x + t * (p2->x - p1->x);
                 ty = p1->y + t * (p2->y - p1->y);
 
-                glVertex3f(tx,ty,-1);
+                glVertex3f(tx,ty,-1.0);
             }
         }
     glEnd();

@@ -39,3 +39,6 @@ void textureLoader::binder()
 {
     glBindTexture(GL_TEXTURE_2D,tex);
 }
+void textureLoader::nullTex() {
+    glBindTexture(GL_TEXTURE_2D, NULL);
+}

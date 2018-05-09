@@ -14,9 +14,11 @@
 #include <stdlib.h>
 #include <iostream>
 #include <windows.h>		// Header File For Windows
+#include <stdio.h>      /* printf, NULL */
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
 
 using namespace std;
-
 
 HDC			hDC=NULL;		// Private GDI Device Context
 HGLRC		hRC=NULL;		// Permanent Rendering Context
@@ -87,6 +89,7 @@ GLvoid KillGLWindow()								// Properly Kill The Window
 /////////////////////////////////////////////////////////////////////////////////////////////////
 BOOL CreateGLWindow(char* title, int width, int height, int bits, bool fullscreenflag)
 {
+    srand (time(NULL));
 	GLuint		PixelFormat;			// Holds The Results After Searching For A Match
 	WNDCLASS	wc;						// Windows Class Structure
 	DWORD		dwExStyle;				// Window Extended Style
@@ -353,7 +356,7 @@ int WINAPI WinMain(	HINSTANCE	hInstance,			// Instance
 
             else
 
-                {     Scene->drawGLScene();
+                {     Scene->run();
 
                          SwapBuffers(hDC); }
 

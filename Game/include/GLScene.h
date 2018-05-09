@@ -5,6 +5,10 @@
 
 #include<gl/gl.h>
 #include<iostream>
+#include<vector>
+#include <time.h>
+
+class Model;
 
 using namespace std;
 
@@ -14,6 +18,7 @@ class GLScene
         GLScene();
         virtual ~GLScene();
         GLint initGL();
+        GLint run();
         GLint drawGLScene();
         GLvoid resizeGLScene(GLsizei, GLsizei);
 
@@ -26,6 +31,10 @@ class GLScene
     protected:
 
     private:
+        clock_t newTime, oldTime;
+        double deltaTime;
+
+
 };
 
 #endif // GLSCENE_H

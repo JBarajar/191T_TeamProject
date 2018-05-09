@@ -5,12 +5,20 @@
 #include <parallax.h>
 #include <player.h>
 #include <skyBox.h>
+#include <randAI.h>
+#include <ObjectHandler.h>
+#include <Wall.h>
+#include <PowerUp.h>
 
 Model *modelTeapot = new Model();
 Inputs *KbMs = new Inputs();
 parallax *plx = new parallax();
 player *ply = new player();
 skyBox *sky = new skyBox;
+randAI *rai = new randAI();
+ObjectHandler* handler = new ObjectHandler();
+
+const double interval = 0.01;
 
 GLScene::GLScene()
 {
@@ -32,17 +40,50 @@ GLint GLScene::initGL()
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
 
-   // glEnable(GL_COLOR_MATERIAL);
+    glEnable(GL_COLOR_MATERIAL);
     GLLight SetLight(GL_LIGHT0);
     GLLight Light(GL_LIGHT0);
 
-    modelTeapot->modelInit("images/player/player0.png",true);
+    //modelTeapot->modelInit("images/player/player0.png",true);
     plx->parallaxInit("images/grid.png");
-    ply->playerInit();
-    sky->loadTextures();
+    //ply->init();
+    //rai->init();
+    //sky->loadTextures();
+
+    handler->addEntity(ply);
+    handler->addEntity(rai);
+    handler->addEntity(new Wall(-1.25,0,0.04,1.37));
+    handler->addEntity(new Wall(1.25,0,0.04,1.37));
+    handler->addEntity(new Wall(0,0.7,2.54,0.04));
+    handler->addEntity(new Wall(0,-0.7,2.54,0.04));
+    handler->addEntity(new PowerUp(0.0,0.0));
+
+    oldTime = clock();
+    newTime = clock();
+    deltaTime = 0;
 
     return true;
 }
+
+GLint GLScene::run()
+{
+    newTime = clock();
+    deltaTime += ((double)newTime - (double)oldTime)/CLOCKS_PER_SEC;
+    oldTime = newTime;
+
+    while(deltaTime >= interval) {
+
+        deltaTime -= interval;
+
+        handler->update();
+
+    }
+
+    drawGLScene();
+
+
+}
+
 
 GLint GLScene::drawGLScene()
 {
@@ -65,9 +106,21 @@ GLint GLScene::drawGLScene()
         glEnable(GL_LIGHTING);
     glPopMatrix();
 */
-    glPushMatrix();
+
+    glScaled(1.0,1.0,1.0);
+    /*glPushMatrix();
         ply->drawPlayer();
     glPopMatrix();
+
+    glPushMatrix();
+        rai->drawRAI();
+    glPopMatrix();*/
+
+    handler->draw(deltaTime/interval);
+
+
+
+    glEnd();
 
 }
 
