@@ -1,5 +1,5 @@
 #include "Trail.h"
-#include <iostream>'
+#include <iostream>
 #include <math.h>
 
 Trail::Trail()
