@@ -14,17 +14,18 @@ randAI::randAI()
     collider->setWidth(0.06f);
     collider->setTag("bike");
 
+    cols->push_back(nCol); cols->push_back(wCol); cols->push_back(sCol); cols->push_back(eCol);
+    cols2->push_back(nCol2); cols2->push_back(wCol2); cols2->push_back(sCol2); cols2->push_back(eCol2);
+
     for(auto const& i: cols) {
         cols->at(i)->setHeight(0.06f);
         cols->at(i)->setWidth(0.06f);
     }
-    updateColliders(cols);
 
     for(auto const& i: cols2) {
         cols2->at(i)->setHeight(0.06f);
         cols2->at(i)->setWidth(0.06f);
     }
-    updateColliders(cols2);
 
     A->start();
 }
@@ -48,22 +49,19 @@ void randAI::update(ObjectHandler* handler)
     }
 }
 
-void randAI::updateColliders(vector<BoxCollider>* col)
+void randAI::updateColliders(vector<BoxCollider*>* col)
 {
-    for(auto const& i: col) {
-        if(dir == 0)
-            col->at(i)->setPosition(Xpos,Ypos+0.006f); //N
-        else if(dir == 1)
-            col->at(i)->setPosition(Xpos-0.006f,Ypos); //W
-        else if(dir == 2)
-            col->at(i)->setPosition(Xpos,Ypos-0.006f); //S
-        else
-            col->at(i)->setPosition(Xpos+0.006f,Ypos); //E
-    }
+    col->at(0)->setPosition(Xpos,Ypos+0.006f); //N
+    col->at(1)->setPosition(Xpos-0.006f,Ypos); //W
+    col->at(2)->setPosition(Xpos,Ypos-0.006f); //S
+    col->at(3)->setPosition(Xpos+0.006f,Ypos); //E
 }
 
 void randAI::setDistances()
 {
+    updateColliders(cols);
+    updateColliders(cols2);
+
     if(dir == 0) {      //N
         //Set NDist = N
         if( (cols2->at(0)->getCollider()->getTag() == "bike") || (cols2->at(0)->getCollider()->getTag() == "wall") ) {
@@ -75,19 +73,19 @@ void randAI::setDistances()
         }
         //Set WDist = W
         if( (cols2->at(1)->getCollider()->getTag() == "bike") || (cols2->at(1)->getCollider()->getTag() == "wall") ) {
-            NDist = 2;
+            WDist = 2;
         } else if ( (cols->at(1)->getCollider()->getTag() == "bike") || (cols->at(1)->getCollider()->getTag() == "wall") ) {
-            NDist = 1;
+            WDist = 1;
         } else {
-            NDist = 0;
+            WDist = 0;
         }
         //Set EDist = E
         if( (cols2->at(3)->getCollider()->getTag() == "bike") || (cols2->at(3)->getCollider()->getTag() == "wall") ) {
-            NDist = 2;
+            EDist = 2;
         } else if ( (cols->at(3)->getCollider()->getTag() == "bike") || (cols->at(3)->getCollider()->getTag() == "wall") ) {
-            NDist = 1;
+            EDist = 1;
         } else {
-            NDist = 0;
+            EDist = 0;
         }
     }
     else if(dir == 1) {   //W
@@ -190,7 +188,7 @@ void randAI::actions()
             setDirection(lTurn);    //50% chance to turn left
         else
             ; //Do nothing          //50% chance to continue
-    }                                                   //Case: Nearest threat W
+    } else if((WDist > NDist) && (WDist > EDist)) {     //Case: Nearest threat W
         if((NDist > EDist))         //Next nearest threat N
             setDirection(rTurn);
         else if(EDist > NDist)      //Next nearest threat W
@@ -200,13 +198,10 @@ void randAI::actions()
         else
             ; //Do nothing          //50% chance to continue
     } else {
-        //Accept fate. Crash is inevitable.
+        ; //Accept fate. Crash is inevitable.
     }
 
     collider->setPosition(Xpos,Ypos);
-    updateColliders(cols);
-    updateColliders(cols2);
-
 }
 
 void randAI::onCollision(Entity* collider)

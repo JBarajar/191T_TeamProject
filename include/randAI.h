@@ -11,6 +11,8 @@
 #include "ObjectHandler.h"
 #include "Bike.h"
 
+using std::vector;
+
 /*
     This AI will move randomnly favoring its current direction over turning.
     It will look 2 positions in move directions to help with decision making.
@@ -34,7 +36,7 @@ class randAI : public Bike
 
         virtual void update(ObjectHandler* handler);
 
-        void updateColliders(vector<BoxCollider>* col);
+        void updateColliders(vector<BoxCollider*>* col);
         void setDistances();
         void actions();          //Decide next action
 
@@ -56,10 +58,8 @@ class randAI : public Bike
         BoxCollider* sCol2 = new BoxCollider(1.0f, 1.0f, "probe");
         BoxCollider* wCol2 = new BoxCollider(1.0f, 1.0f, "probe");
 
-        vector<BoxCollider> *cols = new vector<BoxCollider>;
-        cols->push_back(nCol); cols->push_back(wCol); cols->push_back(sCol); cols->push_back(eCol);
-        vector<BoxCollider> *cols2 = new vector<BoxCollider>;
-        cols2->push_back(nCol2); cols2->push_back(wCol2); cols2->push_back(sCol2); cols2->push_back(eCol2);
+        vector<BoxCollider*>* cols;
+        vector<BoxCollider*>* cols2;
 };
 
 #endif // RANDAI_H
