@@ -105,6 +105,7 @@ bool ObjectHandler::trailCollisionCheck(Entity* e, Trail* t)
 void ObjectHandler::addEntity(Entity* e)
 {
     entities.push_back(e);
+    e->init();
 }
 
 void ObjectHandler::removeEntity(Entity* e)

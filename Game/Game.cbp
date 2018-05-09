@@ -52,6 +52,7 @@
 		<Unit filename="include/Model.h" />
 		<Unit filename="include/ObjectHandler.h" />
 		<Unit filename="include/Trail.h" />
+		<Unit filename="include/Wall.h" />
 		<Unit filename="include/parallax.h" />
 		<Unit filename="include/player.h" />
 		<Unit filename="include/randAI.h" />
@@ -68,6 +69,7 @@
 		<Unit filename="src/Model.cpp" />
 		<Unit filename="src/ObjectHandler.cpp" />
 		<Unit filename="src/Trail.cpp" />
+		<Unit filename="src/Wall.cpp" />
 		<Unit filename="src/parallax.cpp" />
 		<Unit filename="src/player.cpp" />
 		<Unit filename="src/randAI.cpp" />

@@ -7,6 +7,7 @@
 #include <skyBox.h>
 #include <randAI.h>
 #include <ObjectHandler.h>
+#include <Wall.h>
 
 Model *modelTeapot = new Model();
 Inputs *KbMs = new Inputs();
@@ -44,12 +45,13 @@ GLint GLScene::initGL()
 
     //modelTeapot->modelInit("images/player/player0.png",true);
     plx->parallaxInit("images/grid.png");
-    ply->init();
-    rai->init();
+    //ply->init();
+    //rai->init();
     //sky->loadTextures();
 
     handler->addEntity(ply);
     handler->addEntity(rai);
+    handler->addEntity(new Wall(2.0,2.0));
 
     oldTime = clock();
     newTime = clock();

@@ -18,7 +18,7 @@ class Bike : public Entity
         int dir = 0;
         float rot = 0;
 
-        void init();
+        virtual void init();
         void setDirection(int);
         void moveBike();
 

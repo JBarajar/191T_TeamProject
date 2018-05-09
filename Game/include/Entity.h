@@ -17,6 +17,8 @@ class Entity : public Model
         BoxCollider* getCollider() {return collider;}
         virtual void onCollision(ObjectHandler*, Entity* collider) = 0;
 
+        virtual void init() = 0;
+
         virtual void update(ObjectHandler*) = 0;
         virtual void draw(double) = 0;
 
