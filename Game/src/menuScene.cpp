@@ -136,6 +136,7 @@ void menuScene::processSelection()
     if (selection == play)
     {
         shandler->curScene = shandler-> gmScene;
+        shandler->curScene->initGL();
     }
     else if (selection == credits)
     {

@@ -27,5 +27,4 @@ class SceneHandler: public Model
 
 };
 
-
 #endif // SCENEHANDLER_H
