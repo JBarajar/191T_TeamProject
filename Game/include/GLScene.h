@@ -17,14 +17,14 @@ class GLScene
     public:
         GLScene();
         virtual ~GLScene();
-        GLint initGL();
-        GLint run();
-        GLint drawGLScene();
-        GLvoid resizeGLScene(GLsizei, GLsizei);
+        virtual GLint initGL();
+        virtual GLint run();
+        virtual GLint drawGLScene();
+        virtual GLvoid resizeGLScene(GLsizei, GLsizei);
 
         void resetLevel();
 
-        int windMsg(HWND,UINT, WPARAM,LPARAM);
+        virtual int windMsg(HWND,UINT, WPARAM,LPARAM);
 
         bool paused = false;
 
