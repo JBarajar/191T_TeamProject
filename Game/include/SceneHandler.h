@@ -1,11 +1,13 @@
 #ifndef SCENEHANDLER_H
 #define SCENEHANDLER_H
 
-
-#include <Model.h>
+#include "GLScene.h"
+#include "gameScene.h"
+#include "menuScene.h"
+#include "creditsScene.h"
 //#include <Font.h>
 
-class SceneHandler:Model
+class SceneHandler: public Model
 {
     public:
         SceneHandler();
@@ -16,17 +18,22 @@ class SceneHandler:Model
         void moveSelectionDown();
         void setPaused();
         void processSelection();
-        void drawMainMenu();
-        void draw();
+        void run();
         void reset();
+
+        GLScene *curScene = new GLScene();
+        menuScene *mmScene = new menuScene();
+        gameScene *gmScene = new gameScene();
+        creditsScene *cdScene = new creditsScene();
 
         //Font *font;
 
         float depth;
 
         bool stateChange;
-        int curState, prevState, mainMenu, playGame, pauseGame, gameOver;
+        int curState, prevState, mainMenu, playGame, pauseGame, gameOver, gameCredits;
         int selection, play, credits, quit;
+
 };
 
 

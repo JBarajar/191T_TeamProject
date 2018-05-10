@@ -17,6 +17,7 @@
 #include <stdio.h>      /* printf, NULL */
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
+#include "SceneHandler.h"
 
 using namespace std;
 
@@ -31,7 +32,7 @@ bool	fullscreen=FALSE;	// Fullscreen Flag Set To Fullscreen Mode By Default
 
 LRESULT	CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);	// Declaration For WndProc
 
-GLScene *Scene = new GLScene();
+SceneHandler *Scene = new SceneHandler();
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //										THE KILL GL WINDOW
@@ -222,9 +223,9 @@ BOOL CreateGLWindow(char* title, int width, int height, int bits, bool fullscree
 	ShowWindow(hWnd,SW_SHOW);						// Show The Window
 	SetForegroundWindow(hWnd);						// Slightly Higher Priority
 	SetFocus(hWnd);									// Sets Keyboard Focus To The Window
-	Scene->resizeGLScene(width, height);			// Set Up Our Perspective GL Screen
+	Scene->curScene->resizeGLScene(width, height);			// Set Up Our Perspective GL Screen
 
-	if (!Scene->initGL())							// Initialize Our Newly Created GL Window
+	if (!Scene->curScene->initGL())							// Initialize Our Newly Created GL Window
 	{
 		KillGLWindow();								// Reset The Display
 		MessageBox(NULL,"Initialization Failed.","ERROR",MB_OK|MB_ICONEXCLAMATION);
@@ -244,7 +245,7 @@ LRESULT CALLBACK WndProc(	HWND	hWnd,			// Handle For This Window
 							WPARAM	wParam,			// Additional Message Information
 							LPARAM	lParam)			// Additional Message Information
 {
-    Scene->windMsg(hWnd,uMsg,wParam,lParam);
+    Scene->curScene->windMsg(hWnd,uMsg,wParam,lParam);
 	switch (uMsg)									// Check For Windows Messages
 	{
 		case WM_ACTIVATE:							// Watch For Window Activate Message
@@ -296,7 +297,7 @@ LRESULT CALLBACK WndProc(	HWND	hWnd,			// Handle For This Window
                                                     // LoWord=Width, HiWord=Height
 			//Scene->ReSizeGLScene(GetSystemMetrics(SM_CXSCREEN),HIWORD(lParam));
 
-			Scene->resizeGLScene(LOWORD(lParam),HIWORD(lParam));
+			Scene->curScene->resizeGLScene(LOWORD(lParam),HIWORD(lParam));
 			return 0;								// Jump Back
 		}
 	}
@@ -378,4 +379,3 @@ int WINAPI WinMain(	HINSTANCE	hInstance,			// Instance
 	KillGLWindow();									// Kill The Window
 	return (msg.wParam);							// Exit The Program
 }
-

@@ -166,7 +166,7 @@ int GLScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 	    case WM_KEYDOWN:
 	        KbMs->wParam = wParam;
-	        KbMs->keyPressed(this);
+	        //KbMs->keyPressed(this);
 	        if(!paused) {
 	        KbMs->keyPressed(modelTeapot);
 	        KbMs->keyEnv(plx, 0.005);

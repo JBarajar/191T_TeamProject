@@ -36,6 +36,9 @@ GLint menuScene::initGL()
     //GLLight Light(GL_LIGHT0);
 
     plax->parallaxInit("images/grid.png");
+    menuPlay -> modelInit("images/button.png",false);
+    menuCredits -> modelInit("images/button.png",false);
+    menuQuit -> modelInit("images/button.png",false);
 
     return true;
 }
@@ -57,7 +60,7 @@ GLint menuScene::drawGLScene()
         glScaled(3.33,3.33,1.0);
         plax->drawSquare(screenWidth,screenHeight);
     glPopMatrix();
-    plax->scroll(true,"down",0.01);
+    plax->scroll(true,"down",0.0005);
 
     glPushMatrix();
         glScaled(3.33,3.33,1.0);
