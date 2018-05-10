@@ -53,9 +53,13 @@
 		<Unit filename="include/ObjectHandler.h" />
 		<Unit filename="include/Power.h" />
 		<Unit filename="include/PowerUp.h" />
+		<Unit filename="include/SceneHandler.h" />
 		<Unit filename="include/SpeedUp.h" />
 		<Unit filename="include/Trail.h" />
 		<Unit filename="include/Wall.h" />
+		<Unit filename="include/creditsScene.h" />
+		<Unit filename="include/gameScene.h" />
+		<Unit filename="include/menuScene.h" />
 		<Unit filename="include/parallax.h" />
 		<Unit filename="include/player.h" />
 		<Unit filename="include/player2.h" />
@@ -74,9 +78,13 @@
 		<Unit filename="src/ObjectHandler.cpp" />
 		<Unit filename="src/Power.cpp" />
 		<Unit filename="src/PowerUp.cpp" />
+		<Unit filename="src/SceneHandler.cpp" />
 		<Unit filename="src/SpeedUp.cpp" />
 		<Unit filename="src/Trail.cpp" />
 		<Unit filename="src/Wall.cpp" />
+		<Unit filename="src/creditsScene.cpp" />
+		<Unit filename="src/gameScene.cpp" />
+		<Unit filename="src/menuScene.cpp" />
 		<Unit filename="src/parallax.cpp" />
 		<Unit filename="src/player.cpp" />
 		<Unit filename="src/player2.cpp" />
