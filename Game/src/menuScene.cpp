@@ -140,11 +140,13 @@ void menuScene::processSelection()
     if (selection == play)
     {
         shandler->curScene = shandler-> gmScene;
+        sds->stopAllSounds();
         shandler->curScene->initGL();
     }
     else if (selection == credits)
     {
         shandler->curScene = shandler-> cdScene;
+        sds->stopAllSounds();
         shandler->curScene->initGL();
     }
     else if (selection == quit)

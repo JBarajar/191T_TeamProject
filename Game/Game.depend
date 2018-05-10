@@ -1246,7 +1246,7 @@
 1525889003 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\gllight.h
 	<GLScene.h>
 
-1525956397 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\glscene.cpp
+1525979876 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\glscene.cpp
 	"GLScene.h"
 	<GLLight.h>
 	<Model.h>
@@ -1261,6 +1261,7 @@
 	<PowerUp.h>
 	<Power.h>
 	<SpeedUp.h>
+	"sounds.h"
 
 1525948538 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\inputs.h
 	<windows.h>
@@ -1420,10 +1421,11 @@
 1525953031 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\gamescene.h
 	"GLScene.h"
 
-1525957822 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\menuscene.cpp
+1525981140 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\menuscene.cpp
 	"menuScene.h"
 	"SceneHandler.h"
 	"Inputs.h"
+	"sounds.h"
 
 1525955518 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\menuscene.h
 	"GLScene.h"
@@ -1821,6 +1823,110 @@
 	<iostream>
 
 1525972906 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\sounds.cpp
+	"sounds.h"
+	<iostream>
+
+1525979870 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\sounds.h
+	<SNDS/irrKlang.h>
+
+1525980409 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\irrklang.h
+	"ik_irrKlangTypes.h"
+	"ik_vec3d.h"
+	"ik_IRefCounted.h"
+	"ik_IVirtualRefCounted.h"
+	"ik_ESoundOutputDrivers.h"
+	"ik_ESoundEngineOptions.h"
+	"ik_EStreamModes.h"
+	"ik_SAudioStreamFormat.h"
+	"ik_ISoundEngine.h"
+	"ik_ISoundSource.h"
+	"ik_ISound.h"
+	"ik_IAudioStream.h"
+	"ik_IAudioStreamLoader.h"
+	"ik_ISoundEffectControl.h"
+	"ik_ISoundStopEventReceiver.h"
+	"ik_IFileFactory.h"
+	"ik_IFileReader.h"
+	"ik_ISoundDeviceList.h"
+	"ik_IAudioRecorder.h"
+	"ik_ISoundMixedOutputReceiver.h"
+
+1525980411 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_irrklangtypes.h
+	<wchar.h>
+
+1525980408 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_vec3d.h
+	<math.h>
+	"ik_irrKlangTypes.h"
+
+1525980410 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_irefcounted.h
+	"ik_irrKlangTypes.h"
+
+1525980408 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_ivirtualrefcounted.h
+	"ik_irrKlangTypes.h"
+
+1525980409 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_esoundoutputdrivers.h
+
+1525980409 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_esoundengineoptions.h
+
+1525980409 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_estreammodes.h
+
+1525980408 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_saudiostreamformat.h
+	"ik_IRefCounted.h"
+
+1525980407 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_isoundengine.h
+	"ik_IRefCounted.h"
+	"ik_vec3d.h"
+	"ik_ISoundSource.h"
+	"ik_ISound.h"
+	"ik_EStreamModes.h"
+	"ik_IFileFactory.h"
+	"ik_ISoundMixedOutputReceiver.h"
+
+1525980408 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_isoundsource.h
+	"ik_IVirtualRefCounted.h"
+	"ik_vec3d.h"
+	"ik_EStreamModes.h"
+	"ik_SAudioStreamFormat.h"
+
+1525980411 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_isound.h
+	"ik_IVirtualRefCounted.h"
+	"ik_ISoundEffectControl.h"
+	"ik_vec3d.h"
+
+1525980407 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_isoundeffectcontrol.h
+	"ik_IVirtualRefCounted.h"
+	"ik_vec3d.h"
+
+1525980410 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_ifilefactory.h
+	"ik_IRefCounted.h"
+
+1525980407 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_isoundmixedoutputreceiver.h
+	"ik_IRefCounted.h"
+	"ik_SAudioStreamFormat.h"
+
+1525980410 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_iaudiostream.h
+	"ik_IRefCounted.h"
+	"ik_SAudioStreamFormat.h"
+
+1525980410 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_iaudiostreamloader.h
+	"ik_IRefCounted.h"
+	"ik_IFileReader.h"
+
+1525980410 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_ifilereader.h
+	"ik_IRefCounted.h"
+
+1525980408 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_isoundstopeventreceiver.h
+	"ik_IRefCounted.h"
+	"ik_SAudioStreamFormat.h"
+
+1525980407 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_isounddevicelist.h
+	"ik_IRefCounted.h"
+
+1525980410 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\snds\ik_iaudiorecorder.h
+	"ik_IRefCounted.h"
+	"ik_ISoundSource.h"
+
+1525980757 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\sounds.cpp
 	"sounds.h"
 	<iostream>
 

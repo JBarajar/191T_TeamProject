@@ -1,9 +1,11 @@
 #include "creditsScene.h"
 #include "SceneHandler.h"
 #include "Inputs.h"
+#include "sounds.h"
 
 parallax *pllx = new parallax();
 Inputs *KbInp = new Inputs();
+sounds *soud = new sounds();
 
 creditsScene::creditsScene()
 {
@@ -30,6 +32,8 @@ GLint creditsScene::initGL()
     //GLLight Light(GL_LIGHT0);
 
     pllx->parallaxInit("images/grid.png");
+    soud->initSounds();
+    soud->playMusic("sounds/mnmu.wav");
 
     return true;
 }
@@ -73,5 +77,6 @@ int creditsScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 void creditsScene::processSelection()
 {
   shandler->curScene = shandler-> mmScene;
+  soud->stopAllSounds();
   shandler->curScene->initGL();
 }
