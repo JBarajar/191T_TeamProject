@@ -946,7 +946,7 @@
 1525677182 c:\users\jbara\documents\github\191t_teamproject\game\include\collision.h
 	<vector>
 
-1524178235 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\main.cpp
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\main.cpp
 	<windows.h>
 	<GLScene.h>
 	<stdlib.h>
@@ -956,18 +956,20 @@
 	<stdlib.h>
 	<time.h>
 
-1524097954 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\glscene.h
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\glscene.h
 	<windows.h>
 	<gl/gl.h>
 	<iostream>
+	<vector>
+	<time.h>
 
-1524097954 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\gllight.cpp
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\gllight.cpp
 	"GLLight.h"
 
-1524097954 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\gllight.h
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\gllight.h
 	<GLScene.h>
 
-1524178701 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\glscene.cpp
+1525912065 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\glscene.cpp
 	"GLScene.h"
 	<GLLight.h>
 	<Model.h>
@@ -976,18 +978,21 @@
 	<player.h>
 	<skyBox.h>
 	<randAI.h>
+	<ObjectHandler.h>
+	<Wall.h>
+	<PowerUp.h>
 
-1524097954 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\model.h
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\model.h
 	<windows.h>
 	<GL/glut.h>
 
-1524097954 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\common\inc\gl\glut.h
+1525897431 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\common\inc\gl\glut.h
 	<windows.h>
 	<stdlib.h>
 	<GL/gl.h>
 	<GL/glu.h>
 
-1524097954 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\inputs.h
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\inputs.h
 	<windows.h>
 	<iostream>
 	<Model.h>
@@ -995,80 +1000,86 @@
 	<player.h>
 	<skyBox.h>
 
-1524097954 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\parallax.h
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\parallax.h
 	<iostream>
 	<string.h>
 	<gl/gl.h>
 	<windows.h>
 
-1524179460 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\player.h
-	<Model.h>
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\player.h
+	<Entity.h>
 	<gl/gl.h>
 	<textureLoader.h>
 	<Trail.h>
+	<BoxCollider.h>
 	<timer.h>
+	"Bike.h"
 
-1524097954 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\textureloader.h
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\textureloader.h
 	<SOIL.h>
 	<gl/gl.h>
 
-1524097954 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\common\inc\soil.h
+1525897431 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\common\inc\soil.h
 
-1524097954 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\trail.h
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\trail.h
 	<windows.h>
 	<GL/glut.h>
 	<vector>
 
-1524097954 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\skybox.h
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\skybox.h
 	<gl/gl.h>
 	<textureLoader.h>
 
-1524097954 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\inputs.cpp
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\inputs.cpp
 	"Inputs.h"
 	<player.h>
 
-1524097954 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\model.cpp
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\model.cpp
 	"Model.h"
 	<textureLoader.h>
 
-1524097954 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\parallax.cpp
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\parallax.cpp
 	"parallax.h"
 	<textureLoader.h>
 
-1524097954 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\skybox.cpp
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\skybox.cpp
 	"skyBox.h"
 	<iostream>
 
-1524097954 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\textureloader.cpp
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\textureloader.cpp
 	<iostream>
 	"textureLoader.h"
 
-1524097954 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\timer.cpp
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\timer.cpp
 	"timer.h"
 
-1524097954 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\timer.h
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\timer.h
 	<time.h>
 
-1524097954 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\trail.cpp
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\trail.cpp
 	"Trail.h"
 	<iostream>
 	<math.h>
 
-1524100476 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\player.cpp
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\player.cpp
 	<player.h>
-	<timer.h>
-	<textureLoader.h>
 	<iostream>
 
-1524179435 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\randai.h
+1525920847 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\randai.h
 	<Model.h>
 	<gl/gl.h>
 	<textureLoader.h>
 	<Trail.h>
 	<timer.h>
+	<Entity.h>
+	<vector>
+	"ObjectHandler.h"
+	"Bike.h"
 
-1524179268 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\randai.cpp
+1525920932 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\randai.cpp
 	"randAI.h"
+	"ObjectHandler.h"
+	<iostream>
 
 1524179268 ev
 
@@ -1129,4 +1140,58 @@
 1525862427 c:\users\jbara\documents\github\191t_teamproject\game\include\powerup.h
 	<Entity.h>
 	<textureLoader.h>
+
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\bike.cpp
+	"Bike.h"
+	"ObjectHandler.h"
+
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\bike.h
+	"trail.h"
+	"timer.h"
+	"Entity.h"
+	"textureLoader.h"
+
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\entity.h
+	"Model.h"
+	"BoxCollider.h"
+
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\boxcollider.h
+	<string>
+
+1525912065 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\objecthandler.h
+	<vector>
+
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\boxcollider.cpp
+	"BoxCollider.h"
+	<gl/glut.h>
+	<iostream>
+
+1525912065 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\entity.cpp
+	"Entity.h"
+
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\wall.h
+	"Entity.h"
+	"textureLoader.h"
+
+1525897432 c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\include\powerup.h
+	<Entity.h>
+	<textureLoader.h>
+
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\powerup.cpp
+	"PowerUp.h"
+	<iostream>
+
+1525897432 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\wall.cpp
+	"Wall.h"
+	<iostream>
+
+1525920918 source:c:\users\danbb\onedrive - fresno state\school\gamedevelopment\191t_teamproject\game\src\objecthandler.cpp
+	"ObjectHandler.h"
+	"BoxCollider.h"
+	"Entity.h"
+	<iostream>
+	"Trail.h"
+	"player.h"
+	"randAI.h"
+	"PowerUp.h"
 

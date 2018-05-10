@@ -32,7 +32,73 @@ bool ObjectHandler::collisionCheck(Entity* e1, Entity* e2)
     float t2 = b->getTop();
     float b2 = b->getBot();
 
+    if (dynamic_cast<randAI*>(e1)){
+        randAI* bot1 = (dynamic_cast<randAI*>(e1));
+        BoxCollider* b1 = bot1->getCollider();
 
+        bot1->updateColliders();
+
+        for(int i = 0; i < 4; i++)
+            bot1->dists[i] = 0;
+
+        float Tl1 = b1->getLeft();
+        float Tr1 = b1->getRight();
+        float Tt1 = b1->getTop();
+        float Tb1 = b1->getBot();
+
+        for(int i = 0; i < bot1->cols2->size(); i++){
+            if(Tl1 > r2 || Tr1 < l2 || Tb1 > t2 || Tt1 < b2){
+                continue;
+            } else {
+                bot1->setDistance(i,2);
+                std::cout << bot1->dists[i] << '\n';
+            }
+        }
+
+        for(int i = 0; i < bot1->cols->size(); i++){
+            if(bot1->dists[i] == 0){
+                if(Tl1 > r2 || Tr1 < l2 || Tb1 > t2 || Tt1 < b2){
+                    continue;
+                } else {
+                    bot1->setDistance(i,1);
+                    std::cout << bot1->dists[i] << '\n';
+                }
+            }
+        }
+    }
+
+    if (dynamic_cast<randAI*>(e2)){
+        randAI* bot2 = (dynamic_cast<randAI*>(e2));
+        BoxCollider* b2 = bot2->getCollider();
+
+        bot2->updateColliders();
+
+        for(int i = 0; i < 4; i++)
+            bot2->dists[i] = 0;
+
+        float Tl1 = b2->getLeft();
+        float Tr1 = b2->getRight();
+        float Tt1 = b2->getTop();
+        float Tb1 = b2->getBot();
+
+        for(int i = 0; i < bot2->cols2->size(); i++){
+            if(Tl1 > r1 || Tr1 < l1 || Tb1 > t1 || Tt1 < b1){
+                continue;
+            } else {
+                bot2->setDistance(i,2);
+            }
+        }
+
+        for(int i = 0; i < bot2->cols->size(); i++){
+            if(bot2->dists[i] == 0){
+                if(Tl1 > r1 || Tr1 < l1 || Tb1 > t1 || Tt1 < b1){
+                    continue;
+                } else {
+                    bot2->setDistance(i,1);
+                }
+            }
+        }
+    }
 
     if(l1 > r2 || r1 < l2 || b1 > t2 || t1 < b2) {
         return false;
@@ -139,6 +205,7 @@ void ObjectHandler::update()
     //check collisions between entities and trails
     for(int i = 0; i < entities.size(); i++) {
         if(!entities.at(i)->active) continue;
+        if(dynamic_cast<randAI*>(entities.at(i))) continue;
         for(int j = 0; j < entities.size(); j++) {
             if(!entities.at(j)->active) continue;
             if(dynamic_cast<Bike*>(entities.at(j))) {
