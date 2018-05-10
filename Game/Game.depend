@@ -1169,7 +1169,7 @@
 
 1525911173 c:\users\jbara\documents\github\191t_teamproject\game\include\powerupspawn.h
 
-1525905524 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\main.cpp
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\main.cpp
 	<windows.h>
 	<GLScene.h>
 	<stdlib.h>
@@ -1179,24 +1179,24 @@
 	<stdlib.h>
 	<time.h>
 
-1525905524 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\glscene.h
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\glscene.h
 	<windows.h>
 	<gl/gl.h>
 	<iostream>
 	<vector>
 	<time.h>
 
-1525889632 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\bike.cpp
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\bike.cpp
 	"Bike.h"
 	"ObjectHandler.h"
 
-1525889632 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\bike.h
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\bike.h
 	"trail.h"
 	"timer.h"
 	"Entity.h"
 	"textureLoader.h"
 
-1525889632 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\trail.h
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\trail.h
 	<windows.h>
 	<GL/glut.h>
 	<vector>
@@ -1227,7 +1227,7 @@
 
 1525889001 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\soil.h
 
-1525889632 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\objecthandler.h
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\objecthandler.h
 	<vector>
 
 1525889632 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\boxcollider.cpp
@@ -1244,26 +1244,32 @@
 1525889003 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\gllight.h
 	<GLScene.h>
 
-1525905547 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\glscene.cpp
+1525933521 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\glscene.cpp
 	"GLScene.h"
 	<GLLight.h>
 	<Model.h>
 	<Inputs.h>
 	<parallax.h>
 	<player.h>
+	<player2.h>
 	<skyBox.h>
 	<randAI.h>
 	<ObjectHandler.h>
 	<Wall.h>
 	<PowerUp.h>
+	<Power.h>
+	<SpeedUp.h>
 
-1525889003 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\inputs.h
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\inputs.h
 	<windows.h>
 	<iostream>
 	<Model.h>
 	<parallax.h>
 	<player.h>
+	<player2.h>
 	<skyBox.h>
+	<GLScene.h>
+	<ObjectHandler.h>
 
 1525889003 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\parallax.h
 	<iostream>
@@ -1297,11 +1303,11 @@
 	"Entity.h"
 	"textureLoader.h"
 
-1525889632 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\powerup.h
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\powerup.h
 	<Entity.h>
 	<textureLoader.h>
 
-1525889003 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\inputs.cpp
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\inputs.cpp
 	"Inputs.h"
 	<player.h>
 
@@ -1309,15 +1315,19 @@
 	"Model.h"
 	<textureLoader.h>
 
-1525889632 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\objecthandler.cpp
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\objecthandler.cpp
 	"ObjectHandler.h"
 	"BoxCollider.h"
 	"Entity.h"
 	<iostream>
 	"Trail.h"
 	"player.h"
+	"player2.h"
 	"randAI.h"
 	"PowerUp.h"
+	<Wall.h>
+	<Power.h>
+	<SpeedUp.h>
 
 1525889003 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\parallax.cpp
 	"parallax.h"
@@ -1327,7 +1337,7 @@
 	<player.h>
 	<iostream>
 
-1525905547 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\randai.cpp
+1525933453 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\randai.cpp
 	"randAI.h"
 	"ObjectHandler.h"
 
@@ -1347,11 +1357,11 @@
 	<iostream>
 	<math.h>
 
-1525889632 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\wall.cpp
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\wall.cpp
 	"Wall.h"
 	<iostream>
 
-1525889632 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\powerup.cpp
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\powerup.cpp
 	"PowerUp.h"
 	<iostream>
 
@@ -1360,4 +1370,28 @@
 
 1525932422 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\scenehandler.h
 	<Model.h>
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\player2.h
+	<Entity.h>
+	<gl/gl.h>
+	<textureLoader.h>
+	<Trail.h>
+	<BoxCollider.h>
+	<timer.h>
+	"Bike.h"
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\power.h
+	<PowerUp.h>
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\speedup.h
+	<PowerUp.h>
+
+1525933453 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\player2.cpp
+	"player2.h"
+
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\power.cpp
+	"Power.h"
+
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\speedup.cpp
+	"SpeedUp.h"
 
