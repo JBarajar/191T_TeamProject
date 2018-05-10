@@ -10,6 +10,7 @@
 #include <Wall.h>
 #include <Power.h>
 #include <SpeedUp.h>
+#include <PowerUpSpawn.h>
 
 ObjectHandler::ObjectHandler()
 {
@@ -152,8 +153,9 @@ void ObjectHandler::update()
         if(!entities.at(i)->active) continue;
         for(int j = 0; j < entities.size(); j++) {
             if(!entities.at(j)->active) continue;
-            if(dynamic_cast<Bike*>(entities.at(j))) {
+            if(dynamic_cast<Bike*>(entities.at(i)) && dynamic_cast<Bike*>(entities.at(j))) {
                 if(trailCollisionCheck(entities.at(i), (dynamic_cast<Bike*>(entities.at(j)))->trail)) {
+                    std::cout << "active off" << std::endl;
                     entities.at(i)->active = false;
                 }
             }
@@ -184,7 +186,7 @@ void ObjectHandler::loadLevel1(player** p1, player2** p2)
     addEntity(*p2);
 
     addEntity(rai);
-    rai2->Xpos = 0.9;
+    rai2->Xpos = 1.0;
     addEntity(rai2);
     addEntity(new Wall(-1.25,0,0.04,1.37));
     addEntity(new Wall(1.25,0,0.04,1.37));
@@ -226,6 +228,45 @@ void ObjectHandler::loadLevel2(player** p1, player2** p2)
     addEntity(new SpeedUp(0.9, 0.0));
     addEntity(new SpeedUp(-0.9, 0.0));*/
     addEntity(new Wall(0,0,0.3,0.3));
+    addEntity(new Wall(0.7,0.0,0.05, 0.4));
+    addEntity(new Wall(-0.7,0.0,0.05, 0.4));
+
+}
+
+void ObjectHandler::loadLevel3(player** p1, player2** p2)
+{
+    //delete(*p1);
+    //delete(*p2);
+    *p1 = new player();
+    (*p1)->Xpos = 0.9;
+    (*p1)->Ypos = 0.3;
+    *p2 = new player2();
+    randAI* rai = new randAI();
+    randAI* rai2 = new randAI();
+
+    addEntity(*p1);
+    addEntity(*p2);
+
+    addEntity(rai);
+    rai2->Xpos = 0.9;
+    addEntity(rai2);
+    addEntity(new Wall(-1.25,0,0.04,1.37));
+    addEntity(new Wall(1.25,0,0.04,1.37));
+    addEntity(new Wall(0,0.7,2.54,0.04));
+    addEntity(new Wall(0,-0.7,2.54,0.04));
+
+    addEntity(new PowerUpSpawn(0.0,0.0));
+    addEntity(new PowerUpSpawn(0.5,0.5));
+    addEntity(new PowerUpSpawn(-0.5,-0.5));
+    addEntity(new PowerUpSpawn(-0.5, 0.5));
+    addEntity(new PowerUpSpawn(0.5, -0.5));
+    addEntity(new PowerUpSpawn(0.9, 0.0));
+    addEntity(new PowerUpSpawn(-0.9, 0.0));
+
+    addEntity(new Wall(-0.4,0,0.55,0.05));
+    addEntity(new Wall(0.4,0,0.55,0.05));
+    addEntity(new Wall(0.7,0.0,0.05, 0.9));
+    addEntity(new Wall(-0.7,0.0,0.05, 0.9));
 
 }
 

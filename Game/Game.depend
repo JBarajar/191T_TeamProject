@@ -831,7 +831,7 @@
 1525854862 c:\users\jbara\documents\github\191t_teamproject\game\include\gllight.h
 	<GLScene.h>
 
-1525931044 source:c:\users\jbara\documents\github\191t_teamproject\game\src\glscene.cpp
+1525943656 source:c:\users\jbara\documents\github\191t_teamproject\game\src\glscene.cpp
 	"GLScene.h"
 	<GLLight.h>
 	<Model.h>
@@ -846,6 +846,8 @@
 	<PowerUp.h>
 	<Power.h>
 	<SpeedUp.h>
+	<time.h>
+	<stdio.h>
 
 1525896358 c:\users\jbara\documents\github\191t_teamproject\game\include\model.h
 	<windows.h>
@@ -1097,10 +1099,10 @@
 	"Model.h"
 	"BoxCollider.h"
 
-1525930977 c:\users\jbara\documents\github\191t_teamproject\game\include\objecthandler.h
+1525931814 c:\users\jbara\documents\github\191t_teamproject\game\include\objecthandler.h
 	<vector>
 
-1525930977 source:c:\users\jbara\documents\github\191t_teamproject\game\src\objecthandler.cpp
+1525942477 source:c:\users\jbara\documents\github\191t_teamproject\game\src\objecthandler.cpp
 	"ObjectHandler.h"
 	"BoxCollider.h"
 	"Entity.h"
@@ -1113,8 +1115,9 @@
 	<Wall.h>
 	<Power.h>
 	<SpeedUp.h>
+	<PowerUpSpawn.h>
 
-1525930977 source:c:\users\jbara\documents\github\191t_teamproject\game\src\bike.cpp
+1525942815 source:c:\users\jbara\documents\github\191t_teamproject\game\src\bike.cpp
 	"Bike.h"
 	"ObjectHandler.h"
 
@@ -1164,8 +1167,17 @@
 	<timer.h>
 	"Bike.h"
 
-1525911173 source:c:\users\jbara\documents\github\191t_teamproject\game\src\powerupspawn.cpp
+1525943040 source:c:\users\jbara\documents\github\191t_teamproject\game\src\powerupspawn.cpp
 	"PowerUpSpawn.h"
+	<stdlib.h>
+	<ObjectHandler.h>
+	<iostream>
+	<time.h>
+	<stdio.h>
 
-1525911173 c:\users\jbara\documents\github\191t_teamproject\game\include\powerupspawn.h
+1525942895 c:\users\jbara\documents\github\191t_teamproject\game\include\powerupspawn.h
+	<Entity.h>
+	<Power.h>
+	<SpeedUp.h>
+	<timer.h>
 

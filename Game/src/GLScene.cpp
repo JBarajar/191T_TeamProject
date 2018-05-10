@@ -12,6 +12,8 @@
 #include <PowerUp.h>
 #include <Power.h>
 #include <SpeedUp.h>
+#include <time.h>
+#include <stdio.h>
 
 Model *modelTeapot = new Model();
 Inputs *KbMs = new Inputs();
@@ -39,6 +41,7 @@ GLScene::~GLScene()
 
 GLint GLScene::initGL()
 {
+    srand(time(NULL));
     glShadeModel(GL_SMOOTH);
     glClearColor(1.0f,1.0f,1.0f,0.0f);
     glClearDepth(1.0f);
@@ -50,12 +53,12 @@ GLint GLScene::initGL()
     GLLight Light(GL_LIGHT0);
 
     //modelTeapot->modelInit("images/player/player0.png",true);
-    plx->parallaxInit("images/grid.png");
+    plx->parallaxInit("images/gridclean.png");
     //ply->init();
     //rai->init();
     //sky->loadTextures();
 
-    handler->loadLevel1(&ply, &ply2);
+    handler->loadLevel3(&ply, &ply2);
 
     /*handler->addEntity(ply);
     handler->addEntity(ply2);
@@ -102,7 +105,7 @@ GLint GLScene::run()
 
     }
 
-    if(!paused) drawGLScene();
+    drawGLScene();
 
 
 }
@@ -143,7 +146,7 @@ GLint GLScene::drawGLScene()
 
 
 
-    glEnd();
+    //glEnd();
 
 }
 
