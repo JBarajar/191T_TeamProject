@@ -49,7 +49,7 @@ void Wall::draw(double dt)
 {
     collider->drawCollider();
 
-    glColor3f(1.0,0.4,0.0);
+    glColor3f(0.0,0.8,0.8);
     tloader.nullTex();
     glTranslated(Xpos, Ypos, 0.0);
     glBegin(GL_QUADS);

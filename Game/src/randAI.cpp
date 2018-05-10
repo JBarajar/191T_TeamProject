@@ -28,6 +28,8 @@ randAI::randAI()
     }*/
 
     A->start();
+
+    image = "images/EBike.png";
 }
 
 randAI::~randAI()

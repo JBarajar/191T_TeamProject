@@ -113,6 +113,56 @@ void Inputs::keyPressed(player* ply)
         }
 }
 
+void Inputs::p2keyPressed(player2* ply)
+{
+    switch(wParam)
+    {
+        case 0x41:
+            ply->setDirection(1);
+            break;
+
+        case 0x44:
+            ply->setDirection(3);
+            break;
+
+        case 0x53:
+            ply->setDirection(2);
+            break;
+
+        case 0x57:
+            ply->setDirection(0);
+            break;
+
+        case VK_ADD:
+
+            break;
+
+        case VK_SUBTRACT:
+
+            break;
+        }
+}
+
+void Inputs::keyPressed(GLScene* scene)
+{
+    switch(wParam) {
+    case 0x50:
+        scene->paused = !scene->paused;
+        break;
+    case 0x52:
+        scene->resetLevel();
+        break;
+    }
+}
+
+void Inputs::keyPressed(ObjectHandler* handler)
+{
+    switch(wParam) {
+
+    }
+}
+
+
 
 void Inputs::keyUP()
 {

@@ -1,11 +1,8 @@
 #include "PowerUp.h"
 #include <iostream>
 
-PowerUp::PowerUp(float x, float y)
+PowerUp::PowerUp()
 {
-
-    Xpos = x;
-    Ypos = y;
 
     collider->setHeight(height);
     collider->setWidth(width);
@@ -52,8 +49,9 @@ void PowerUp::draw(double)
 {
 
 
-    glColor3f(1.0,1.0,0.0);
-    tloader.nullTex();
+    //glColor3f(1.0,1.0,0.0);
+    //collider->drawCollider();
+    tloader.binder();
     glTranslated(Xpos, Ypos, 0.0);
     glBegin(GL_QUADS);
         glTexCoord2f(0.0,1.0);
@@ -72,6 +70,6 @@ void PowerUp::draw(double)
 
     glColor3f(1.0,1.0,1.0);
 
-    collider->drawCollider();
+
 }
 

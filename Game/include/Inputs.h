@@ -6,7 +6,10 @@
 #include <Model.h>
 #include <parallax.h>
 #include <player.h>
+#include <player2.h>
 #include <skyBox.h>
+#include <GLScene.h>
+#include <ObjectHandler.h>
 
 class Inputs
 {
@@ -16,7 +19,10 @@ class Inputs
 
         void keyPressed(Model *);
         void keyPressed(player *);
+        void p2keyPressed(player2*);
         void keyPressed(skyBox *);
+        void keyPressed(GLScene*);
+        void keyPressed(ObjectHandler*);
 
         void keyUp(player *);
         void keyUP();

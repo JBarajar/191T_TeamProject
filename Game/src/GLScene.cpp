@@ -4,18 +4,23 @@
 #include <Inputs.h>
 #include <parallax.h>
 #include <player.h>
+#include <player2.h>
 #include <skyBox.h>
 #include <randAI.h>
 #include <ObjectHandler.h>
 #include <Wall.h>
 #include <PowerUp.h>
+#include <Power.h>
+#include <SpeedUp.h>
 
 Model *modelTeapot = new Model();
 Inputs *KbMs = new Inputs();
 parallax *plx = new parallax();
 player *ply = new player();
+player2 *ply2 = new player2();
 skyBox *sky = new skyBox;
-randAI *rai = new randAI();
+//randAI *rai = new randAI();
+//randAI *rai2 = new randAI();
 ObjectHandler* handler = new ObjectHandler();
 
 const double interval = 0.01;
@@ -50,19 +55,37 @@ GLint GLScene::initGL()
     //rai->init();
     //sky->loadTextures();
 
-    handler->addEntity(ply);
+    handler->loadLevel1(&ply, &ply2);
+
+    /*handler->addEntity(ply);
+    handler->addEntity(ply2);
+
     handler->addEntity(rai);
+    rai2->Xpos = 0.9;
+    handler->addEntity(rai2);
     handler->addEntity(new Wall(-1.25,0,0.04,1.37));
     handler->addEntity(new Wall(1.25,0,0.04,1.37));
     handler->addEntity(new Wall(0,0.7,2.54,0.04));
     handler->addEntity(new Wall(0,-0.7,2.54,0.04));
-    //handler->addEntity(new PowerUp(0.0,0.0));
+    handler->addEntity(new Power(0.0,0.0));
+    handler->addEntity(new Power(0.5,0.5));
+    handler->addEntity(new Power(-0.5,-0.5));
+    handler->addEntity(new SpeedUp(-0.5, 0.5));
+    handler->addEntity(new SpeedUp(0.5, -0.5));
+    handler->addEntity(new SpeedUp(0.9, 0.0));
+    handler->addEntity(new SpeedUp(-0.9, 0.0));*/
 
     oldTime = clock();
     newTime = clock();
     deltaTime = 0;
 
     return true;
+}
+
+void GLScene::resetLevel() {
+    handler->clearObjects();
+    handler->loadLevel1(&ply,&ply2);
+
 }
 
 GLint GLScene::run()
@@ -75,11 +98,11 @@ GLint GLScene::run()
 
         deltaTime -= interval;
 
-        handler->update();
+        if(!paused) handler->update();
 
     }
 
-    drawGLScene();
+    if(!paused) drawGLScene();
 
 
 }
@@ -143,10 +166,15 @@ int GLScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 	    case WM_KEYDOWN:
 	        KbMs->wParam = wParam;
+	        KbMs->keyPressed(this);
+	        if(!paused) {
 	        KbMs->keyPressed(modelTeapot);
 	        KbMs->keyEnv(plx, 0.005);
 	        KbMs->keyPressed(ply);
+	        KbMs->p2keyPressed(ply2);
 	        KbMs->keyPressed(sky);
+	        KbMs->keyPressed(handler);
+	        }
 
 	    break;
 

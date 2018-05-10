@@ -30,6 +30,7 @@ class Trail
         void setSpeed(float s) {speed = s;}
         void setColor(float r, float g, float b) {color.r = r; color.g = g; color.b = b;}
         void setMaxLength(float l){maxLength = l;}
+        float getMaxLength() {return maxLength;}
 
     protected:
 

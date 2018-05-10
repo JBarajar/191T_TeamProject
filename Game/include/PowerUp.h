@@ -8,7 +8,7 @@
 class PowerUp : public Entity
 {
     public:
-        PowerUp(float x, float y);
+        PowerUp();
         virtual ~PowerUp();
 
         vec verticies[4];
@@ -21,13 +21,13 @@ class PowerUp : public Entity
         virtual void draw(double);
 
     protected:
-
+        char* image = "images/Wall.png";
     private:
 
         float width = 0.04;
         float height = 0.04;
         textureLoader tloader;
-        char image[1024] = "images/wall.png";
+
 };
 
 #endif // POWERUP_H
