@@ -3,7 +3,7 @@
 
 using namespace std;
 
-ISoundEngine* engine = createIrrKlangDevice();
+irrklang::ISoundEngine* engine = irrklang::createIrrKlangDevice();
 
 sounds::sounds()
 {
