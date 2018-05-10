@@ -1,7 +1,7 @@
 #include "parallax.h"
 #include <textureLoader.h>
 
-textureLoader *bTex = new textureLoader();
+
 
 parallax::parallax()
 {
@@ -23,17 +23,19 @@ void parallax::drawSquare(float width, float height)
     bTex->binder();
     glBegin(GL_POLYGON);
         glTexCoord2f(Xmin,Ymin);
-        glVertex3f(-width/height,-1,-8.0f);
+        glVertex3f(-width/height,-1,-1.0f);
 
         glTexCoord2f(Xmax,Ymin);
-        glVertex3f(width/height,-1,-8.0f);
+        glVertex3f(width/height,-1,-1.0f);
 
         glTexCoord2f(Xmax,Ymax);
-        glVertex3f(width/height,1,-8.0f);
+        glVertex3f(width/height,1,-1.0f);
 
         glTexCoord2f(Xmin,Ymax);
-        glVertex3f(-width/height,1,-8.0f);
+        glVertex3f(-width/height,1,-1.0f);
      glEnd();
+
+     bTex->nullTex();
 }
 
 void parallax::parallaxInit(char *FileName)

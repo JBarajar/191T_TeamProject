@@ -175,8 +175,8 @@ void ObjectHandler::draw(double dt)
 
 void ObjectHandler::loadLevel1(player** p1, player2** p2)
 {
-    //delete(*p1);
-    //delete(*p2);
+    clearObjects();
+
     *p1 = new player();
     *p2 = new player2();
     randAI* rai = new randAI();
@@ -211,8 +211,8 @@ void ObjectHandler::loadLevel1(player** p1, player2** p2)
 
 void ObjectHandler::loadLevel2(player** p1, player2** p2)
 {
-    //delete(*p1);
-    //delete(*p2);
+    clearObjects();
+
     *p1 = new player();
     *p2 = new player2();
     randAI* rai = new randAI();
@@ -235,7 +235,7 @@ void ObjectHandler::loadLevel2(player** p1, player2** p2)
 
     rai2->Xpos = 0.0;
     rai2->Ypos = 0.5;
-    addEntity(rai2);
+    //addEntity(rai2);
     addEntity(new Wall(-1.25,0,0.04,1.37));
     addEntity(new Wall(1.25,0,0.04,1.37));
     addEntity(new Wall(0,0.7,2.54,0.04));
@@ -270,8 +270,8 @@ void ObjectHandler::loadLevel2(player** p1, player2** p2)
 
 void ObjectHandler::loadLevel3(player** p1, player2** p2)
 {
-    //delete(*p1);
-    //delete(*p2);
+    clearObjects();
+
     *p1 = new player();
     (*p1)->Xpos = 0.9;
     (*p1)->Ypos = -0.5;

@@ -808,7 +808,7 @@
 	<iostream>
 	<math.h>
 
-1525950421 source:c:\users\jbara\documents\github\191t_teamproject\game\main.cpp
+1525978555 source:c:\users\jbara\documents\github\191t_teamproject\game\main.cpp
 	<windows.h>
 	<GLScene.h>
 	<stdlib.h>
@@ -818,12 +818,13 @@
 	<stdlib.h>
 	<time.h>
 
-1525950421 c:\users\jbara\documents\github\191t_teamproject\game\include\glscene.h
+1525980085 c:\users\jbara\documents\github\191t_teamproject\game\include\glscene.h
 	<windows.h>
 	<gl/gl.h>
 	<iostream>
 	<vector>
 	<time.h>
+	<timer.h>
 
 1525854862 source:c:\users\jbara\documents\github\191t_teamproject\game\src\gllight.cpp
 	"GLLight.h"
@@ -831,7 +832,7 @@
 1525854862 c:\users\jbara\documents\github\191t_teamproject\game\include\gllight.h
 	<GLScene.h>
 
-1525951166 source:c:\users\jbara\documents\github\191t_teamproject\game\src\glscene.cpp
+1525980241 source:c:\users\jbara\documents\github\191t_teamproject\game\src\glscene.cpp
 	"GLScene.h"
 	<GLLight.h>
 	<Model.h>
@@ -849,7 +850,7 @@
 	<time.h>
 	<stdio.h>
 
-1525950256 c:\users\jbara\documents\github\191t_teamproject\game\include\model.h
+1525978555 c:\users\jbara\documents\github\191t_teamproject\game\include\model.h
 	<windows.h>
 	<GL/glut.h>
 
@@ -859,7 +860,7 @@
 	<GL/gl.h>
 	<GL/glu.h>
 
-1525950421 c:\users\jbara\documents\github\191t_teamproject\game\include\inputs.h
+1525978555 c:\users\jbara\documents\github\191t_teamproject\game\include\inputs.h
 	<windows.h>
 	<iostream>
 	<Model.h>
@@ -870,11 +871,12 @@
 	<GLScene.h>
 	<ObjectHandler.h>
 
-1525854862 c:\users\jbara\documents\github\191t_teamproject\game\include\parallax.h
+1525979368 c:\users\jbara\documents\github\191t_teamproject\game\include\parallax.h
 	<iostream>
 	<string.h>
 	<gl/gl.h>
 	<windows.h>
+	<textureLoader.h>
 
 1525896358 c:\users\jbara\documents\github\191t_teamproject\game\include\player.h
 	<Entity.h>
@@ -900,15 +902,15 @@
 	<gl/gl.h>
 	<textureLoader.h>
 
-1525950421 source:c:\users\jbara\documents\github\191t_teamproject\game\src\inputs.cpp
+1525978555 source:c:\users\jbara\documents\github\191t_teamproject\game\src\inputs.cpp
 	"Inputs.h"
 	<player.h>
 
-1525950256 source:c:\users\jbara\documents\github\191t_teamproject\game\src\model.cpp
+1525978555 source:c:\users\jbara\documents\github\191t_teamproject\game\src\model.cpp
 	"Model.h"
 	<textureLoader.h>
 
-1525854862 source:c:\users\jbara\documents\github\191t_teamproject\game\src\parallax.cpp
+1525979565 source:c:\users\jbara\documents\github\191t_teamproject\game\src\parallax.cpp
 	"parallax.h"
 	<textureLoader.h>
 
@@ -1099,10 +1101,10 @@
 	"Model.h"
 	"BoxCollider.h"
 
-1525950421 c:\users\jbara\documents\github\191t_teamproject\game\include\objecthandler.h
+1525978647 c:\users\jbara\documents\github\191t_teamproject\game\include\objecthandler.h
 	<vector>
 
-1525951595 source:c:\users\jbara\documents\github\191t_teamproject\game\src\objecthandler.cpp
+1525979014 source:c:\users\jbara\documents\github\191t_teamproject\game\src\objecthandler.cpp
 	"ObjectHandler.h"
 	"BoxCollider.h"
 	"Entity.h"
@@ -1117,7 +1119,7 @@
 	<SpeedUp.h>
 	<PowerUpSpawn.h>
 
-1525950421 source:c:\users\jbara\documents\github\191t_teamproject\game\src\bike.cpp
+1525978555 source:c:\users\jbara\documents\github\191t_teamproject\game\src\bike.cpp
 	"Bike.h"
 	"ObjectHandler.h"
 
@@ -1167,7 +1169,7 @@
 	<timer.h>
 	"Bike.h"
 
-1525950421 source:c:\users\jbara\documents\github\191t_teamproject\game\src\powerupspawn.cpp
+1525978555 source:c:\users\jbara\documents\github\191t_teamproject\game\src\powerupspawn.cpp
 	"PowerUpSpawn.h"
 	<stdlib.h>
 	<ObjectHandler.h>
@@ -1175,7 +1177,7 @@
 	<time.h>
 	<stdio.h>
 
-1525950421 c:\users\jbara\documents\github\191t_teamproject\game\include\powerupspawn.h
+1525978555 c:\users\jbara\documents\github\191t_teamproject\game\include\powerupspawn.h
 	<Entity.h>
 	<Power.h>
 	<SpeedUp.h>
