@@ -34,19 +34,18 @@ bool ObjectHandler::collisionCheck(Entity* e1, Entity* e2)
 
     if (dynamic_cast<randAI*>(e1)){
         randAI* bot1 = (dynamic_cast<randAI*>(e1));
-        BoxCollider* b1 = bot1->getCollider();
 
         bot1->updateColliders();
 
         for(int i = 0; i < 4; i++)
             bot1->dists[i] = 0;
 
-        float Tl1 = b1->getLeft();
-        float Tr1 = b1->getRight();
-        float Tt1 = b1->getTop();
-        float Tb1 = b1->getBot();
-
         for(int i = 0; i < bot1->cols2->size(); i++){
+            float Tl1 = bot1->cols2->at(i)->getLeft();
+            float Tr1 = bot1->cols2->at(i)->getRight();
+            float Tt1 = bot1->cols2->at(i)->getTop();
+            float Tb1 = bot1->cols2->at(i)->getBot();
+
             if(Tl1 > r2 || Tr1 < l2 || Tb1 > t2 || Tt1 < b2){
                 continue;
             } else {
@@ -56,6 +55,11 @@ bool ObjectHandler::collisionCheck(Entity* e1, Entity* e2)
         }
 
         for(int i = 0; i < bot1->cols->size(); i++){
+            float Tl1 = bot1->cols->at(i)->getLeft();
+            float Tr1 = bot1->cols->at(i)->getRight();
+            float Tt1 = bot1->cols->at(i)->getTop();
+            float Tb1 = bot1->cols->at(i)->getBot();
+
             if(bot1->dists[i] == 0){
                 if(Tl1 > r2 || Tr1 < l2 || Tb1 > t2 || Tt1 < b2){
                     continue;
@@ -69,19 +73,18 @@ bool ObjectHandler::collisionCheck(Entity* e1, Entity* e2)
 
     if (dynamic_cast<randAI*>(e2)){
         randAI* bot2 = (dynamic_cast<randAI*>(e2));
-        BoxCollider* b2 = bot2->getCollider();
 
         bot2->updateColliders();
 
         for(int i = 0; i < 4; i++)
             bot2->dists[i] = 0;
 
-        float Tl1 = b2->getLeft();
-        float Tr1 = b2->getRight();
-        float Tt1 = b2->getTop();
-        float Tb1 = b2->getBot();
-
         for(int i = 0; i < bot2->cols2->size(); i++){
+            float Tl1 = bot2->cols2->at(i)->getLeft();
+            float Tr1 = bot2->cols2->at(i)->getRight();
+            float Tt1 = bot2->cols2->at(i)->getTop();
+            float Tb1 = bot2->cols2->at(i)->getBot();
+
             if(Tl1 > r1 || Tr1 < l1 || Tb1 > t1 || Tt1 < b1){
                 continue;
             } else {
@@ -91,6 +94,11 @@ bool ObjectHandler::collisionCheck(Entity* e1, Entity* e2)
 
         for(int i = 0; i < bot2->cols->size(); i++){
             if(bot2->dists[i] == 0){
+                float Tl1 = bot2->cols->at(i)->getLeft();
+                float Tr1 = bot2->cols->at(i)->getRight();
+                float Tt1 = bot2->cols->at(i)->getTop();
+                float Tb1 = bot2->cols->at(i)->getBot();
+
                 if(Tl1 > r1 || Tr1 < l1 || Tb1 > t1 || Tt1 < b1){
                     continue;
                 } else {
