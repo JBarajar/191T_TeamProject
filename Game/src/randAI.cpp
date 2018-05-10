@@ -10,6 +10,8 @@ randAI::randAI()
     Ypos = 0.0;
 
     A->start();
+
+    image = "images/EBike.png";
 }
 
 randAI::~randAI()

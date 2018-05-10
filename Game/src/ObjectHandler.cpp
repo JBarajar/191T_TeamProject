@@ -4,8 +4,12 @@
 #include <iostream>
 #include "Trail.h"
 #include "player.h"
+#include "player2.h"
 #include "randAI.h"
 #include "PowerUp.h"
+#include <Wall.h>
+#include <Power.h>
+#include <SpeedUp.h>
 
 ObjectHandler::ObjectHandler()
 {
@@ -19,6 +23,8 @@ ObjectHandler::~ObjectHandler()
 
 bool ObjectHandler::collisionCheck(Entity* e1, Entity* e2)
 {
+
+
     BoxCollider* a = e1->getCollider();
     BoxCollider* b = e2->getCollider();
 
@@ -112,10 +118,15 @@ void ObjectHandler::removeEntity(Entity* e)
             return;
         }
     }
-
-
-
 }
+void ObjectHandler::clearObjects()
+{
+    for(int i = 0; i < entities.size(); i++) {
+        delete(entities.at(i));
+    }
+    entities.clear();
+}
+
 
 void ObjectHandler::update()
 {
@@ -158,6 +169,64 @@ void ObjectHandler::draw(double dt)
             if(entities.at(i)->active) entities.at(i)->draw(dt);
         glPopMatrix();
     }
+}
+
+void ObjectHandler::loadLevel1(player** p1, player2** p2)
+{
+    //delete(*p1);
+    //delete(*p2);
+    *p1 = new player();
+    *p2 = new player2();
+    randAI* rai = new randAI();
+    randAI* rai2 = new randAI();
+
+    addEntity(*p1);
+    addEntity(*p2);
+
+    addEntity(rai);
+    rai2->Xpos = 0.9;
+    addEntity(rai2);
+    addEntity(new Wall(-1.25,0,0.04,1.37));
+    addEntity(new Wall(1.25,0,0.04,1.37));
+    addEntity(new Wall(0,0.7,2.54,0.04));
+    addEntity(new Wall(0,-0.7,2.54,0.04));
+    addEntity(new Power(0.0,0.0));
+    addEntity(new Power(0.5,0.5));
+    addEntity(new Power(-0.5,-0.5));
+    addEntity(new SpeedUp(-0.5, 0.5));
+    addEntity(new SpeedUp(0.5, -0.5));
+    addEntity(new SpeedUp(0.9, 0.0));
+    addEntity(new SpeedUp(-0.9, 0.0));
+}
+
+void ObjectHandler::loadLevel2(player** p1, player2** p2)
+{
+    //delete(*p1);
+    //delete(*p2);
+    *p1 = new player();
+    *p2 = new player2();
+    randAI* rai = new randAI();
+    randAI* rai2 = new randAI();
+
+    addEntity(*p1);
+    addEntity(*p2);
+
+    addEntity(rai);
+    rai2->Xpos = 0.9;
+    addEntity(rai2);
+    addEntity(new Wall(-1.25,0,0.04,1.37));
+    addEntity(new Wall(1.25,0,0.04,1.37));
+    addEntity(new Wall(0,0.7,2.54,0.04));
+    addEntity(new Wall(0,-0.7,2.54,0.04));
+    /*addEntity(new Power(0.0,0.0));
+    addEntity(new Power(0.5,0.5));
+    addEntity(new Power(-0.5,-0.5));
+    addEntity(new SpeedUp(-0.5, 0.5));
+    addEntity(new SpeedUp(0.5, -0.5));
+    addEntity(new SpeedUp(0.9, 0.0));
+    addEntity(new SpeedUp(-0.9, 0.0));*/
+    addEntity(new Wall(0,0,0.3,0.3));
+
 }
 
 

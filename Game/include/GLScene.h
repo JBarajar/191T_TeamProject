@@ -22,7 +22,11 @@ class GLScene
         GLint drawGLScene();
         GLvoid resizeGLScene(GLsizei, GLsizei);
 
+        void resetLevel();
+
         int windMsg(HWND,UINT, WPARAM,LPARAM);
+
+        bool paused = false;
 
 
         WPARAM wParam;
