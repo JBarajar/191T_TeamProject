@@ -41,6 +41,8 @@ randAI::~randAI()
 
 void randAI::update(ObjectHandler* handler)
 {
+
+
     lastXpos = Xpos;
     lastYpos = Ypos;
     moveBike();
@@ -51,19 +53,22 @@ void randAI::update(ObjectHandler* handler)
         actions();
         A->reset();
     }
+
+    for(int i =0; i < 4; i++)
+        dists[i] = 0;
 }
 
 void randAI::updateColliders()
 {
-    cols->at(0)->setPosition(Xpos,Ypos+speed); //N
-    cols->at(1)->setPosition(Xpos-speed,Ypos); //W
-    cols->at(2)->setPosition(Xpos,Ypos-speed); //S
-    cols->at(3)->setPosition(Xpos+speed,Ypos); //E
+    cols->at(0)->setPosition(Xpos,Ypos+height); //N
+    cols->at(1)->setPosition(Xpos+width,Ypos); //W
+    cols->at(2)->setPosition(Xpos,Ypos-height); //S
+    cols->at(3)->setPosition(Xpos-width,Ypos); //E
 
-    cols2->at(0)->setPosition(Xpos,Ypos+speed+speed); //N
-    cols2->at(1)->setPosition(Xpos-speed-speed,Ypos); //W
-    cols2->at(2)->setPosition(Xpos,Ypos-speed-speed); //S
-    cols2->at(3)->setPosition(Xpos+speed+speed,Ypos); //E
+    cols2->at(0)->setPosition(Xpos,Ypos+height+height); //N
+    cols2->at(1)->setPosition(Xpos+width+width,Ypos); //W
+    cols2->at(2)->setPosition(Xpos,Ypos-height-height); //S
+    cols2->at(3)->setPosition(Xpos-width-width,Ypos); //E
 }
 
 void randAI::setDistance(int index, int value)
@@ -74,6 +79,8 @@ void randAI::setDistance(int index, int value)
 
 void randAI::actions()
 {
+    std::cout << dists[0] << dists[1] << dists[2] << dists[3] << endl;
+
     int rDir  = rand()%100;         //Random direction
 
     //Gets dir for right turn
@@ -145,4 +152,49 @@ void randAI::onCollision(Entity* collider)
     if(collider->getCollider()->getTag() == "wall") {
         active = false;
     }
+}
+
+void randAI::draw(double dt)
+{
+    glPushMatrix();
+        trail->drawTrail();
+    glPopMatrix();
+
+    glPushMatrix();
+
+    //collider->drawCollider();
+    cols->at(0)->drawCollider();
+    cols->at(1)->drawCollider();
+    cols->at(2)->drawCollider();
+    cols->at(3)->drawCollider();
+
+    cols2->at(0)->drawCollider();
+    cols2->at(1)->drawCollider();
+    cols2->at(2)->drawCollider();
+    cols2->at(3)->drawCollider();
+
+    glTranslated(Xpos,Ypos,0.0);
+    glRotated(dir * 90, 0,0,1);
+
+    tloader.binder();
+
+    glBegin(GL_QUADS);
+
+    glTexCoord2f(0.0,1.0);
+    glVertex3f(verticies[0].x,verticies[0].y,verticies[0].z);
+
+    glTexCoord2f(1.0,1.0);
+    glVertex3f(verticies[1].x,verticies[1].y,verticies[1].z);
+
+    glTexCoord2f(1.0,0.0);
+    glVertex3f(verticies[2].x,verticies[2].y,verticies[2].z);
+
+    glTexCoord2f(0.0,0.0);
+    glVertex3f(verticies[3].x,verticies[3].y,verticies[3].z);
+
+    glEnd();
+
+    tloader.nullTex();
+
+    glPopMatrix();
 }

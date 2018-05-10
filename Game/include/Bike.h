@@ -30,13 +30,14 @@ class Bike : public Entity
         Trail* trail = new Trail();
 
     protected:
+        float width = 0.08;
+        float height = 0.08;
 
     private:
         char image[1024] = "images/bike.png";
         textureLoader tloader;
 
-        float width = 0.08;
-        float height = 0.08;
+
 
 };
 

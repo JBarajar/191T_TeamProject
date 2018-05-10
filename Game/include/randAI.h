@@ -42,6 +42,8 @@ class randAI : public Bike
 
         virtual void onCollision(Entity* collider);
 
+        virtual void draw(double dt);
+
         //Current N/W/S/E
         int dists[4];
         vector<BoxCollider*>* cols;

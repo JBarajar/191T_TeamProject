@@ -37,8 +37,8 @@ bool ObjectHandler::collisionCheck(Entity* e1, Entity* e2)
 
         bot1->updateColliders();
 
-        for(int i = 0; i < 4; i++)
-            bot1->dists[i] = 0;
+        //for(int i = 0; i < 4; i++)
+            //bot1->dists[i] = 0;
 
         for(int i = 0; i < bot1->cols2->size(); i++){
             float Tl1 = bot1->cols2->at(i)->getLeft();
@@ -50,7 +50,7 @@ bool ObjectHandler::collisionCheck(Entity* e1, Entity* e2)
                 continue;
             } else {
                 bot1->setDistance(i,2);
-                std::cout << bot1->dists[i] << '\n';
+                //std::cout << bot1->dists[i] << '\n';
             }
         }
 
@@ -65,7 +65,7 @@ bool ObjectHandler::collisionCheck(Entity* e1, Entity* e2)
                     continue;
                 } else {
                     bot1->setDistance(i,1);
-                    std::cout << bot1->dists[i] << '\n';
+                    //std::cout << bot1->dists[i] << '\n';
                 }
             }
         }
@@ -75,9 +75,6 @@ bool ObjectHandler::collisionCheck(Entity* e1, Entity* e2)
         randAI* bot2 = (dynamic_cast<randAI*>(e2));
 
         bot2->updateColliders();
-
-        for(int i = 0; i < 4; i++)
-            bot2->dists[i] = 0;
 
         for(int i = 0; i < bot2->cols2->size(); i++){
             float Tl1 = bot2->cols2->at(i)->getLeft();
