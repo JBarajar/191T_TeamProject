@@ -182,13 +182,13 @@ void ObjectHandler::loadLevel1(player** p1, player2** p2)
     randAI* rai = new randAI();
     randAI* rai2 = new randAI();
 
-    (*p1)->Xpos = -0.4;
-    (*p1)->Ypos = -0.2;
-    (*p1)->dir = 0;
+    (*p2)->Xpos = -0.4;
+    (*p2)->Ypos = -0.2;
+    (*p2)->dir = 0;
 
-    (*p2)->Xpos = 0.4;
-    (*p2)->Ypos = 0.2;
-    (*p2)->dir = 2;
+    (*p1)->Xpos = 0.4;
+    (*p1)->Ypos = 0.2;
+    (*p1)->dir = 2;
 
     addEntity(*p1);
     addEntity(*p2);
@@ -218,20 +218,20 @@ void ObjectHandler::loadLevel2(player** p1, player2** p2)
     randAI* rai = new randAI();
     randAI* rai2 = new randAI();
 
-    (*p1)->Xpos = -1.0;
-    (*p1)->Ypos = 0.0;
-    (*p1)->dir = 3;
-
-    (*p2)->Xpos = 1.0;
+    (*p2)->Xpos = -1.0;
     (*p2)->Ypos = 0.0;
-    (*p2)->dir = 1;
+    (*p2)->dir = 3;
+
+    (*p1)->Xpos = 1.0;
+    (*p1)->Ypos = 0.0;
+    (*p1)->dir = 1;
 
     addEntity(*p1);
     addEntity(*p2);
 
     rai->Xpos = 0.0;
     rai->Ypos = -0.5;
-    addEntity(rai);
+    //addEntity(rai);
 
     rai2->Xpos = 0.0;
     rai2->Ypos = 0.5;
@@ -274,17 +274,21 @@ void ObjectHandler::loadLevel3(player** p1, player2** p2)
     //delete(*p2);
     *p1 = new player();
     (*p1)->Xpos = 0.9;
-    (*p1)->Ypos = 0.3;
+    (*p1)->Ypos = -0.5;
+
+
     *p2 = new player2();
+    (*p2)->Xpos = -0.9;
+    (*p2)->Ypos = -0.5;
     randAI* rai = new randAI();
     randAI* rai2 = new randAI();
 
     addEntity(*p1);
     addEntity(*p2);
 
-    addEntity(rai);
-    rai2->Xpos = 0.9;
-    addEntity(rai2);
+    //addEntity(rai);
+    //rai2->Xpos = 0.9;
+    //addEntity(rai2);
     addEntity(new Wall(-1.25,0,0.04,1.37));
     addEntity(new Wall(1.25,0,0.04,1.37));
     addEntity(new Wall(0,0.7,2.54,0.04));
