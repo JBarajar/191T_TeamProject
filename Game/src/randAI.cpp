@@ -14,7 +14,7 @@ randAI::randAI()
     collider->setWidth(0.06f);
     collider->setTag("bike");
 
-    cols->push_back(nCol); cols->push_back(wCol); cols->push_back(sCol); cols->push_back(eCol);
+    /*cols->push_back(nCol); cols->push_back(wCol); cols->push_back(sCol); cols->push_back(eCol);
     cols2->push_back(nCol2); cols2->push_back(wCol2); cols2->push_back(sCol2); cols2->push_back(eCol2);
 
     for(auto const& i: cols) {
@@ -25,7 +25,7 @@ randAI::randAI()
     for(auto const& i: cols2) {
         cols2->at(i)->setHeight(0.06f);
         cols2->at(i)->setWidth(0.06f);
-    }
+    }*/
 
     A->start();
 }
