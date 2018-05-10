@@ -63,17 +63,14 @@ GLint menuScene::drawGLScene()
     plax->scroll(true,"down",0.0005);
 
     glPushMatrix();
-        glScaled(3.33,3.33,1.0);
         menuPlay->drawModel();
     glPopMatrix();
 
     glPushMatrix();
-        glScaled(3.33,3.33,1.0);
         menuCredits->drawModel();
     glPopMatrix();
 
     glPushMatrix();
-        glScaled(3.33,3.33,1.0);
         menuQuit->drawModel();
     glPopMatrix();
 
