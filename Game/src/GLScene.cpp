@@ -98,7 +98,6 @@ GLint GLScene::run()
     oldTime = newTime;
 
     while(deltaTime >= interval) {
-
         deltaTime -= interval;
 
         if(!paused) handler->update();
