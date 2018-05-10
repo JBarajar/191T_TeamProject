@@ -4,6 +4,7 @@
 #include <Inputs.h>
 #include <parallax.h>
 #include <player.h>
+#include <player2.h>
 #include <skyBox.h>
 #include <randAI.h>
 #include <ObjectHandler.h>
