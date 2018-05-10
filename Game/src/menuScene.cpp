@@ -140,7 +140,8 @@ void menuScene::processSelection()
     }
     else if (selection == credits)
     {
-
+        shandler->curScene = shandler-> cdScene;
+        shandler->curScene->initGL();
     }
     else if (selection == quit)
     {

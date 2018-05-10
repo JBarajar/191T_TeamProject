@@ -276,3 +276,14 @@ void Inputs::keyPressed(menuScene* mscene)
             break;
       }
 }
+
+void Inputs::keyPressed(creditsScene* cscene)
+{
+    switch(wParam)
+    {
+
+        case VK_SPACE:
+                cscene->processSelection();
+        break;
+      }
+}
