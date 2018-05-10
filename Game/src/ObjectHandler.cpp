@@ -182,23 +182,31 @@ void ObjectHandler::loadLevel1(player** p1, player2** p2)
     randAI* rai = new randAI();
     randAI* rai2 = new randAI();
 
+    (*p1)->Xpos = -0.4;
+    (*p1)->Ypos = -0.2;
+    (*p1)->dir = 0;
+
+    (*p2)->Xpos = 0.4;
+    (*p2)->Ypos = 0.2;
+    (*p2)->dir = 2;
+
     addEntity(*p1);
     addEntity(*p2);
 
-    addEntity(rai);
-    rai2->Xpos = 1.0;
-    addEntity(rai2);
+    //addEntity(rai);
+    //rai2->Xpos = 1.0;
+    //addEntity(rai2);
     addEntity(new Wall(-1.25,0,0.04,1.37));
     addEntity(new Wall(1.25,0,0.04,1.37));
     addEntity(new Wall(0,0.7,2.54,0.04));
     addEntity(new Wall(0,-0.7,2.54,0.04));
-    addEntity(new Power(0.0,0.0));
-    addEntity(new Power(0.5,0.5));
-    addEntity(new Power(-0.5,-0.5));
-    addEntity(new SpeedUp(-0.5, 0.5));
-    addEntity(new SpeedUp(0.5, -0.5));
-    addEntity(new SpeedUp(0.9, 0.0));
-    addEntity(new SpeedUp(-0.9, 0.0));
+    addEntity(new PowerUpSpawn(0.0,0.0));
+    addEntity(new PowerUpSpawn(0.5,0.5));
+    addEntity(new PowerUpSpawn(-0.5,-0.5));
+    addEntity(new PowerUpSpawn(-0.5, 0.5));
+    addEntity(new PowerUpSpawn(0.5, -0.5));
+    addEntity(new PowerUpSpawn(0.9, 0.0));
+    addEntity(new PowerUpSpawn(-0.9, 0.0));
 }
 
 void ObjectHandler::loadLevel2(player** p1, player2** p2)
@@ -210,26 +218,53 @@ void ObjectHandler::loadLevel2(player** p1, player2** p2)
     randAI* rai = new randAI();
     randAI* rai2 = new randAI();
 
+    (*p1)->Xpos = -1.0;
+    (*p1)->Ypos = 0.0;
+    (*p1)->dir = 3;
+
+    (*p2)->Xpos = 1.0;
+    (*p2)->Ypos = 0.0;
+    (*p2)->dir = 1;
+
     addEntity(*p1);
     addEntity(*p2);
 
+    rai->Xpos = 0.0;
+    rai->Ypos = -0.5;
     addEntity(rai);
-    rai2->Xpos = 0.9;
+
+    rai2->Xpos = 0.0;
+    rai2->Ypos = 0.5;
     addEntity(rai2);
     addEntity(new Wall(-1.25,0,0.04,1.37));
     addEntity(new Wall(1.25,0,0.04,1.37));
     addEntity(new Wall(0,0.7,2.54,0.04));
     addEntity(new Wall(0,-0.7,2.54,0.04));
-    /*addEntity(new Power(0.0,0.0));
-    addEntity(new Power(0.5,0.5));
-    addEntity(new Power(-0.5,-0.5));
-    addEntity(new SpeedUp(-0.5, 0.5));
-    addEntity(new SpeedUp(0.5, -0.5));
-    addEntity(new SpeedUp(0.9, 0.0));
-    addEntity(new SpeedUp(-0.9, 0.0));*/
+
     addEntity(new Wall(0,0,0.3,0.3));
-    addEntity(new Wall(0.7,0.0,0.05, 0.4));
-    addEntity(new Wall(-0.7,0.0,0.05, 0.4));
+    addEntity(new Wall(0.8,0.3,0.05, 0.4));
+    addEntity(new Wall(0.625,0.5,0.4, 0.05));
+
+    addEntity(new Wall(0.8,-0.3,0.05, 0.4));
+    addEntity(new Wall(0.625,-0.5,0.4, 0.05));
+
+    addEntity(new Wall(-0.8,0.3,0.05, 0.4));
+    addEntity(new Wall(-0.625,0.5,0.4, 0.05));
+
+    addEntity(new Wall(-0.8,-0.3,0.05, 0.4));
+    addEntity(new Wall(-0.625,-0.5,0.4, 0.05));
+
+    addEntity(new PowerUpSpawn(-0.8, 0.0));
+    addEntity(new PowerUpSpawn(0.8, 0.0));
+
+    addEntity(new PowerUpSpawn(0.0, 0.5));
+    addEntity(new PowerUpSpawn(0.0, -0.5));
+
+    addEntity(new PowerUpSpawn(1.1, 0.4));
+    addEntity(new PowerUpSpawn(-1.1, 0.4));
+
+    addEntity(new PowerUpSpawn(1.1, -0.4));
+    addEntity(new PowerUpSpawn(-1.1, -0.4));
 
 }
 

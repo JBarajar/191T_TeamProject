@@ -58,7 +58,7 @@ GLint GLScene::initGL()
     //rai->init();
     //sky->loadTextures();
 
-    handler->loadLevel3(&ply, &ply2);
+    handler->loadLevel1(&ply, &ply2);
 
     /*handler->addEntity(ply);
     handler->addEntity(ply2);

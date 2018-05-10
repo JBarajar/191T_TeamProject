@@ -26,7 +26,7 @@ class PowerUpSpawn : public Entity
         timer spawnTimer;
         bool canSpawn = true;
         int sTime;
-        int sTimeLimit = 10000;
+        int sTimeLimit = 7000;
         float width = 0.04;
         float height = 0.04;
 };

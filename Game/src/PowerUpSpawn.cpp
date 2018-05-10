@@ -37,7 +37,6 @@ void PowerUpSpawn::init()
 {
     collider->setPosition(Xpos,Ypos);
     sTime = rand() % sTimeLimit + 3000;
-    std::cout << sTime << std::endl;
     spawnTimer.start();
 }
 
