@@ -34,6 +34,8 @@ class Model
     protected:
 
     private:
+        float width = 0.4;
+        float height = 0.4;
 };
 
 #endif // MODEL_H

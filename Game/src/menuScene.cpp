@@ -10,8 +10,8 @@ menuScene::menuScene()
     //ctor
     screenHeight= GetSystemMetrics(SM_CYSCREEN);
     screenWidth = GetSystemMetrics(SM_CXSCREEN);
-    menuPlay->Xpos = 0.3;
-    menuPlay->Ypos = 0.3;
+    menuPlay->Xpos = 0.0;
+    menuPlay->Ypos = 0.0;
     menuCredits->Xpos = 0.3;
     menuCredits->Ypos = 0.6;
     menuQuit->Xpos = 0.3;
@@ -36,7 +36,7 @@ GLint menuScene::initGL()
     //GLLight Light(GL_LIGHT0);
 
     plax->parallaxInit("images/grid.png");
-    menuPlay -> modelInit("images/button.png",false);
+    menuPlay -> modelInit("images/button.png",true);
     menuCredits -> modelInit("images/button.png",false);
     menuQuit -> modelInit("images/button.png",false);
 

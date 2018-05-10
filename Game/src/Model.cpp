@@ -14,10 +14,10 @@ Model::Model()
         Xpos = 0.0;
         Ypos = 0.0;
 
-        verticies[0].x=0.0;verticies[0].y=0.0;verticies[0].z=1.0;
-        verticies[1].x=1.0;verticies[1].y=0.0;verticies[1].z=1.0;
-        verticies[2].x=1.0;verticies[2].y=1.0;verticies[2].z=1.0;
-        verticies[3].x=0.0;verticies[3].y=1.0;verticies[3].z=1.0;
+        verticies[0].x=-width/2;verticies[0].y=-height/2;verticies[0].z=-1.0;
+        verticies[1].x=width/2;verticies[1].y=-height/2;verticies[1].z=-1.0;
+        verticies[2].x=width/2;verticies[2].y=height/2;verticies[2].z=-1.0;
+        verticies[3].x=-width/2;verticies[3].y=height/2;verticies[3].z=-1.0;
 }
 
 Model::~Model()
@@ -38,6 +38,11 @@ void Model::modelInit(char *fileName, bool trans)
 
 void Model::drawModel()
 {
+    verticies[0].x=-width/2;verticies[0].y=-height/2;verticies[0].z=-1.0;
+    verticies[1].x=width/2;verticies[1].y=-height/2;verticies[1].z=-1.0;
+    verticies[2].x=width/2;verticies[2].y=height/2;verticies[2].z=-1.0;
+    verticies[3].x=-width/2;verticies[3].y=height/2;verticies[3].z=-1.0;
+
     glColor3f(0.8,0.5,0.0);
     tex->binder();
     glTranslated(Xpos,Ypos,0);
@@ -60,6 +65,8 @@ void Model::drawModel()
     glVertex3f(verticies[3].x,verticies[3].y,verticies[3].z);
 
     glEnd();
+
+    tex->nullTex();
 
 
   //  glutSolidTeapot(1.5);
