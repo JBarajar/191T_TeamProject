@@ -1,12 +1,14 @@
 #include "menuScene.h"
 #include "SceneHandler.h"
 #include "Inputs.h"
+#include "sounds.h"
 
 Model *menuPlay = new Model();
 Model *menuCredits = new Model();
 Model *menuQuit = new Model();
 parallax *plax = new parallax();
 Inputs *KbIp = new Inputs();
+sounds *sds = new sounds();
 
 menuScene::menuScene()
 {
@@ -55,6 +57,8 @@ GLint menuScene::initGL()
     menuPlay -> modelInit("images/button.png",true);
     menuCredits -> modelInit("images/button.png",false);
     menuQuit -> modelInit("images/button.png",false);
+    sds->initSounds();
+    sds->playMusic("sounds/mnmu.wav");
 
     return true;
 }

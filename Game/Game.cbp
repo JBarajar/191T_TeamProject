@@ -65,6 +65,7 @@
 		<Unit filename="include/player2.h" />
 		<Unit filename="include/randAI.h" />
 		<Unit filename="include/skyBox.h" />
+		<Unit filename="include/sounds.h" />
 		<Unit filename="include/textureLoader.h" />
 		<Unit filename="include/timer.h" />
 		<Unit filename="main.cpp" />
@@ -90,6 +91,7 @@
 		<Unit filename="src/player2.cpp" />
 		<Unit filename="src/randAI.cpp" />
 		<Unit filename="src/skyBox.cpp" />
+		<Unit filename="src/sounds.cpp" />
 		<Unit filename="src/textureLoader.cpp" />
 		<Unit filename="src/timer.cpp" />
 		<Extensions>

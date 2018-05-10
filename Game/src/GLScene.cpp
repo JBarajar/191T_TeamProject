@@ -12,6 +12,7 @@
 #include <PowerUp.h>
 #include <Power.h>
 #include <SpeedUp.h>
+#include "sounds.h"
 
 Model *modelTeapot = new Model();
 Inputs *KbMs = new Inputs();
@@ -22,6 +23,7 @@ skyBox *sky = new skyBox;
 //randAI *rai = new randAI();
 //randAI *rai2 = new randAI();
 ObjectHandler* handler = new ObjectHandler();
+sounds *snds = new sounds();
 
 const double interval = 0.01;
 
@@ -51,6 +53,8 @@ GLint GLScene::initGL()
 
     //modelTeapot->modelInit("images/player/player0.png",true);
     plx->parallaxInit("images/grid.png");
+    snds->initSounds();
+    snds->playMusic("sounds/battle.wav");
     //ply->init();
     //rai->init();
     //sky->loadTextures();
