@@ -5,7 +5,7 @@
 #include "Model.h"
 #include "parallax.h"
 
-class SceneHandler
+class SceneHandler;
 
 class menuScene : public GLScene
 {
@@ -21,7 +21,7 @@ class menuScene : public GLScene
         virtual int windMsg(HWND,UINT, WPARAM,LPARAM);
 
         SceneHandler* shandler;
-        int selection, play, credits, quit;
+        int selection, mainMenu, play, credits, quit;
 
     protected:
 

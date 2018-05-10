@@ -1170,7 +1170,7 @@
 
 1525911173 c:\users\jbara\documents\github\191t_teamproject\game\include\powerupspawn.h
 
-1525941472 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\main.cpp
+1525952529 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\main.cpp
 	<windows.h>
 	<GLScene.h>
 	<stdlib.h>
@@ -1181,7 +1181,7 @@
 	<time.h>
 	"SceneHandler.h"
 
-1525936113 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\glscene.h
+1525956395 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\glscene.h
 	<windows.h>
 	<gl/gl.h>
 	<iostream>
@@ -1328,7 +1328,7 @@
 1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\speedup.h
 	<PowerUp.h>
 
-1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\inputs.cpp
+1525955631 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\inputs.cpp
 	"Inputs.h"
 	<player.h>
 
@@ -1394,30 +1394,34 @@
 	"Wall.h"
 	<iostream>
 
-1525941662 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\scenehandler.cpp
+1525954774 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\scenehandler.cpp
 	"SceneHandler.h"
 
-1525952110 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\scenehandler.h
+1525956329 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\scenehandler.h
 	"GLScene.h"
 	"gameScene.h"
 	"menuScene.h"
 	"creditsScene.h"
 
-1525935453 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\creditsscene.cpp
+1525952987 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\creditsscene.cpp
 	"creditsScene.h"
+	"SceneHandler.h"
 
-1525935452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\creditsscene.h
+1525953022 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\creditsscene.h
 
-1525935401 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\gamescene.cpp
+1525952993 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\gamescene.cpp
 	"gameScene.h"
+	"SceneHandler.h"
 
-1525936084 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\gamescene.h
+1525953031 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\gamescene.h
 	"GLScene.h"
 
-1525946136 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\menuscene.cpp
+1525956189 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\menuscene.cpp
 	"menuScene.h"
+	"SceneHandler.h"
+	"Inputs.h"
 
-1525952246 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\menuscene.h
+1525955518 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\menuscene.h
 	"GLScene.h"
 	"Model.h"
 	"parallax.h"

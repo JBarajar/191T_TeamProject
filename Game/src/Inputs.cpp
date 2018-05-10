@@ -263,22 +263,16 @@ void Inputs::keyPressed(menuScene* mscene)
 {
     switch(wParam)
     {
-        case VK_LEFT:
-            break;
-
-        case VK_RIGHT:
-            break;
-
         case VK_DOWN:
-                msScece->moveSelectionDown();
+                mscene->moveSelectionDown();
             break;
 
         case VK_UP:
-                msScece->moveSelectionUP();
+                mscene->moveSelectionUP();
             break;
 
         case VK_SPACE:
-                msScece->processSelection();
+                mscene->processSelection();
             break;
       }
 }

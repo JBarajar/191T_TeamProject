@@ -9,6 +9,7 @@
 #include <time.h>
 
 class Model;
+class SceneHandler;
 
 using namespace std;
 
@@ -27,7 +28,7 @@ class GLScene
         virtual int windMsg(HWND,UINT, WPARAM,LPARAM);
 
         bool paused = false;
-
+        SceneHandler* shandler;
 
         WPARAM wParam;
         float screenHeight;

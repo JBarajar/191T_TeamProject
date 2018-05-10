@@ -5,6 +5,8 @@ SceneHandler::SceneHandler()
     mmScene->shandler = this;
     gmScene->shandler = this;
     cdScene->shandler = this;
+
+    curScene = mmScene;
 }
 
 SceneHandler::~SceneHandler()
@@ -14,16 +16,10 @@ SceneHandler::~SceneHandler()
 
 void SceneHandler::init()
 {
-  
+
 }
 
-void SceneHandler::run(GLScene* crScene)
+void SceneHandler::run()
 {
-    crScene->run();
-}
-
-void SceneHandler::reset()
-{
-    curState  = mainMenu;
-    prevState = mainMenu;
+    curScene->run();
 }

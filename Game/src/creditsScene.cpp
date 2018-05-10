@@ -1,4 +1,5 @@
 #include "creditsScene.h"
+#include "SceneHandler.h"
 
 creditsScene::creditsScene()
 {

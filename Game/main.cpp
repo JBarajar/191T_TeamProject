@@ -357,7 +357,7 @@ int WINAPI WinMain(	HINSTANCE	hInstance,			// Instance
 
             else
 
-                {     Scene->run();
+                {Scene->curScene->run();
 
                          SwapBuffers(hDC); }
 

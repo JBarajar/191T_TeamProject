@@ -1,19 +1,22 @@
 #include "menuScene.h"
 #include "SceneHandler.h"
+#include "Inputs.h"
 
 Model *menuPlay = new Model();
 Model *menuCredits = new Model();
 Model *menuQuit = new Model();
 parallax *plax = new parallax();
+Inputs *KbIp = new Inputs();
 
 menuScene::menuScene()
 {
     //ctor
-
     play = 1;
     credits = 2;
     quit = 3;
     selection = play;
+
+    //shandler->curScene = shandler-> mmScene;
 
     screenHeight= GetSystemMetrics(SM_CYSCREEN);
     screenWidth = GetSystemMetrics(SM_CXSCREEN);
@@ -98,14 +101,10 @@ int menuScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     switch (uMsg)									// Check For Windows Messages
 	{
-
 	    case WM_KEYDOWN:
-
+          KbIp->wParam = wParam;
+          KbIp->keyPressed(this);
 	    break;
-	    case WM_KEYUP:								// Has A Key Been Released?
-
-		  break;								// Jump Back
-
   }
 }
 
@@ -136,7 +135,7 @@ void menuScene::processSelection()
 {
     if (selection == play)
     {
-
+        shandler->curScene = shandler-> gmScene;
     }
     else if (selection == credits)
     {

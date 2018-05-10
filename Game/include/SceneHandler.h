@@ -14,12 +14,11 @@ class SceneHandler: public Model
         virtual ~SceneHandler();
 
         void init();
-        void run(GLScene*);
-        void reset();
+        void run();
 
         GLScene *curScene = new GLScene();
         menuScene *mmScene = new menuScene();
-        gameScene *gmScene = new gameScene();
+        GLScene *gmScene = new GLScene();
         creditsScene *cdScene = new creditsScene();
 
         //Font *font;
