@@ -192,10 +192,58 @@ void Fonts::buildFont(char* str)
               C[cCnt].ymax = 2.0/10.0;//1.0/7.0;
         break;
         case '0':
-              C[cCnt].xmin = 7.0/9.0 - 0.01;
-              C[cCnt].xmax = 8.0/10.0 + 0.06;
-              C[cCnt].ymin = 3.0/10.0;//6.0/7.0;
-              C[cCnt].ymax = 2.0/10.0;//1.0/7.0;
+              C[cCnt].xmin = 0.005;
+              C[cCnt].xmax = 1.0/9.0 - 0.02;
+              C[cCnt].ymin = 7.0/9.0 - 0.02;//6.0/7.0; 6.0/9.0 - 0.02;
+              C[cCnt].ymax = 6.0/9.0 - 0.02;//1.0/7.0;
+        break;
+        case '1':
+              C[cCnt].xmin = 1.0/9.0;
+              C[cCnt].xmax = 2.0/9.0 ;
+              C[cCnt].ymin = 7.0/9.0 - 0.02;//6.0/7.0;
+              C[cCnt].ymax = 6.0/9.0 - 0.02;//1.0/7.0;
+        break;
+        case '2':
+              C[cCnt].xmin = 2.0/9.0;
+              C[cCnt].xmax = 3.0/9.0 ;
+              C[cCnt].ymin = 7.0/9.0 - 0.02;//6.0/7.0;
+              C[cCnt].ymax = 6.0/9.0 - 0.02;//1.0/7.0;
+        break;
+        case '3':
+              C[cCnt].xmin = 3.0/9.0;
+              C[cCnt].xmax = 4.0/9.0 ;
+              C[cCnt].ymin = 7.0/9.0 - 0.02;//6.0/7.0;
+              C[cCnt].ymax = 6.0/9.0 - 0.02;//1.0/7.0;
+        break;
+        case '4':
+              C[cCnt].xmin = 4.0/9.0;
+              C[cCnt].xmax = 5.0/9.0 ;
+              C[cCnt].ymin = 7.0/9.0 - 0.02;//6.0/7.0;
+              C[cCnt].ymax = 6.0/9.0 - 0.02;//1.0/7.0;
+        break;
+        case '5':
+              C[cCnt].xmin = 5.0/9.0;
+              C[cCnt].xmax = 6.0/9.0 ;
+              C[cCnt].ymin = 7.0/9.0 - 0.02;//6.0/7.0;
+              C[cCnt].ymax = 6.0/9.0 - 0.02;//1.0/7.0;
+        break;
+        case '6':
+              C[cCnt].xmin = 6.0/9.0;
+              C[cCnt].xmax = 7.0/9.0 ;
+              C[cCnt].ymin = 7.0/9.0 - 0.02;//6.0/7.0;
+              C[cCnt].ymax = 6.0/9.0 - 0.02;//1.0/7.0;
+        break;
+        case '7':
+              C[cCnt].xmin = 7.0/9.0;
+              C[cCnt].xmax = 8.0/9.0 ;
+              C[cCnt].ymin = 7.0/9.0 - 0.02;//6.0/7.0;
+              C[cCnt].ymax = 6.0/9.0 - 0.02;//1.0/7.0;
+        break;
+        case '8':
+              C[cCnt].xmin = 8.0/9.0;
+              C[cCnt].xmax = 9.0/9.0 ;
+              C[cCnt].ymin = 7.0/9.0 - 0.02;//6.0/7.0;
+              C[cCnt].ymax = 6.0/9.0 - 0.02;//1.0/7.0;
         break;
         }
 
