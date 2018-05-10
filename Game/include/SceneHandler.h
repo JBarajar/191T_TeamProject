@@ -13,12 +13,8 @@ class SceneHandler: public Model
         SceneHandler();
         virtual ~SceneHandler();
 
-        void init(float, float);
-        void moveSelectionUP();
-        void moveSelectionDown();
-        void setPaused();
-        void processSelection();
-        void run();
+        void init();
+        void run(GLScene*);
         void reset();
 
         GLScene *curScene = new GLScene();
@@ -29,10 +25,6 @@ class SceneHandler: public Model
         //Font *font;
 
         float depth;
-
-        bool stateChange;
-        int curState, prevState, mainMenu, playGame, pauseGame, gameOver, gameCredits;
-        int selection, play, credits, quit;
 
 };
 

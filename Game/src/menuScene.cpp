@@ -1,4 +1,5 @@
 #include "menuScene.h"
+#include "SceneHandler.h"
 
 Model *menuPlay = new Model();
 Model *menuCredits = new Model();
@@ -8,6 +9,12 @@ parallax *plax = new parallax();
 menuScene::menuScene()
 {
     //ctor
+
+    play = 1;
+    credits = 2;
+    quit = 3;
+    selection = play;
+
     screenHeight= GetSystemMetrics(SM_CYSCREEN);
     screenWidth = GetSystemMetrics(SM_CXSCREEN);
     menuPlay->Xpos = 0.0;
@@ -87,7 +94,7 @@ GLint menuScene::drawGLScene()
 
 }
 
-int GLScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+int menuScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     switch (uMsg)									// Check For Windows Messages
 	{
@@ -100,4 +107,43 @@ int GLScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		  break;								// Jump Back
 
   }
+}
+
+void menuScene::moveSelectionUP()
+{
+    if (selection == quit)
+    {
+        selection = credits;
+    }
+    else if (selection == credits)
+    {
+        selection = play;
+    }
+}
+
+void menuScene::moveSelectionDown()
+{
+    if (selection == play)
+    {
+        selection = credits;
+    }
+    else if (selection == credits)
+    {
+        selection = quit;
+    }
+}
+void menuScene::processSelection()
+{
+    if (selection == play)
+    {
+
+    }
+    else if (selection == credits)
+    {
+
+    }
+    else if (selection == quit)
+    {
+          exit(0);
+    }
 }

@@ -270,15 +270,15 @@ void Inputs::keyPressed(menuScene* mscene)
             break;
 
         case VK_DOWN:
-            mscene->moveSelectionUP();
+                msScece->moveSelectionDown();
             break;
 
         case VK_UP:
-            mscene->moveSelectionDown();
+                msScece->moveSelectionUP();
             break;
 
         case VK_SPACE:
-            mscene->processSelection();
+                msScece->processSelection();
             break;
       }
 }
