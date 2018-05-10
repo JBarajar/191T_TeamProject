@@ -43,7 +43,6 @@ void Model::drawModel()
     verticies[2].x=width/2;verticies[2].y=height/2;verticies[2].z=-1.0;
     verticies[3].x=-width/2;verticies[3].y=height/2;verticies[3].z=-1.0;
 
-    glColor3f(0.8,0.5,0.0);
     tex->binder();
     glTranslated(Xpos,Ypos,0);
     glRotated(RotateX,1,0,0);

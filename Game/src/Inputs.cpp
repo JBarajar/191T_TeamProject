@@ -259,4 +259,26 @@ void Inputs::mouseMove(skyBox* sky, double x, double y)
         prev_Mouse_Y =y;
 
 }
+void Inputs::keyPressed(menuScene* mscene)
+{
+    switch(wParam)
+    {
+        case VK_LEFT:
+            break;
 
+        case VK_RIGHT:
+            break;
+
+        case VK_DOWN:
+            mscene->moveSelectionUP();
+            break;
+
+        case VK_UP:
+            mscene->moveSelectionDown();
+            break;
+
+        case VK_SPACE:
+            mscene->processSelection();
+            break;
+      }
+}

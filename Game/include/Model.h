@@ -31,11 +31,13 @@ class Model
 
         vec1 verticies[4];
 
+        float width = 0.4;
+        float height = 0.4;
+
     protected:
 
     private:
-        float width = 0.4;
-        float height = 0.4;
+
 };
 
 #endif // MODEL_H

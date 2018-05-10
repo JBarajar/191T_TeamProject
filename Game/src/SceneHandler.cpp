@@ -75,12 +75,12 @@ void SceneHandler::processSelection()
         if (selection == play)
         {
             curState = playGame;
-
             stateChange = true;
         }
         else if (selection == credits)
         {
-
+            curState = gameCredits;
+            stateChange = true;
         }
         else if (selection == quit)
         {
@@ -91,19 +91,17 @@ void SceneHandler::processSelection()
     else if (curState == gameOver)
     {
         curState = mainMenu;
-
         stateChange = true;
     }
     else if (curState = pauseGame)
     {
         if (selection == play)
         {
-            setPaused();
+            //setPaused();
         }
         else if(selection == quit)
         {
             curState = mainMenu;
-
             stateChange = true;
         }
     }

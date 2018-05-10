@@ -4,6 +4,7 @@
 #include "GLScene.h"
 #include "Model.h"
 #include "parallax.h"
+#include "Inputs.h"
 
 class menuScene : public GLScene
 {
@@ -13,6 +14,7 @@ class menuScene : public GLScene
         virtual GLint initGL();
         virtual GLint run();
         virtual GLint drawGLScene();
+        virtual int windMsg(HWND,UINT, WPARAM,LPARAM);
 
     protected:
 

@@ -12,10 +12,16 @@ menuScene::menuScene()
     screenWidth = GetSystemMetrics(SM_CXSCREEN);
     menuPlay->Xpos = 0.0;
     menuPlay->Ypos = 0.0;
-    menuCredits->Xpos = 0.3;
-    menuCredits->Ypos = 0.6;
-    menuQuit->Xpos = 0.3;
-    menuQuit->Ypos = 0.9;
+    menuCredits->Xpos = 0.0;
+    menuCredits->Ypos = -0.25;
+    menuQuit->Xpos = 0.0;
+    menuQuit->Ypos = -0.5;
+    menuPlay->width = 0.6;
+    menuPlay->height = 0.2;
+    menuCredits->width = 0.6;
+    menuCredits->height = 0.2;
+    menuQuit->width = 0.6;
+    menuQuit->height = 0.2;
 }
 
 menuScene::~menuScene()
@@ -79,4 +85,19 @@ GLint menuScene::drawGLScene()
 
     glEnd();
 
+}
+
+int GLScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+    switch (uMsg)									// Check For Windows Messages
+	{
+
+	    case WM_KEYDOWN:
+
+	    break;
+	    case WM_KEYUP:								// Has A Key Been Released?
+
+		  break;								// Jump Back
+
+  }
 }

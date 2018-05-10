@@ -10,6 +10,10 @@
 #include <skyBox.h>
 #include <GLScene.h>
 #include <ObjectHandler.h>
+#include "gameScene.h"
+#include "menuScene.h"
+#include "creditsScene.h"
+#include "SceneHandler.h"
 
 class Inputs
 {
@@ -23,6 +27,8 @@ class Inputs
         void keyPressed(skyBox *);
         void keyPressed(GLScene*);
         void keyPressed(ObjectHandler*);
+        void keyPressed(menuScene*);
+        void keyPressed(creditsScene*);
 
         void keyUp(player *);
         void keyUP();
