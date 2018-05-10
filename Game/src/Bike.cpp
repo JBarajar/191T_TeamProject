@@ -119,10 +119,10 @@ void Bike::onCollision(ObjectHandler* handler, Entity* collider)
         active = false;
     }
     if(collider->getCollider()->getTag() == "power") {
-        trail->setMaxLength(trail->getMaxLength() + 0.5);
+        trail->setMaxLength(trail->getMaxLength() + 0.2);
     }
     if(collider->getCollider()->getTag() == "speed") {
-        speed += 0.003;
+        speed += 0.001;
     }
 }
 

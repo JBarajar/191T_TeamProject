@@ -53,7 +53,7 @@ GLint menuScene::initGL()
     //GLLight SetLight(GL_LIGHT0);
     //GLLight Light(GL_LIGHT0);
 
-    plax->parallaxInit("images/grid.png");
+    plax->parallaxInit("images/gridclean.png");
     menuPlay -> modelInit("images/button.png",true);
     menuCredits -> modelInit("images/button.png",false);
     menuQuit -> modelInit("images/button.png",false);

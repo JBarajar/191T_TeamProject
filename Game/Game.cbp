@@ -42,6 +42,8 @@
 			<Add library="glu32" />
 			<Add library="gdi32" />
 			<Add library="../Common/lib/glut32.lib" />
+			<Add library="../Common/lib/libirrKlang.a" />
+			<Add library="../Common/lib/irrKlang.lib" />
 		</Linker>
 		<Unit filename="include/Bike.h" />
 		<Unit filename="include/BoxCollider.h" />

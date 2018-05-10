@@ -31,7 +31,7 @@ GLint creditsScene::initGL()
     //GLLight SetLight(GL_LIGHT0);
     //GLLight Light(GL_LIGHT0);
 
-    pllx->parallaxInit("images/grid.png");
+    pllx->parallaxInit("images/gridclean.png");
     soud->initSounds();
     soud->playMusic("sounds/mnmu.wav");
 

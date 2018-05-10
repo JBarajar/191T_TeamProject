@@ -28,11 +28,14 @@ class ObjectHandler
 
         void loadLevel1(player**, player2**);
         void loadLevel2(player**, player2**);
+        void loadLevel3(player**, player2**);
+
+        std::vector<Entity*> entities;
 
     protected:
 
     private:
-        std::vector<Entity*> entities;
+
 };
 
 #endif // COLLISION_H

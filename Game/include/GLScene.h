@@ -7,6 +7,7 @@
 #include<iostream>
 #include<vector>
 #include <time.h>
+#include <timer.h>
 
 class Model;
 class SceneHandler;
@@ -33,11 +34,21 @@ class GLScene
         WPARAM wParam;
         float screenHeight;
         float screenWidth;
+
+        bool p1win = false;
+        bool p2win = false;
+        bool draw = false;
+        bool finalwin = false;
+
+        int lvl;
+
+        int scores[2];
     protected:
 
     private:
         clock_t newTime, oldTime;
         double deltaTime;
+        timer ttime;
 
 
 };
