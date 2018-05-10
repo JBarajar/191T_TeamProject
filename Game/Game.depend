@@ -1169,3 +1169,228 @@
 
 1525911173 c:\users\jbara\documents\github\191t_teamproject\game\include\powerupspawn.h
 
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\main.cpp
+	<windows.h>
+	<GLScene.h>
+	<stdlib.h>
+	<iostream>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\glscene.h
+	<windows.h>
+	<gl/gl.h>
+	<iostream>
+	<vector>
+	<time.h>
+
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\bike.cpp
+	"Bike.h"
+	"ObjectHandler.h"
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\bike.h
+	"trail.h"
+	"timer.h"
+	"Entity.h"
+	"textureLoader.h"
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\trail.h
+	<windows.h>
+	<GL/glut.h>
+	<vector>
+
+1525889001 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1525889003 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\timer.h
+	<time.h>
+
+1525889632 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\entity.h
+	"Model.h"
+	"BoxCollider.h"
+
+1525889632 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\model.h
+	<windows.h>
+	<GL/glut.h>
+
+1525889632 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\boxcollider.h
+	<string>
+
+1525889632 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\textureloader.h
+	<SOIL.h>
+	<gl/gl.h>
+
+1525889001 c:\users\zacha\onedrive\documents\github\191t_teamproject\common\inc\soil.h
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\objecthandler.h
+	<vector>
+
+1525889632 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\boxcollider.cpp
+	"BoxCollider.h"
+	<gl/glut.h>
+	<iostream>
+
+1525889632 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\entity.cpp
+	"Entity.h"
+
+1525889003 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\gllight.cpp
+	"GLLight.h"
+
+1525889003 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\gllight.h
+	<GLScene.h>
+
+1525933521 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\glscene.cpp
+	"GLScene.h"
+	<GLLight.h>
+	<Model.h>
+	<Inputs.h>
+	<parallax.h>
+	<player.h>
+	<player2.h>
+	<skyBox.h>
+	<randAI.h>
+	<ObjectHandler.h>
+	<Wall.h>
+	<PowerUp.h>
+	<Power.h>
+	<SpeedUp.h>
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\inputs.h
+	<windows.h>
+	<iostream>
+	<Model.h>
+	<parallax.h>
+	<player.h>
+	<player2.h>
+	<skyBox.h>
+	<GLScene.h>
+	<ObjectHandler.h>
+
+1525889003 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\parallax.h
+	<iostream>
+	<string.h>
+	<gl/gl.h>
+	<windows.h>
+
+1525889632 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\player.h
+	<Entity.h>
+	<gl/gl.h>
+	<textureLoader.h>
+	<Trail.h>
+	<BoxCollider.h>
+	<timer.h>
+	"Bike.h"
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\player2.h
+	<Entity.h>
+	<gl/gl.h>
+	<textureLoader.h>
+	<Trail.h>
+	<BoxCollider.h>
+	<timer.h>
+	"Bike.h"
+
+1525889003 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\skybox.h
+	<gl/gl.h>
+	<textureLoader.h>
+
+1525905628 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\randai.h
+	<Model.h>
+	<gl/gl.h>
+	<textureLoader.h>
+	<Trail.h>
+	<timer.h>
+	<Entity.h>
+	"Bike.h"
+
+1525889632 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\wall.h
+	"Entity.h"
+	"textureLoader.h"
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\powerup.h
+	<Entity.h>
+	<textureLoader.h>
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\power.h
+	<PowerUp.h>
+
+1525933452 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\speedup.h
+	<PowerUp.h>
+
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\inputs.cpp
+	"Inputs.h"
+	<player.h>
+
+1525932396 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\model.cpp
+	"Model.h"
+	<textureLoader.h>
+
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\objecthandler.cpp
+	"ObjectHandler.h"
+	"BoxCollider.h"
+	"Entity.h"
+	<iostream>
+	"Trail.h"
+	"player.h"
+	"player2.h"
+	"randAI.h"
+	"PowerUp.h"
+	<Wall.h>
+	<Power.h>
+	<SpeedUp.h>
+
+1525889003 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\parallax.cpp
+	"parallax.h"
+	<textureLoader.h>
+
+1525889632 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\player.cpp
+	<player.h>
+	<iostream>
+
+1525933453 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\player2.cpp
+	"player2.h"
+
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\power.cpp
+	"Power.h"
+
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\powerup.cpp
+	"PowerUp.h"
+	<iostream>
+
+1525934324 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\randai.cpp
+	"randAI.h"
+
+1525889003 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\skybox.cpp
+	"skyBox.h"
+	<iostream>
+
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\speedup.cpp
+	"SpeedUp.h"
+
+1525889632 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\textureloader.cpp
+	<iostream>
+	"textureLoader.h"
+
+1525889003 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\timer.cpp
+	"timer.h"
+
+1525934323 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\trail.cpp
+	"Trail.h"
+	<iostream>
+	<math.h>
+
+1525933452 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\wall.cpp
+	"Wall.h"
+	<iostream>
+
+1525932549 source:c:\users\zacha\onedrive\documents\github\191t_teamproject\game\src\scenehandler.cpp
+	"SceneHandler.h"
+
+1525932422 c:\users\zacha\onedrive\documents\github\191t_teamproject\game\include\scenehandler.h
+	<Model.h>
+
