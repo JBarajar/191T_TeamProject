@@ -4,12 +4,32 @@
 
 parallax *pllx = new parallax();
 Inputs *KbInp = new Inputs();
+Model *joey = new Model();
+Model *zach = new Model();
+Model *daniel = new Model();
+Model *juan = new Model();
 
 creditsScene::creditsScene()
 {
     //ctor
     screenHeight= GetSystemMetrics(SM_CYSCREEN);
     screenWidth = GetSystemMetrics(SM_CXSCREEN);
+    juan->Ypos = 0.25;
+    juan->Xpos = 0.0;
+    zach->Xpos = 0.0;
+    zach->Ypos = 0.0;
+    joey->Xpos = 0.0;
+    joey->Ypos = -0.25;
+    daniel->Xpos = 0.0;
+    daniel->Ypos = -0.5;
+    zach->width = 0.6;
+    zach->height = 0.2;
+    joey->width = 0.6;
+    joey->height = 0.2;
+    daniel->width = 0.6;
+    daniel->height = 0.2;
+    juan->width = 0.6;
+    juan->height = 0.2;
 }
 
 creditsScene::~creditsScene()
@@ -30,6 +50,10 @@ GLint creditsScene::initGL()
     //GLLight Light(GL_LIGHT0);
 
     pllx->parallaxInit("images/grid.png");
+    zach->modelInit("images/zach.png", true);
+    joey->modelInit("images/joey.png",false);
+    daniel->modelInit("images/daniel.png",false);
+    juan->modelInit("images/juan.png",false);
 
     return true;
 }
@@ -52,6 +76,21 @@ GLint creditsScene::drawGLScene()
         pllx->drawSquare(screenWidth,screenHeight);
     glPopMatrix();
     pllx->scroll(true,"right",0.0005);
+    glPushMatrix();
+        zach->drawModel();
+    glPopMatrix();
+
+    glPushMatrix();
+        joey->drawModel();
+    glPopMatrix();
+
+    glPushMatrix();
+        daniel->drawModel();
+    glPopMatrix();
+
+    glPushMatrix();
+        juan->drawModel();
+    glPopMatrix();
 
     glScaled(1.0,1.0,1.0);
 

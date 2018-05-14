@@ -1,11 +1,12 @@
 #include "Model.h"
-#include <textureLoader.h>
 
-textureLoader *tex = new textureLoader();
+
 
 Model::Model()
 {
     //ctor
+        tex = new textureLoader();
+
         RotateX =0.0; // Rotations
         RotateY =0.0;
         RotateZ =0.0;
@@ -64,6 +65,7 @@ void Model::drawModel()
     glVertex3f(verticies[3].x,verticies[3].y,verticies[3].z);
 
     glEnd();
+
 
     tex->nullTex();
 

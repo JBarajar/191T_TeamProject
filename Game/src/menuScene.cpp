@@ -2,6 +2,7 @@
 #include "SceneHandler.h"
 #include "Inputs.h"
 #include "sounds.h"
+#include "Fonts.h"
 
 Model *menuPlay = new Model();
 Model *menuCredits = new Model();
@@ -9,7 +10,7 @@ Model *menuQuit = new Model();
 parallax *plax = new parallax();
 Inputs *KbIp = new Inputs();
 sounds *sds = new sounds();
-
+Fonts *playText = new Fonts(0.0, 0.0);
 menuScene::menuScene()
 {
     //ctor
@@ -22,6 +23,7 @@ menuScene::menuScene()
 
     screenHeight= GetSystemMetrics(SM_CYSCREEN);
     screenWidth = GetSystemMetrics(SM_CXSCREEN);
+
     menuPlay->Xpos = 0.0;
     menuPlay->Ypos = 0.0;
     menuCredits->Xpos = 0.0;
@@ -43,6 +45,7 @@ menuScene::~menuScene()
 
 GLint menuScene::initGL()
 {
+
     glShadeModel(GL_SMOOTH);
     glClearColor(1.0f,1.0f,1.0f,0.0f);
     glClearDepth(1.0f);
@@ -54,11 +57,14 @@ GLint menuScene::initGL()
     //GLLight Light(GL_LIGHT0);
 
     plax->parallaxInit("images/grid.png");
-    menuPlay -> modelInit("images/button.png",true);
-    menuCredits -> modelInit("images/button.png",false);
-    menuQuit -> modelInit("images/button.png",false);
+    menuPlay->modelInit("images/buttonPlay.png", true);
+    menuCredits->modelInit("images/buttonCred.png",false);
+    menuQuit->modelInit("images/buttonQuit.png",false);
     sds->initSounds();
     sds->playMusic("sounds/mnmu.wav");
+    playText->initFonts("images/font.png");
+    playText->buildFont("PLAY");
+
 
     return true;
 }
@@ -70,6 +76,7 @@ GLint menuScene::run()
 
 GLint menuScene::drawGLScene()
 {
+
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Clear Screen And Depth Buffer
     glLoadIdentity();								// Reset The Current Modelview Matrix
 
@@ -78,13 +85,24 @@ GLint menuScene::drawGLScene()
 
     glPushMatrix();
         glScaled(3.33,3.33,1.0);
-        plax->drawSquare(screenWidth,screenHeight);
+            plax->drawSquare(screenWidth,screenHeight);
     glPopMatrix();
     plax->scroll(true,"down",0.0005);
+
+
 
     glPushMatrix();
         menuPlay->drawModel();
     glPopMatrix();
+
+    for(int i=0; i<playText->cCnt;i++)
+    {
+        glPushMatrix();
+        glTranslated(playText->xpos+i/6.0,playText->ypos,playText->zoom);
+        playText->drawFont(i);
+        glPopMatrix();
+    }
+
 
     glPushMatrix();
         menuCredits->drawModel();
@@ -98,6 +116,15 @@ GLint menuScene::drawGLScene()
     glScaled(1.0,1.0,1.0);
 
     glEnd();
+
+ /*\       for(int i=0; i<playText->cCnt;i++)
+    {
+        glPushMatrix();
+        glTranslated(playText->xpos+i/6.0,playText->ypos,playText->zoom);
+          playText->drawFont(i);
+        glPopMatrix();
+    }
+*/
 
 }
 
@@ -140,6 +167,7 @@ void menuScene::processSelection()
     if (selection == play)
     {
         shandler->curScene = shandler-> gmScene;
+        sds->stopAllSounds();
         shandler->curScene->initGL();
     }
     else if (selection == credits)

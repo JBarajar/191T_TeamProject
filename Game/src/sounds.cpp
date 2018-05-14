@@ -27,7 +27,7 @@ void sounds::playSound(char* File)
 
 void sounds::stopAllSounds()
 {
-
+    engine->stopAllSounds();
 }
 
 int sounds::initSounds()

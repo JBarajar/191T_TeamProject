@@ -42,10 +42,12 @@
 			<Add library="glu32" />
 			<Add library="gdi32" />
 			<Add library="../Common/lib/glut32.lib" />
+			<Add library="../Common/lib/libirrKlang.a" />
 		</Linker>
 		<Unit filename="include/Bike.h" />
 		<Unit filename="include/BoxCollider.h" />
 		<Unit filename="include/Entity.h" />
+		<Unit filename="include/Fonts.h" />
 		<Unit filename="include/GLLight.h" />
 		<Unit filename="include/GLScene.h" />
 		<Unit filename="include/Inputs.h" />
@@ -72,6 +74,7 @@
 		<Unit filename="src/Bike.cpp" />
 		<Unit filename="src/BoxCollider.cpp" />
 		<Unit filename="src/Entity.cpp" />
+		<Unit filename="src/Fonts.cpp" />
 		<Unit filename="src/GLLight.cpp" />
 		<Unit filename="src/GLScene.cpp" />
 		<Unit filename="src/Inputs.cpp" />

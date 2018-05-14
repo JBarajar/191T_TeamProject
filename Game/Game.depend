@@ -1490,9 +1490,10 @@
 	"Model.h"
 	"parallax.h"
 
-1525972804 c:\users\juan\desktop\191.3\191t_teamproject\game\include\model.h
+1526301007 c:\users\juan\desktop\191.3\191t_teamproject\game\include\model.h
 	<windows.h>
 	<GL/glut.h>
+	<textureLoader.h>
 
 1525972804 c:\users\juan\desktop\191.3\191t_teamproject\common\inc\gl\glut.h
 	<windows.h>
@@ -1525,7 +1526,7 @@
 1525972804 c:\users\juan\desktop\191.3\191t_teamproject\game\include\gllight.h
 	<GLScene.h>
 
-1525972804 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\glscene.cpp
+1526298880 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\glscene.cpp
 	"GLScene.h"
 	<GLLight.h>
 	<Model.h>
@@ -1733,9 +1734,8 @@
 	"Inputs.h"
 	<player.h>
 
-1525972804 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\model.cpp
+1526301022 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\model.cpp
 	"Model.h"
-	<textureLoader.h>
 
 1525972804 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\parallax.cpp
 	"parallax.h"
@@ -1768,7 +1768,7 @@
 	"Bike.h"
 	"ObjectHandler.h"
 
-1525972804 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\creditsscene.cpp
+1526302586 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\creditsscene.cpp
 	"creditsScene.h"
 	"SceneHandler.h"
 	"Inputs.h"
@@ -1780,11 +1780,12 @@
 	"gameScene.h"
 	"SceneHandler.h"
 
-1525972804 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\menuscene.cpp
+1526301549 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\menuscene.cpp
 	"menuScene.h"
 	"SceneHandler.h"
 	"Inputs.h"
 	"sounds.h"
+	"Fonts.h"
 
 1525972804 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\objecthandler.cpp
 	"ObjectHandler.h"
@@ -1820,7 +1821,15 @@
 	"Wall.h"
 	<iostream>
 
-1525972906 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\sounds.cpp
+1525980682 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\sounds.cpp
 	"sounds.h"
+	<iostream>
+
+1526298068 source:c:\users\juan\desktop\191.3\191t_teamproject\game\src\fonts.cpp
+	"Fonts.h"
+	<textureLoader.h>
+
+1525974457 c:\users\juan\desktop\191.3\191t_teamproject\game\include\fonts.h
+	<string.h>
 	<iostream>
 
