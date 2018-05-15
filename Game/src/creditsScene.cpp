@@ -11,18 +11,21 @@ Model *zach = new Model();
 Model *daniel = new Model();
 Model *juan = new Model();
 Model *team = new Model();
+Model *controls = new Model();
+Model *p1 = new Model();
+Model *p2 = new Model();
 
 creditsScene::creditsScene()
 {
     //ctor
     screenHeight= GetSystemMetrics(SM_CYSCREEN);
     screenWidth = GetSystemMetrics(SM_CXSCREEN);
-    zach->Xpos = -0.35;
-    zach->Ypos = 0.0; //.25
-    joey->Xpos = -0.35;
-    joey->Ypos = -0.25;//.50
-    daniel->Xpos = 0.35;
-    daniel->Ypos = -0.25;// .75
+    zach->Xpos = 0.5;
+    zach->Ypos = 0.20; //.25
+    joey->Xpos = 0.5;
+    joey->Ypos = 0.0;//.50
+    daniel->Xpos = 0.50;
+    daniel->Ypos = -0.20;// .75
     zach->width = 0.6;
     zach->height = 0.2;
     joey->width = 0.6;
@@ -31,13 +34,30 @@ creditsScene::creditsScene()
     daniel->height = 0.2;
     juan->width = 0.6;
     juan->height = 0.2;
-    juan->Ypos = 0.0; //0
-    juan->Xpos = 0.35;
+    juan->Ypos = -.40; //0
+    juan->Xpos = 0.50;
 
-    team->Xpos = 0.0;
-    team->Ypos = 0.35;
+    team->Xpos = 0.50;
+    team->Ypos = 0.50;
     team->width = .7;
     team->height = .3;
+
+    controls->Xpos = -.5;
+    controls->Ypos = .5;
+    controls->width = .7;
+    controls->height = .3;
+
+    p1->Xpos = -.5;
+    p1->Ypos = .20;
+    p1->width = .6;
+    p1->height = .2;
+
+    p2->Xpos = -.5;
+    p2->Ypos = .0;
+    p2->width = .6;
+    p2->height = .2;
+
+
 
 }
 
@@ -57,6 +77,9 @@ GLint creditsScene::initGL()
     glEnable(GL_COLOR_MATERIAL);
     //GLLight SetLight(GL_LIGHT0);
     //GLLight Light(GL_LIGHT0);
+    controls->modelInit("images/controls.png", false);
+    p1->modelInit("images/p1c.png", false);
+    p2->modelInit("images/p2c.png", false);
     team->modelInit("images/team.png", false);
     zach->modelInit("images/zach.png", true);
     joey->modelInit("images/joey.png",false);
@@ -106,6 +129,19 @@ GLint creditsScene::drawGLScene()
     glPushMatrix();
         team->drawModel();
     glPopMatrix();
+
+    glPushMatrix();
+        controls->drawModel();
+    glPopMatrix();
+
+    glPushMatrix();
+        p1->drawModel();
+    glPopMatrix();
+
+    glPushMatrix();
+        p2->drawModel();
+    glPopMatrix();
+
     glScaled(1.0,1.0,1.0);
 
     glEnd();
