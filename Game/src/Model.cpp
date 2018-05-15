@@ -1,11 +1,12 @@
 #include "Model.h"
-#include <textureLoader.h>
 
-textureLoader *tex = new textureLoader();
 
 Model::Model()
 {
     //ctor
+
+
+        tex = new textureLoader();
         RotateX =0.0; // Rotations
         RotateY =0.0;
         RotateZ =0.0;

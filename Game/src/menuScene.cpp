@@ -6,6 +6,7 @@
 Model *menuPlay = new Model();
 Model *menuCredits = new Model();
 Model *menuQuit = new Model();
+Model *title = new Model();
 parallax *plax = new parallax();
 Inputs *KbIp = new Inputs();
 sounds *sds = new sounds();
@@ -22,6 +23,8 @@ menuScene::menuScene()
 
     screenHeight= GetSystemMetrics(SM_CYSCREEN);
     screenWidth = GetSystemMetrics(SM_CXSCREEN);
+    title->Xpos = 0.0;
+    title->Ypos = 0.40;
     menuPlay->Xpos = 0.0;
     menuPlay->Ypos = 0.0;
     menuCredits->Xpos = 0.0;
@@ -34,6 +37,10 @@ menuScene::menuScene()
     menuCredits->height = 0.2;
     menuQuit->width = 0.6;
     menuQuit->height = 0.2;
+    title->width = 0.7;
+    title->height = 0.4;
+
+
 }
 
 menuScene::~menuScene()
@@ -52,11 +59,12 @@ GLint menuScene::initGL()
     glEnable(GL_COLOR_MATERIAL);
     //GLLight SetLight(GL_LIGHT0);
     //GLLight Light(GL_LIGHT0);
-
+    title->modelInit("images/t1.png", false);
     plax->parallaxInit("images/gridclean.png");
-    menuPlay -> modelInit("images/button.png",true);
-    menuCredits -> modelInit("images/button.png",false);
-    menuQuit -> modelInit("images/button.png",false);
+    menuPlay -> modelInit("images/buttonPlay.png",true);
+    menuCredits -> modelInit("images/buttonCred.png",false);
+    menuQuit -> modelInit("images/buttonQuit.png",false);
+    //title->modelInit("images/title1.png", true);
     sds->initSounds();
     sds->playMusic("sounds/mnmu.wav");
 
@@ -81,6 +89,10 @@ GLint menuScene::drawGLScene()
         plax->drawSquare(screenWidth,screenHeight);
     glPopMatrix();
     plax->scroll(true,"down",0.0005);
+
+    glPushMatrix();
+        title->drawModel();
+    glPopMatrix();
 
     glPushMatrix();
         menuPlay->drawModel();

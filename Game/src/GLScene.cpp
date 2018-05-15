@@ -14,6 +14,7 @@
 #include <SpeedUp.h>
 #include <time.h>
 #include <stdio.h>
+#include <sounds.h>
 
 Model *modelTeapot = new Model();
 Inputs *KbMs = new Inputs();
@@ -23,6 +24,7 @@ parallax *p2w = new parallax();
 player *ply = new player();
 player2 *ply2 = new player2();
 skyBox *sky = new skyBox;
+sounds *snds = new sounds();
 //randAI *rai = new randAI();
 //randAI *rai2 = new randAI();
 ObjectHandler* handler = new ObjectHandler();
