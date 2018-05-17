@@ -94,17 +94,28 @@ GLint menuScene::drawGLScene()
         title->drawModel();
     glPopMatrix();
 
+    glColor3f(0.0,0.5,0.5);
+
     glPushMatrix();
+    if(selection == play) glColor3f(0.0,0.8,0.8);
         menuPlay->drawModel();
     glPopMatrix();
 
+    glColor3f(0.0,0.5,0.5);
+
     glPushMatrix();
+    if(selection == credits) glColor3f(0.0,0.8,0.8);
         menuCredits->drawModel();
     glPopMatrix();
 
+    glColor3f(0.0,0.5,0.5);
+
     glPushMatrix();
+    if(selection == quit) glColor3f(0.0,0.8,0.8);
         menuQuit->drawModel();
     glPopMatrix();
+
+    glColor3f(1.0,1.0,1.0);
 
 
     glScaled(1.0,1.0,1.0);
