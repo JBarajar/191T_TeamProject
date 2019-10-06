@@ -3,6 +3,9 @@
 
 #include<windows.h>
 #include<GL/glut.h>
+#include <textureLoader.h>
+
+
 
 typedef struct{
  float x;
@@ -31,9 +34,14 @@ class Model
 
         vec1 verticies[4];
 
+        float width = 0.4;
+        float height = 0.4;
+        textureLoader *tex;
+
     protected:
 
     private:
+
 };
 
 #endif // MODEL_H

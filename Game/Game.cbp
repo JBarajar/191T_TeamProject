@@ -42,6 +42,8 @@
 			<Add library="glu32" />
 			<Add library="gdi32" />
 			<Add library="../Common/lib/glut32.lib" />
+			<Add library="../Common/lib/libirrKlang.a" />
+			<Add library="../Common/lib/irrKlang.lib" />
 		</Linker>
 		<Unit filename="include/Bike.h" />
 		<Unit filename="include/BoxCollider.h" />
@@ -51,13 +53,22 @@
 		<Unit filename="include/Inputs.h" />
 		<Unit filename="include/Model.h" />
 		<Unit filename="include/ObjectHandler.h" />
+		<Unit filename="include/Power.h" />
 		<Unit filename="include/PowerUp.h" />
+		<Unit filename="include/PowerUpSpawn.h" />
+		<Unit filename="include/SceneHandler.h" />
+		<Unit filename="include/SpeedUp.h" />
 		<Unit filename="include/Trail.h" />
 		<Unit filename="include/Wall.h" />
+		<Unit filename="include/creditsScene.h" />
+		<Unit filename="include/gameScene.h" />
+		<Unit filename="include/menuScene.h" />
 		<Unit filename="include/parallax.h" />
 		<Unit filename="include/player.h" />
+		<Unit filename="include/player2.h" />
 		<Unit filename="include/randAI.h" />
 		<Unit filename="include/skyBox.h" />
+		<Unit filename="include/sounds.h" />
 		<Unit filename="include/textureLoader.h" />
 		<Unit filename="include/timer.h" />
 		<Unit filename="main.cpp" />
@@ -69,13 +80,22 @@
 		<Unit filename="src/Inputs.cpp" />
 		<Unit filename="src/Model.cpp" />
 		<Unit filename="src/ObjectHandler.cpp" />
+		<Unit filename="src/Power.cpp" />
 		<Unit filename="src/PowerUp.cpp" />
+		<Unit filename="src/PowerUpSpawn.cpp" />
+		<Unit filename="src/SceneHandler.cpp" />
+		<Unit filename="src/SpeedUp.cpp" />
 		<Unit filename="src/Trail.cpp" />
 		<Unit filename="src/Wall.cpp" />
+		<Unit filename="src/creditsScene.cpp" />
+		<Unit filename="src/gameScene.cpp" />
+		<Unit filename="src/menuScene.cpp" />
 		<Unit filename="src/parallax.cpp" />
 		<Unit filename="src/player.cpp" />
+		<Unit filename="src/player2.cpp" />
 		<Unit filename="src/randAI.cpp" />
 		<Unit filename="src/skyBox.cpp" />
+		<Unit filename="src/sounds.cpp" />
 		<Unit filename="src/textureLoader.cpp" />
 		<Unit filename="src/timer.cpp" />
 		<Extensions>

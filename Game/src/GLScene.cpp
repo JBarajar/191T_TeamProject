@@ -4,18 +4,29 @@
 #include <Inputs.h>
 #include <parallax.h>
 #include <player.h>
+#include <player2.h>
 #include <skyBox.h>
 #include <randAI.h>
 #include <ObjectHandler.h>
 #include <Wall.h>
 #include <PowerUp.h>
+#include <Power.h>
+#include <SpeedUp.h>
+#include <time.h>
+#include <stdio.h>
+#include <sounds.h>
 
 Model *modelTeapot = new Model();
 Inputs *KbMs = new Inputs();
 parallax *plx = new parallax();
+parallax *p1w = new parallax();
+parallax *p2w = new parallax();
 player *ply = new player();
+player2 *ply2 = new player2();
 skyBox *sky = new skyBox;
-randAI *rai = new randAI();
+sounds *snds = new sounds();
+//randAI *rai = new randAI();
+//randAI *rai2 = new randAI();
 ObjectHandler* handler = new ObjectHandler();
 
 const double interval = 0.01;
@@ -34,6 +45,7 @@ GLScene::~GLScene()
 
 GLint GLScene::initGL()
 {
+    srand(time(NULL));
     glShadeModel(GL_SMOOTH);
     glClearColor(1.0f,1.0f,1.0f,0.0f);
     glClearDepth(1.0f);
@@ -44,25 +56,64 @@ GLint GLScene::initGL()
     GLLight SetLight(GL_LIGHT0);
     GLLight Light(GL_LIGHT0);
 
+    ttime.start();
+
     //modelTeapot->modelInit("images/player/player0.png",true);
-    plx->parallaxInit("images/grid.png");
+    p1w->parallaxInit("images/p1win.png");
+    p2w->parallaxInit("images/p2win.png");
+    plx->parallaxInit("images/gridclean.png");
+    snds->initSounds();
+    snds->playMusic("sounds/battle.wav");
+
     //ply->init();
     //rai->init();
     //sky->loadTextures();
 
-    handler->addEntity(ply);
+    lvl = rand() % 3;
+
+    switch(lvl) {
+    case 0:
+        handler->loadLevel1(&ply, &ply2);
+        break;
+    case 1:
+        handler->loadLevel2(&ply, &ply2);
+        break;
+    case 2:
+        handler->loadLevel3(&ply, &ply2);
+        break;
+    }
+
+    //handler->loadLevel1(&ply, &ply2);
+
+    /*handler->addEntity(ply);
+    handler->addEntity(ply2);
+
     handler->addEntity(rai);
+    rai2->Xpos = 0.9;
+    handler->addEntity(rai2);
     handler->addEntity(new Wall(-1.25,0,0.04,1.37));
     handler->addEntity(new Wall(1.25,0,0.04,1.37));
     handler->addEntity(new Wall(0,0.7,2.54,0.04));
     handler->addEntity(new Wall(0,-0.7,2.54,0.04));
-    handler->addEntity(new PowerUp(0.0,0.0));
+    handler->addEntity(new Power(0.0,0.0));
+    handler->addEntity(new Power(0.5,0.5));
+    handler->addEntity(new Power(-0.5,-0.5));
+    handler->addEntity(new SpeedUp(-0.5, 0.5));
+    handler->addEntity(new SpeedUp(0.5, -0.5));
+    handler->addEntity(new SpeedUp(0.9, 0.0));
+    handler->addEntity(new SpeedUp(-0.9, 0.0));*/
 
     oldTime = clock();
     newTime = clock();
     deltaTime = 0;
 
     return true;
+}
+
+void GLScene::resetLevel() {
+    handler->clearObjects();
+    handler->loadLevel1(&ply,&ply2);
+
 }
 
 GLint GLScene::run()
@@ -72,10 +123,26 @@ GLint GLScene::run()
     oldTime = newTime;
 
     while(deltaTime >= interval) {
-
         deltaTime -= interval;
 
-        handler->update();
+        if(!paused) handler->update();
+
+        if(!draw && !p1win && !p2win) {
+        if(!handler->entities.at(0)->active && !handler->entities.at(1)->active) {
+            draw = true;
+            ttime.reset();
+        }
+        else if(!handler->entities.at(0)->active && handler->entities.at(1)->active) {
+            p2win = true;
+            ttime.reset();
+            scores[1]++;
+        }
+        else if(handler->entities.at(0)->active && !handler->entities.at(1)->active) {
+            p1win = true;
+            ttime.reset();
+            scores[0]++;
+        }
+        }
 
     }
 
@@ -94,7 +161,7 @@ GLint GLScene::drawGLScene()
 
 
     glPushMatrix();
-        glScaled(3.33,3.33,1.0);
+        //glScaled(3.33,3.33,1.0);
         plx->drawSquare(screenWidth,screenHeight);
     glPopMatrix();
         //plx->scroll(true,"right",0.001);
@@ -116,11 +183,106 @@ GLint GLScene::drawGLScene()
         rai->drawRAI();
     glPopMatrix();*/
 
-    handler->draw(deltaTime/interval);
+    if(!finalwin) handler->draw(deltaTime/interval);
+
+    if(draw) {
+        if(ttime.getTicks() > 3000) {
+            draw = false;
+            p1win = false;
+            p2win = false;
+
+            int oldlvl = lvl;
+            while(lvl == oldlvl) lvl = rand() % 3;
+
+            switch(lvl) {
+            case 0:
+                handler->loadLevel1(&ply, &ply2);
+                break;
+            case 1:
+                handler->loadLevel2(&ply, &ply2);
+                break;
+            case 2:
+                handler->loadLevel3(&ply, &ply2);
+                break;
+            }
+
+        }
+    }
+
+    if(p1win) {
+    glPushMatrix();
+        glScaled(0.5,0.5,1.0);
+        p1w->drawSquare(400,200);
+
+        if(ttime.getTicks() > 3000) {
+            if(scores[0] >= 3) finalwin = true;
+
+            if(!finalwin) {
+            draw = false;
+            p1win = false;
+            p2win = false;
 
 
 
-    glEnd();
+            int oldlvl = lvl;
+            while(lvl == oldlvl) lvl = rand() % 3;
+
+            switch(lvl) {
+            case 0:
+                handler->loadLevel1(&ply, &ply2);
+                break;
+            case 1:
+                handler->loadLevel2(&ply, &ply2);
+                break;
+            case 2:
+                handler->loadLevel3(&ply, &ply2);
+                break;
+            }
+
+            }
+        }
+    glPopMatrix();
+    }
+
+    if(p2win) {
+    glPushMatrix();
+        glScaled(0.5,0.5,1.0);
+        p2w->drawSquare(400,200);
+
+        if(ttime.getTicks() > 3000) {
+            if(scores[1] >= 3) finalwin = true;
+
+            if(!finalwin) {
+            draw = false;
+            p1win = false;
+            p2win = false;
+
+
+
+            int oldlvl = lvl;
+            while(lvl == oldlvl) lvl = rand() % 3;
+
+            switch(lvl) {
+            case 0:
+                handler->loadLevel1(&ply, &ply2);
+                break;
+            case 1:
+                handler->loadLevel2(&ply, &ply2);
+                break;
+            case 2:
+                handler->loadLevel3(&ply, &ply2);
+                break;
+            }
+
+            }
+
+        }
+    glPopMatrix();
+    }
+
+
+
+    //glEnd();
 
 }
 
@@ -143,10 +305,15 @@ int GLScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 	    case WM_KEYDOWN:
 	        KbMs->wParam = wParam;
+	        KbMs->keyPressed(this);
+	        if(!paused) {
 	        KbMs->keyPressed(modelTeapot);
 	        KbMs->keyEnv(plx, 0.005);
 	        KbMs->keyPressed(ply);
+	        KbMs->p2keyPressed(ply2);
 	        KbMs->keyPressed(sky);
+	        KbMs->keyPressed(handler);
+	        }
 
 	    break;
 

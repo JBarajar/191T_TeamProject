@@ -3,6 +3,9 @@
 
 #include<vector>
 
+class player;
+class player2;
+
 class BoxCollider;
 class Entity;
 
@@ -18,14 +21,21 @@ class ObjectHandler
 
         void addEntity(Entity*);
         void removeEntity(Entity*);
+        void clearObjects();
 
         void update();
         void draw(double dt);
 
+        void loadLevel1(player**, player2**);
+        void loadLevel2(player**, player2**);
+        void loadLevel3(player**, player2**);
+
+        std::vector<Entity*> entities;
+
     protected:
 
     private:
-        std::vector<Entity*> entities;
+
 };
 
 #endif // COLLISION_H
